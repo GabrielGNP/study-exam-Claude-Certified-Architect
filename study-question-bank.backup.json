@@ -1,0 +1,2677 @@
+{
+  "id": "01KT81BA4JVZCTQRSE9VR4MJ1W",
+  "contractId": "01KT81BA4J2AN132PCS4FZSR2E",
+  "schemaVersion": "1.0.0",
+  "title": "Banco de Preguntas de Estudio de Claude Code",
+  "description": "Multiple-choice study bank for Claude Code and Claude development workflows.",
+  "language": "en",
+  "version": "1.0.0",
+  "topics": [
+    {
+      "id": "01KT81BA4J1SN6A5M3D93T1920",
+      "order": 1,
+      "title": "Claude Code para Integración Continua",
+      "questionCount": 15
+    },
+    {
+      "id": "01KT81BA4JK0BAMH84VBFJK0FA",
+      "order": 2,
+      "title": "Sistema de Investigación Multi-Agente",
+      "questionCount": 15
+    },
+    {
+      "id": "01KT81BA4J2675N47R42Q4C716",
+      "order": 3,
+      "title": "Productividad del Desarrollador con Claude",
+      "questionCount": 15
+    },
+    {
+      "id": "01KT81BA4JJHS623EN20YJ4JZ1",
+      "order": 4,
+      "title": "Generación de Código con Claude Code",
+      "questionCount": 15
+    }
+  ],
+  "questions": [
+    {
+      "id": "01KT81N3RTZKP46GW353B7QPQA",
+      "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+      "order": 1,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Claude Code para Integración Continua",
+        "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
+      },
+      "prompt": "La revisión automatizada marca sistemáticamente patrones que tu equipo usa de forma intencional: force-unwrapping de opcionales en archivos de prueba, uso de clases coordinadoras grandes que siguen tu arquitectura establecida, e importación de módulos internos marcados como deprecated en el SDK público. Los desarrolladores descartan aproximadamente el 30% de todos los hallazgos como falsos positivos específicos del proyecto. ¿Qué enfoque evita que el modelo genere estos hallazgos desde el inicio, al proporcionar las convenciones del proyecto como contexto persistente en cada revisión?",
+      "options": [
+        {
+          "id": "01KT81N3RT27J6TC68DNZGMAM7",
+          "key": "A",
+          "text": "Construir filtros de palabras clave en post-procesamiento que supriman hallazgos que contengan términos como 'force unwrap', 'large class' o 'deprecated import' antes de que los resultados lleguen a los desarrolladores."
+        },
+        {
+          "id": "01KT81N3RTC0FNQTM0Q9C2G8NH",
+          "key": "B",
+          "text": "Hacer que los desarrolladores agreguen comentarios de supresión en línea en las líneas marcadas y preprocesar los diffs para excluir las líneas suprimidas antes de enviar el código al modelo."
+        },
+        {
+          "id": "01KT81N3RTDP8B9P2V4BWKZ5GQ",
+          "key": "C",
+          "text": "Configurar la revisión para analizar solo las líneas modificadas en el diff sin el contexto del archivo circundante, reduciendo la cantidad de código que el modelo evalúa por revisión."
+        },
+        {
+          "id": "01KT81N3RT1WD1FTYS13H0E48M",
+          "key": "D",
+          "text": "Documentar los patrones aceptados y las convenciones intencionales del equipo en el archivo CLAUDE.md del proyecto, para que el modelo reciba este contexto en cada revisión."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RT1WD1FTYS13H0E48M",
+        "correctOptionKey": "D",
+        "text": "Documentar los patrones aceptados y las convenciones intencionales del equipo en el archivo CLAUDE.md del proyecto, para que el modelo reciba este contexto en cada revisión.",
+        "justification": "`CLAUDE.md` es el mecanismo a nivel de proyecto para proporcionar a Claude Code contexto persistente, como convenciones de codificación, criterios de revisión, estándares de prueba y patrones arquitectónicos aceptados. Como el problema es que el modelo marca repetidamente decisiones intencionales específicas del proyecto, la solución correcta es proporcionar esas convenciones antes de que se genere la revisión. Los filtros de palabras clave, los comentarios de supresión o la reducción de contexto solo ocultan o limitan los hallazgos después de que el modelo ya ha malinterpretado el proyecto."
+      },
+      "studyMetadata": {
+        "tags": ["claude_code_for_continuous_integration"],
+        "difficulty": "intermediate",
+        "sourceOrder": 1
+      }
+    },
+    {
+      "id": "01KT81N3RT20D62GS0H9NAYG9G",
+      "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+      "order": 2,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Claude Code para Integración Continua",
+        "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
+      },
+      "prompt": "Tras implementar la revisión automatizada, notas alta precisión pero bajo recall: los bugs reales pasan desapercibidos. La investigación revela que tu prompt de revisión le indica a Claude que 'solo reporte problemas de alta confianza de los que esté seguro' y que 'erre del lado de no comentar'. Los desarrolladores aprecian el bajo ruido, pero una race condition que causó una interrupción en producción era visible en un PR revisado y no fue reportada. Necesitas mejorar sustancialmente la detección de bugs manteniendo las tasas de falsos positivos manejables para tu equipo. ¿Cuál es el enfoque más efectivo?",
+      "options": [
+        {
+          "id": "01KT81N3RTCQ0WCJEKG6ZHS9WC",
+          "key": "A",
+          "text": "Agregar ejemplos few-shot detallados que demuestren las categorías de bugs que Claude debería marcar —race conditions, null dereferences, brechas en el manejo de errores— manteniendo la instrucción de filtrado de alta confianza para preservar los niveles actuales de precisión."
+        },
+        {
+          "id": "01KT81N3RTGKBDGHRC4WSR3AQS",
+          "key": "B",
+          "text": "Ampliar la ventana de contexto incluyendo archivos de prueba relacionados, historial de git reciente y el grafo de dependencias del módulo junto con el diff, dando a Claude señales más ricas para evaluar la severidad de los problemas."
+        },
+        {
+          "id": "01KT81N3RT1JCQ86N6HQK9CCA3",
+          "key": "C",
+          "text": "Dividir la revisión en una etapa de hallazgos donde el objetivo de Claude es la cobertura —marcando cada problema potencial con metadata de confianza y severidad— y una etapa separada que filtra esos hallazgos."
+        },
+        {
+          "id": "01KT81N3RTR9NRQ5KWP869C398",
+          "key": "D",
+          "text": "Eliminar las instrucciones de filtrado conservadoras y pedirle a Claude que reporte todos los problemas potenciales, luego aplicar un filtro programático para deduplicar y suprimir las categorías que históricamente generan falsos positivos."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RT1JCQ86N6HQK9CCA3",
+        "correctOptionKey": "C",
+        "text": "Dividir la revisión en una etapa de hallazgos donde el objetivo de Claude es la cobertura —marcando cada problema potencial con metadata de confianza y severidad— y una etapa separada que filtra esos hallazgos.",
+        "justification": "El prompt actual suprime problemas reales porque optimiza demasiado agresivamente para la certeza. Una revisión en dos etapas separa el recall de la publicación: primero, Claude identifica problemas potenciales de manera amplia y adjunta metadata estructurada de confianza y severidad; luego, un paso de umbral separado decide qué llega a los desarrolladores. Esto preserva la visibilidad de bugs graves como las race conditions, mientras gestiona los falsos positivos. Mantener la instrucción de alta confianza continuaría perdiendo bugs, y simplemente agregar más contexto o filtros post-procesamiento no resuelve directamente el problema de recall."
+      },
+      "studyMetadata": {
+        "tags": ["claude_code_for_continuous_integration"],
+        "difficulty": "intermediate",
+        "sourceOrder": 2
+      }
+    },
+    {
+      "id": "01KT81N3RTXEKM0BV2S96564Q5",
+      "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+      "order": 3,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Claude Code para Integración Continua",
+        "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
+      },
+      "prompt": "Tu revisión automatizada genera muchos hallazgos por PR, pero el feedback de los desarrolladores indica que aproximadamente la mitad se descartan como 'no vale la pena abordar'. El análisis revela que los hallazgos descartados suelen ser técnicamente precisos pero involucran preferencias de estilo menores o patrones aceptables en tu codebase. Antes de agregar complejidad de infraestructura, ¿qué cambio en el diseño del prompt reduciría más efectivamente los descartes manteniendo la detección de problemas reales?",
+      "options": [
+        {
+          "id": "01KT81N3RTJH6XCKSY8815A0GE",
+          "key": "A",
+          "text": "Agregar instrucciones pidiéndole a Claude que califique la confianza de cada hallazgo (1-10) e incluir solo los hallazgos con calificación 8 o superior"
+        },
+        {
+          "id": "01KT81N3RT3PQMWM9S4QMR95V1",
+          "key": "B",
+          "text": "Implementar un modelo de clasificación secundario que filtre los hallazgos de Claude basándose en la aceptación predicha por los desarrolladores"
+        },
+        {
+          "id": "01KT81N3RTDW1WSKS481NHX4JM",
+          "key": "C",
+          "text": "Agregar criterios explícitos que definan qué problemas reportar (bugs, seguridad) versus cuáles omitir (estilo menor, patrones locales)"
+        },
+        {
+          "id": "01KT81N3RTK7EHDE3PXNC92HVS",
+          "key": "D",
+          "text": "Agregar instrucciones para 'reportar solo los hallazgos de los que estés muy seguro de que son problemas reales'"
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RTDW1WSKS481NHX4JM",
+        "correctOptionKey": "C",
+        "text": "Agregar criterios explícitos que definan qué problemas reportar (bugs, seguridad) versus cuáles omitir (estilo menor, patrones locales)",
+        "justification": "Los hallazgos descartados no son necesariamente incorrectos; simplemente son de bajo valor para esta codebase. El mejor cambio de prompt es definir categorías claras de qué debe reportarse y qué debe omitirse, como reportar bugs y problemas de seguridad mientras se excluyen preferencias de estilo menores o patrones locales aceptados. Las instrucciones basadas en confianza son demasiado vagas y pueden suprimir problemas importantes, mientras que agregar otro modelo introduce infraestructura innecesaria antes de corregir los criterios del prompt."
+      },
+      "studyMetadata": {
+        "tags": ["claude_code_for_continuous_integration"],
+        "difficulty": "intermediate",
+        "sourceOrder": 3
+      }
+    },
+    {
+      "id": "01KT81N3RTJSPDS2TFG4K2BJAJ",
+      "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+      "order": 4,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Claude Code para Integración Continua",
+        "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
+      },
+      "prompt": "Tu revisor automatizado usa un único prompt que cubre problemas de seguridad, diseño de API y corrección de lógica de negocio. Tu suite de evaluación muestra alto recall para hallazgos de diseño de API (82%) pero bajo recall para casos extremos de lógica de negocio en el puntaje de quizzes (34%). Cuando agregas ejemplos few-shot de bugs de lógica al prompt, el recall de lógica mejora al 41% pero el recall de diseño de API cae al 68%. ¿Cómo deberías abordar este trade-off para mejorar la detección en ambas categorías?",
+      "options": [
+        {
+          "id": "01KT81N3RT2C0SDF3JKPX9RH6A",
+          "key": "A",
+          "text": "Reemplazar los ejemplos few-shot por un checklist detallado de casos extremos de lógica específicos a verificar, como división por cero en cálculos de puntaje y condiciones de límite en umbrales de calificación."
+        },
+        {
+          "id": "01KT81N3RT3WK0XP6YMAPZ2347",
+          "key": "B",
+          "text": "Dividir la revisión en prompts separados y enfocados —uno para seguridad y diseño de API, otro para lógica de negocio— cada uno con ejemplos dedicados, y luego consolidar los hallazgos antes de publicarlos."
+        },
+        {
+          "id": "01KT81N3RTXS6Q5DXSGNC651B3",
+          "key": "C",
+          "text": "Actualizar a un tier de modelo más potente, ya que su razonamiento más sólido manejará ambos tipos de preocupaciones en un único prompt y eliminará el trade-off de recall."
+        },
+        {
+          "id": "01KT81N3RTV2EG1C3KK5KBNHPT",
+          "key": "D",
+          "text": "Proporcionar el repositorio completo como contexto en lugar de solo los archivos modificados y el código circundante, dando al modelo mayor visibilidad sobre los patrones de lógica de negocio."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RT3WK0XP6YMAPZ2347",
+        "correctOptionKey": "B",
+        "text": "Dividir la revisión en prompts separados y enfocados —uno para seguridad y diseño de API, otro para lógica de negocio— cada uno con ejemplos dedicados, y luego consolidar los hallazgos antes de publicarlos.",
+        "justification": "La evaluación muestra interferencia entre prompts: agregar ejemplos para una preocupación mejora el recall de lógica de negocio pero perjudica el recall de diseño de API. Dividir la revisión en pasadas enfocadas permite que cada prompt use criterios y ejemplos adaptados a su categoría, y luego consolidar los resultados para los desarrolladores. Un checklist puede ayudar con los bugs de lógica pero no aborda la regresión en el diseño de API, y una actualización del modelo o más contexto del repositorio no resuelve directamente el conflicto creado al combinar objetivos de revisión distintos en un único prompt."
+      },
+      "studyMetadata": {
+        "tags": ["claude_code_for_continuous_integration"],
+        "difficulty": "intermediate",
+        "sourceOrder": 4
+      }
+    },
+    {
+      "id": "01KT81N3RTEZJKR5AZKKPH66C8",
+      "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+      "order": 5,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Claude Code para Integración Continua",
+        "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
+      },
+      "prompt": "Tu pipeline incluye un paso de generación de notas de versión que clasifica y resume aproximadamente 200 commits al final de cada ciclo semanal de release. Actualmente, cada commit se envía como una llamada separada a la Messages API usando un modelo Claude de tier Sonnet. Las notas de versión no se necesitan hasta la mañana siguiente (los resultados tienen ~12 horas de latencia aceptable). Tu equipo necesita reducir el costo de API por token para este paso manteniendo el mismo modelo y prompts (sin cambios en el tier del modelo ni en la calidad del output). ¿Qué enfoque satisface todas estas restricciones?",
+      "options": [
+        {
+          "id": "01KT81N3RTPG0QHTJ733SN3Q9D",
+          "key": "A",
+          "text": "Emitir las 200 solicitudes de la Messages API en paralelo usando conexiones concurrentes, ya que la concurrencia reduce el precio por token que cobra la API."
+        },
+        {
+          "id": "01KT81N3RTMRRS6JC7X1SF04XC",
+          "key": "B",
+          "text": "Cambiar las llamadas de resumen del modelo de tier Sonnet al modelo de tier Haiku para aprovechar las tarifas por token más bajas de Haiku."
+        },
+        {
+          "id": "01KT81N3RTASCE56SVKQXZKFGJ",
+          "key": "C",
+          "text": "Concatenar los 200 mensajes de commit en una única solicitud de la Messages API y hacer que el modelo devuelva todos los resúmenes en una respuesta, ya que menos solicitudes siempre reduce el costo total de tokens."
+        },
+        {
+          "id": "01KT81N3RTX9XKK0WB36TZC0DF",
+          "key": "D",
+          "text": "Enviar las 200 solicitudes a la Message Batches API con custom_ids únicos y recuperar los resultados una vez que termine el batch, lo que aplica un descuento del 50% a todos los tokens de entrada y salida."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RTX9XKK0WB36TZC0DF",
+        "correctOptionKey": "D",
+        "text": "Enviar las 200 solicitudes a la Message Batches API con custom_ids únicos y recuperar los resultados una vez que termine el batch, lo que aplica un descuento del 50% a todos los tokens de entrada y salida.",
+        "justification": "Esta carga de trabajo tolera la latencia y no requiere resultados hasta la mañana siguiente, por lo que se adapta al procesamiento por lotes. La Message Batches API mantiene el mismo modelo y prompts mientras reduce el costo de tokens de entrada y salida, y los valores de `custom_id` permiten correlacionar el resultado de cada commit después del procesamiento. Las llamadas paralelas a la Messages API no reducen el precio por token, cambiar a Haiku viola el requisito de mismo modelo, y concatenar todos los commits cambia la estructura del prompt y puede perjudicar la correlación o la calidad del output."
+      },
+      "studyMetadata": {
+        "tags": ["claude_code_for_continuous_integration"],
+        "difficulty": "intermediate",
+        "sourceOrder": 5
+      }
+    },
+    {
+      "id": "01KT81N3RVYXJMRQ62M326SB42",
+      "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+      "order": 6,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Claude Code para Integración Continua",
+        "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
+      },
+      "prompt": "Tu revisión de código automatizada está perdiendo bugs reales en pull requests. La investigación revela que tu prompt de revisión incluye la instrucción: 'Solo marcar problemas críticos que definitivamente causarían fallos en producción. Ignorar preocupaciones menores y cualquier cosa de la que no estés seguro.' Los desarrolladores confirman que algunos bugs perdidos son errores lógicos reales que el modelo investigó pero decidió no reportar. El equipo requiere que el output de la revisión permanezca estructurado (cada hallazgo etiquetado con metadata) y accionable. ¿Qué cambio en el prompt elimina la causa de los hallazgos suprimidos y preserva el output estructurado y etiquetado para el filtrado posterior?",
+      "options": [
+        {
+          "id": "01KT81N3RTVVCT9VKRZR4F7A4G",
+          "key": "A",
+          "text": "Agregar una segunda pasada de revisión que vuelva a leer el diff usando el mismo prompt, buscando cualquier cosa que la primera pasada pueda haber omitido."
+        },
+        {
+          "id": "01KT81N3RT291SP54KFYDAF39W",
+          "key": "B",
+          "text": "Instruir al modelo para que reporte todos los hallazgos con un nivel de confianza y una etiqueta de severidad, dejando el filtrado para un paso posterior."
+        },
+        {
+          "id": "01KT81N3RTBEGTQSEVS6ZFJ689",
+          "key": "C",
+          "text": "Eliminar todas las instrucciones relacionadas con severidad del prompt y dejar que el modelo use su criterio predeterminado sobre qué reportar."
+        },
+        {
+          "id": "01KT81N3RTB437QPVDKBNJGYV2",
+          "key": "D",
+          "text": "Habilitar el extended thinking e instruir al modelo para que razone paso a paso sobre cada cambio de código antes de producir su revisión."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RT291SP54KFYDAF39W",
+        "correctOptionKey": "B",
+        "text": "Instruir al modelo para que reporte todos los hallazgos con un nivel de confianza y una etiqueta de severidad, dejando el filtrado para un paso posterior.",
+        "justification": "Los bugs perdidos son causados por una instrucción que le indica al modelo no reportar nada incierto o por debajo de un umbral de severidad muy alto. Pedir todos los hallazgos con metadata de confianza y severidad elimina esa supresión mientras preserva el output estructurado para el filtrado posterior. Volver a ejecutar el mismo prompt conservador repetiría el mismo modo de fallo, eliminar toda la guía de severidad reduciría la estructura, y el extended thinking no aborda la instrucción que le indica al modelo retener hallazgos."
+      },
+      "studyMetadata": {
+        "tags": ["claude_code_for_continuous_integration"],
+        "difficulty": "intermediate",
+        "sourceOrder": 6
+      }
+    },
+    {
+      "id": "01KT81N3RV6GH7MHTX84DBR863",
+      "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+      "order": 7,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Claude Code para Integración Continua",
+        "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
+      },
+      "prompt": "Tras implementar la revisión de código automatizada, los desarrolladores reportan que aproximadamente el 35% de los hallazgos marcados son falsos positivos que siguen patrones consistentes: sugerencias de estilo que contradicen las convenciones del equipo, advertencias de seguridad para patrones seguros en tu contexto de despliegue, y sugerencias de rendimiento que degradarían tu caso de uso específico. Quieres reducir los falsos positivos manteniendo la capacidad de detectar problemas reales. ¿Qué enfoque permite mejor al modelo generalizar su criterio a patrones de código nuevos que no ha visto antes?",
+      "options": [
+        {
+          "id": "01KT81N3RV5H2DNMMTS91Q190Y",
+          "key": "A",
+          "text": "Incluir ejemplos few-shot en tu prompt mostrando fragmentos de código anotados que distingan los patrones aceptables de los problemas reales en cada categoría."
+        },
+        {
+          "id": "01KT81N3RVRAK5RW8MNQYR620E",
+          "key": "B",
+          "text": "Crear una especificación escrita completa de todos los patrones que no deben marcarse, luego incluir esta documentación completa en el system prompt."
+        },
+        {
+          "id": "01KT81N3RVDH9YTWNGNZS1P4K5",
+          "key": "C",
+          "text": "Implementar post-procesamiento que use coincidencia de palabras clave para filtrar hallazgos que contengan términos como 'convention', 'context-dependent' o 'trade-off'."
+        },
+        {
+          "id": "01KT81N3RVVT397MFA5D3M6HJ2",
+          "key": "D",
+          "text": "Agregar instrucciones a tu system prompt para 'ser conservador', 'solo marcar problemas definitivos', y 'considerar que algunos patrones pueden ser intencionales'."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RV5H2DNMMTS91Q190Y",
+        "correctOptionKey": "A",
+        "text": "Incluir ejemplos few-shot en tu prompt mostrando fragmentos de código anotados que distingan los patrones aceptables de los problemas reales en cada categoría.",
+        "justification": "Los ejemplos few-shot son muy adecuados para juicios de revisión ambiguos porque muestran cómo distinguir patrones aceptables específicos del proyecto de problemas reales. Los ejemplos anotados para estilo, seguridad y rendimiento enseñan al modelo el límite de decisión subyacente para que pueda generalizar a código nuevo, en lugar de simplemente coincidir con una lista fija. Una lista de bloqueo completa es frágil, el filtrado por palabras clave ocurre demasiado tarde y puede ocultar problemas reales, y las instrucciones vagas como 'ser conservador' no proporcionan suficiente guía concreta."
+      },
+      "studyMetadata": {
+        "tags": ["claude_code_for_continuous_integration"],
+        "difficulty": "intermediate",
+        "sourceOrder": 7
+      }
+    },
+    {
+      "id": "01KT81N3RVZY0BD03BKT26KNMV",
+      "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+      "order": 8,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Claude Code para Integración Continua",
+        "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
+      },
+      "prompt": "El pipeline de revisión automatizada genera un promedio de 18 hallazgos por PR. El feedback de los desarrolladores revela tres categorías de ruido no deseado: (1) problemas de estilo y formato ya aplicados por tu linter en CI, (2) hallazgos sobre código de plantilla auto-generado bajo src/gen/, y (3) patrones de helpers de renderizado que son convenciones intencionales del proyecto pero se marcan porque se parecen a anti-patrones comunes. Solo alrededor de 4 hallazgos por PR son bugs lógicos reales. ¿Cuál es la forma más efectiva de reducir este ruido preservando la detección de problemas reales?",
+      "options": [
+        {
+          "id": "01KT81N3RVMBEKS9Q1X1XWQ94Y",
+          "key": "A",
+          "text": "Agregar el parámetro de prompt a la configuración de GitHub Action con instrucciones para suprimir hallazgos duplicados del linter, ignorar el código de plantilla generado, y aplicar requisitos de evidencia más estrictos para problemas relacionados con el renderizado."
+        },
+        {
+          "id": "01KT81N3RVKDRHYVRSKE9D9KSR",
+          "key": "B",
+          "text": "Agregar explicaciones detalladas al CLAUDE.md del proyecto describiendo qué patrones son intencionales, que el linting se maneja por separado en CI, y que el directorio src/gen/ contiene código de plantilla auto-generado."
+        },
+        {
+          "id": "01KT81N3RV56GS697E8SZ39SA7",
+          "key": "C",
+          "text": "Crear un REVIEW.md en la raíz del repositorio con reglas de omisión para los checks aplicados por CI y los archivos generados, y un requisito de verificación de que los hallazgos relacionados con el renderizado deben citar una línea específica que demuestre comportamiento incorrecto."
+        },
+        {
+          "id": "01KT81N3RVHHYNVJKM7JR2XJCG",
+          "key": "D",
+          "text": "Configurar archivos de workflow de GitHub Action separados para cada área de código —uno para el código generado con hallazgos suprimidos, uno para el código de renderizado con instrucciones de revisión personalizadas, y un workflow general para todo lo demás."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RVKDRHYVRSKE9D9KSR",
+        "correctOptionKey": "B",
+        "text": "Agregar explicaciones detalladas al CLAUDE.md del proyecto describiendo qué patrones son intencionales, que el linting se maneja por separado en CI, y que el directorio src/gen/ contiene código de plantilla auto-generado.",
+        "justification": "El ruido proviene de la falta de contexto del proyecto: el modelo revisa el formato gestionado por el linter, los archivos generados y las convenciones de renderizado intencionales como si fueran defectos ordinarios. Poner esos detalles en `CLAUDE.md` proporciona a Claude Code guía persistente del proyecto durante la revisión, para que pueda evitar hallazgos de bajo valor mientras sigue detectando bugs lógicos reales. Dividir los workflows o filtrar de forma ad hoc agrega complejidad, y un parámetro de prompt puntual es menos mantenible que documentar las convenciones estables del repositorio donde Claude Code espera el contexto del proyecto."
+      },
+      "studyMetadata": {
+        "tags": ["claude_code_for_continuous_integration"],
+        "difficulty": "intermediate",
+        "sourceOrder": 8
+      }
+    },
+    {
+      "id": "01KT81N3RVF49N9MZKNFTKD5AZ",
+      "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+      "order": 9,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Claude Code para Integración Continua",
+        "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
+      },
+      "prompt": "Durante las pruebas iniciales del pipeline de revisión automatizada, notas que las revisiones de PRs grandes (50+ archivos modificados) a veces tardan más de 20 minutos y cuestan $8-12 por ejecución debido a extensos bucles agénticos —Claude lee archivos, ejecuta herramientas de análisis e itera muchas veces. Tu equipo necesita que cada invocación se detenga al alcanzar un conteo de iteraciones fijo y una cantidad en dólares fija, aplicado por Claude Code mismo en lugar del runner del job circundante. ¿Qué cambio de configuración aplica directamente ambos límites por invocación?",
+      "options": [
+        {
+          "id": "01KT81N3RV185286CBTZWNA7PH",
+          "key": "A",
+          "text": "Agregar --max-turns 10 --max-budget-usd 2.00 a la invocación de claude -p para limitar las iteraciones y el gasto."
+        },
+        {
+          "id": "01KT81N3RVE4EDABSGK14X9VYG",
+          "key": "B",
+          "text": "Configurar timeout-minutes: 5 en el paso del job de GitHub Actions y monitorear los costos por ejecución a través del dashboard de uso de la Anthropic Console."
+        },
+        {
+          "id": "01KT81N3RV8D12BD9A0S6GEJ4Z",
+          "key": "C",
+          "text": "Cambiar el flag --model a un modelo más pequeño y económico para que cada iteración use menos tokens y tenga un costo por llamada menor."
+        },
+        {
+          "id": "01KT81N3RVQSN8D0SJCCV5J5P4",
+          "key": "D",
+          "text": "Configurar --permission-mode dontAsk para denegar automáticamente cualquier solicitud de permisos de herramientas que no esté en el conjunto explícitamente permitido."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RV185286CBTZWNA7PH",
+        "correctOptionKey": "A",
+        "text": "Agregar --max-turns 10 --max-budget-usd 2.00 a la invocación de claude -p para limitar las iteraciones y el gasto.",
+        "justification": "El requisito es que Claude Code mismo detenga cada invocación después de un conteo de iteraciones fijo y una cantidad en dólares fija. El cap `--max-turns` limita las iteraciones agénticas, mientras que `--max-budget-usd` limita el gasto para esa ejecución. Un timeout de GitHub Actions y el dashboard de uso son controles externos en lugar de caps aplicados por Claude Code, cambiar modelos solo reduce el costo por token sin limitar los bucles, y el modo de permisos controla las aprobaciones de herramientas en lugar del conteo de iteraciones o el presupuesto."
+      },
+      "studyMetadata": {
+        "tags": ["claude_code_for_continuous_integration"],
+        "difficulty": "intermediate",
+        "sourceOrder": 9
+      }
+    },
+    {
+      "id": "01KT81N3RVHF1RDAY99N25R5P1",
+      "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+      "order": 10,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Claude Code para Integración Continua",
+        "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
+      },
+      "prompt": "Tu pipeline revisa aproximadamente 200 scripts de migración de base de datos diariamente usando la Message Batches API. Cada solicitud del batch incluye un system prompt compartido de 8.000 tokens que contiene directrices de revisión de migraciones y documentación del esquema, seguido del script de migración individual. Has agregado breakpoints de cache_control en el system prompt compartido en cada solicitud, pero el monitoreo muestra tasas de cache hit de solo el 32%, con cache misses concentradas en solicitudes procesadas más tarde en la ventana del batch. ¿Qué cambio abordará la causa raíz de estas cache misses sin agregar latencia de procesamiento secuencial?",
+      "options": [
+        {
+          "id": "01KT81N3RVG0H3DH8KKZ23AVBB",
+          "key": "A",
+          "text": "Mover los breakpoints de cache_control del system prompt al contenido del script de migración individual para cachear patrones de código similares entre revisiones."
+        },
+        {
+          "id": "01KT81N3RVS7ZTGZS2S3T0DGTJ",
+          "key": "B",
+          "text": "Agregar solicitudes de pre-calentamiento con max_tokens: 0 al inicio de cada batch para cargar el cache antes de que se ejecuten las solicitudes de revisión."
+        },
+        {
+          "id": "01KT81N3RVSN1224AK224JEJR3",
+          "key": "C",
+          "text": "Dividir las 200 solicitudes en 10 batches secuenciales de 20, enviando cada uno solo después de que el anterior termine, para mantener las solicitudes suficientemente cercanas en el tiempo para la reutilización del cache."
+        },
+        {
+          "id": "01KT81N3RVXYC67GWB12FZ7GB6",
+          "key": "D",
+          "text": "Usar el TTL de cache extendido de 1 hora en lugar del TTL predeterminado de 5 minutos en tus breakpoints de cache."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RVXYC67GWB12FZ7GB6",
+        "correctOptionKey": "D",
+        "text": "Usar el TTL de cache extendido de 1 hora en lugar del TTL predeterminado de 5 minutos en tus breakpoints de cache.",
+        "justification": "El system prompt compartido es idéntico y ya tiene breakpoints de cache, por lo que las cache misses no son causadas por la ubicación del contenido. Se concentran en solicitudes procesadas más tarde en la ventana del batch, lo que apunta al cache que expira antes de que las solicitudes posteriores puedan reutilizarlo. Usar el TTL extendido de 1 hora aborda esa causa raíz mientras preserva el procesamiento paralelo del batch. Mover los breakpoints a scripts de migración variables reduciría la reutilización, el pre-calentamiento no previene la expiración posterior, y los batches secuenciales agregarían latencia innecesaria."
+      },
+      "studyMetadata": {
+        "tags": ["claude_code_for_continuous_integration"],
+        "difficulty": "intermediate",
+        "sourceOrder": 10
+      }
+    },
+    {
+      "id": "01KT81N3RVQ7DZADFKFKGNM1BW",
+      "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+      "order": 11,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Claude Code para Integración Continua",
+        "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
+      },
+      "prompt": "Tu pipeline de CI realiza revisiones de código enfocadas en seguridad en aproximadamente 50 PRs diariamente, costando actualmente $150/día usando la API síncrona. Las revisiones no son bloqueantes —los desarrolladores hacen merge después de que pasen los tests y abordan los hallazgos en commits posteriores. Estás evaluando la Message Batches API por su reducción de costos del 50%. ¿Qué factor determina principalmente si el procesamiento por lotes es apropiado para este caso de uso?",
+      "options": [
+        {
+          "id": "01KT81N3RVKQ860ZGMEBSXM9R6",
+          "key": "A",
+          "text": "Si puedes estructurar cada revisión como una única solicitud sin refinamiento multi-turno."
+        },
+        {
+          "id": "01KT81N3RVW1PWC5RC8SBPVJZS",
+          "key": "B",
+          "text": "Si tu procesamiento de resultados puede manejar revisiones que llegan en un orden diferente al enviado."
+        },
+        {
+          "id": "01KT81N3RVYCEKRWK0K3A2FNDT",
+          "key": "C",
+          "text": "Si el feedback de revisión que llega hasta 24 horas después de la creación del PR sigue siendo accionable."
+        },
+        {
+          "id": "01KT81N3RVZEB49J2FJ2C31XCX",
+          "key": "D",
+          "text": "Si reducir la latencia por revisión de 30-60 segundos a casi instantánea importa para tu flujo de trabajo."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RVYCEKRWK0K3A2FNDT",
+        "correctOptionKey": "C",
+        "text": "Si el feedback de revisión que llega hasta 24 horas después de la creación del PR sigue siendo accionable.",
+        "justification": "La Message Batches API es apropiada para trabajo no bloqueante y tolerante a la latencia porque intercambia garantías de latencia por menor costo. Dado que estas revisiones no bloquean los merges, la pregunta clave es si los hallazgos entregados más tarde, potencialmente hasta 24 horas después de la presentación, siguen siendo lo suficientemente útiles para commits posteriores. El orden de los resultados puede manejarse con identificadores, y la latencia casi instantánea no es la propuesta de valor del procesamiento por lotes."
+      },
+      "studyMetadata": {
+        "tags": ["claude_code_for_continuous_integration"],
+        "difficulty": "intermediate",
+        "sourceOrder": 11
+      }
+    },
+    {
+      "id": "01KT81N3RVFQ5MJ2N2W0HX1JMZ",
+      "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+      "order": 12,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Claude Code para Integración Continua",
+        "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
+      },
+      "prompt": "Tu revisión automatizada llama a la API de Claude para cada PR, usando tool_use con una herramienta report_findings que devuelve un array JSON de objetos de hallazgos (cada uno con file_path, line_number, severity, category y description). Durante las pruebas en un PR grande que toca 30+ archivos, la respuesta alcanza el límite de max_tokens y el output se trunca a mitad del JSON, haciendo que el parser de tu pipeline falle. ¿Cuál es la forma más efectiva de manejar esto?",
+      "options": [
+        {
+          "id": "01KT81N3RV5ZE51K3RN4Q90T1E",
+          "key": "A",
+          "text": "Dividir la revisión en múltiples llamadas a la API que analicen un subconjunto de los archivos modificados, luego combinar los arrays de hallazgos resultantes."
+        },
+        {
+          "id": "01KT81N3RVHD44ANANWRQE4CV3",
+          "key": "B",
+          "text": "Aumentar max_tokens al máximo del modelo e instruir a Claude para que mantenga las descripciones de hallazgos de menos de 50 palabras cada una."
+        },
+        {
+          "id": "01KT81N3RVS9W0801AZM2A958P",
+          "key": "C",
+          "text": "Agregar lógica de reintento que detecte JSON truncado y reenvíe la solicitud con instrucciones para reportar solo los hallazgos de severidad crítica y alta."
+        },
+        {
+          "id": "01KT81N3RVC0DYCV0KA2RJKK1P",
+          "key": "D",
+          "text": "Cambiar de tool_use a pedirle a Claude que devuelva los hallazgos como una lista en markdown."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RV5ZE51K3RN4Q90T1E",
+        "correctOptionKey": "A",
+        "text": "Dividir la revisión en múltiples llamadas a la API que analicen un subconjunto de los archivos modificados, luego combinar los arrays de hallazgos resultantes.",
+        "justification": "El fallo es causado por una única revisión grande que produce más output estructurado del que cabe en `max_tokens`, resultando en JSON truncado. Dividir el PR en unidades de revisión más pequeñas mantiene cada respuesta de `tool_use` acotada y parseable mientras preserva el mismo esquema de hallazgos estructurado. Simplemente aumentar `max_tokens` puede seguir fallando en PRs muy grandes, reintentar con solo los hallazgos de alta severidad cambia el recall, y cambiar a Markdown elimina la estructura parseable por máquina de la que depende el pipeline."
+      },
+      "studyMetadata": {
+        "tags": ["claude_code_for_continuous_integration"],
+        "difficulty": "intermediate",
+        "sourceOrder": 12
+      }
+    },
+    {
+      "id": "01KT81N3RVJ5B7A6GS57J0S5W6",
+      "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+      "order": 13,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Claude Code para Integración Continua",
+        "body": "[ilegible]"
+      },
+      "prompt": "Tu pipeline ejecuta:\n\n```\nPROMPT=\"You are a code reviewer.\"\nPROMPT=\"$PROMPT Analyze the provided diff\"\nPROMPT=\"$PROMPT for bugs, security issues,\"\nPROMPT=\"$PROMPT and style violations.\"\n\nclaude -p \\\n  --dangerously-skip-permissions \\\n  --system-prompt \"$PROMPT\" \\\n  < diff.txt\n```\n\nLas revisiones se completan y devuelven feedback, pero Claude solo comenta sobre el texto del diff enviado por pipe —nunca lee archivos circundantes en el repositorio clonado para entender el contexto más amplio, incluso cuando el diff modifica una función llamada por muchos otros módulos. ¿Qué cambio en la invocación hará que Claude lea los archivos relacionados en el repositorio mientras sigue aplicando tus instrucciones de revisión personalizadas?",
+      "options": [
+        {
+          "id": "01KT81N3RV2FJDGWZHBYV86A0X",
+          "key": "A",
+          "text": "Mantener --system-prompt y agregar --allowedTools \"Read,Glob,Grep\" para que el modo no interactivo -p permita las herramientas del sistema de archivos que de otro modo deshabilita."
+        },
+        {
+          "id": "01KT81N3RVCATW51SM9XSGSQ58",
+          "key": "B",
+          "text": "Eliminar --system-prompt por completo y colocar las instrucciones de revisión en un archivo CLAUDE.md en la raíz del repositorio, ya que --system-prompt es incompatible con el uso de herramientas bajo -p."
+        },
+        {
+          "id": "01KT81N3RVQR7N9FZ4SN1VYGSB",
+          "key": "C",
+          "text": "Dejar de enviar el diff por stdin e incorporar el contenido del diff dentro del string del prompt, para que Claude Code trate la invocación como una sesión agéntica en lugar de un procesamiento de stream."
+        },
+        {
+          "id": "01KT81N3RVBT9GJQA67EQPKQRM",
+          "key": "D",
+          "text": "Reemplazar --system-prompt con --append-system-prompt para que las instrucciones de revisión se agreguen al prompt predeterminado de Claude Code en lugar de sobrescribir la guía incorporada para usar herramientas de lectura de archivos y navegación de código."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RVBT9GJQA67EQPKQRM",
+        "correctOptionKey": "D",
+        "text": "Reemplazar --system-prompt con --append-system-prompt para que las instrucciones de revisión se agreguen al prompt predeterminado de Claude Code en lugar de sobrescribir la guía incorporada para usar herramientas de lectura de archivos y navegación de código.",
+        "justification": "La invocación está reemplazando la guía predeterminada del sistema de Claude Code con un prompt personalizado mínimo, por lo que la ejecución se comporta como si solo debiera analizar el texto del diff enviado por stdin. Usar `--append-system-prompt` preserva las instrucciones incorporadas de Claude Code para navegar el repositorio con herramientas, mientras agrega los criterios de revisión personalizados. Simplemente permitir herramientas o mover el diff al prompt no soluciona la guía predeterminada sobrescrita, y `CLAUDE.md` es contexto del proyecto, no un reemplazo para las instrucciones de revisión a nivel de invocación."
+      },
+      "studyMetadata": {
+        "tags": ["claude_code_for_continuous_integration"],
+        "difficulty": "intermediate",
+        "sourceOrder": 13
+      }
+    },
+    {
+      "id": "01KT81N3RV9QP7F2EXVX3V8FJ4",
+      "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+      "order": 14,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Claude Code para Integración Continua",
+        "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
+      },
+      "prompt": "Construiste una herramienta de revisión de código basada en LLM que analiza pull requests y genera hallazgos estructurados. Cada hallazgo es un objeto JSON con file_path, line_number, issue_category (por ejemplo, \"security\", \"style\") y description. Los desarrolladores pueden hacer clic en \"dismiss\" en cualquier hallazgo que consideren poco útil; actualmente el 35% de los hallazgos son descartados. Quieres analizar estos descartados para entender qué está fallando en tu sistema y mejorar tus prompts. ¿Qué cambio en la estructura de salida sería más útil para este análisis?",
+      "options": [
+        {
+          "id": "01KT81N3RVQ87KCTB0Y651E1WS",
+          "key": "A",
+          "text": "Eliminar el campo issue_category y rastrear las tasas de descarte solo a nivel de hallazgo individual."
+        },
+        {
+          "id": "01KT81N3RVZ7VGXGDZ1SZBNEC6",
+          "key": "B",
+          "text": "Ampliar el campo description para incluir explicaciones más detalladas de por qué cada problema importa y cómo corregirlo."
+        },
+        {
+          "id": "01KT81N3RVV8Y6N0QS9AY0NZS5",
+          "key": "C",
+          "text": "Agregar un campo model_confidence (0.0-1.0) y filtrar los hallazgos por debajo de un umbral calibrado contra las tasas históricas de descarte."
+        },
+        {
+          "id": "01KT81N3RV8JF4A8GWZEEGRFGM",
+          "key": "D",
+          "text": "Agregar un campo detected_pattern que registre la construcción de código (por ejemplo, \"single-letter loop variable\") que disparó cada hallazgo."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RV8JF4A8GWZEEGRFGM",
+        "correctOptionKey": "D",
+        "text": "Agregar un campo detected_pattern que registre la construcción de código (por ejemplo, \"single-letter loop variable\") que disparó cada hallazgo.",
+        "justification": "Para mejorar los prompts, el equipo necesita saber qué patrones de código recurrentes generan hallazgos descartados. `issue_category` es demasiado amplio, y el rastreo a nivel de hallazgo individual es demasiado granular para revelar fallas sistemáticas del prompt. Un campo `detected_pattern` permite segmentar los descartados por la construcción real que disparó el comentario de revisión, identificar patrones con alto índice de falsos positivos y refinar criterios o ejemplos para esos casos. El filtrado por confianza puede reducir el volumen, pero no explica qué está fallando en el sistema."
+      },
+      "studyMetadata": {
+        "tags": ["claude_code_for_continuous_integration"],
+        "difficulty": "intermediate",
+        "sourceOrder": 14
+      }
+    },
+    {
+      "id": "01KT81N3RWQ2TM730EQJNRC6MQ",
+      "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+      "order": 15,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Claude Code para Integración Continua",
+        "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
+      },
+      "prompt": "Tus prompts de revisión de código incluyen tanto los cambios de implementación como el archivo de tests correspondiente, pero los comentarios de revisión del LLM no señalan caminos de código sin pruebas. El análisis revela que el modelo detecta correctamente las funciones que no tienen tests en absoluto, pero no identifica cuando las ramas condicionales o los caminos de manejo de errores dentro de funciones con tests carecen de cobertura.\n¿Cuál es la forma más efectiva de mejorar la detección de gaps de cobertura a nivel de ramas sin complicar demasiado el pipeline?",
+      "options": [
+        {
+          "id": "01KT81N3RWG88YNK6KXND42EGY",
+          "key": "A",
+          "text": "Agregar instrucciones explícitas que dirijan al modelo a enumerar cada rama condicional y camino de excepción, luego verificar que cada uno tenga una aserción de test correspondiente"
+        },
+        {
+          "id": "01KT81N3RWAC7E1T686GSH9B8A",
+          "key": "B",
+          "text": "Incluir ejemplos few-shot que muestren código con una rama sin cobertura junto al comentario de revisión que identifica el caso de test faltante específico"
+        },
+        {
+          "id": "01KT81N3RW0F40FAHY2WT1PBP1",
+          "key": "C",
+          "text": "Implementar un pipeline multi-paso donde llamadas separadas al LLM primero extraigan todas las ramas condicionales, luego crucen cada una con las aserciones de test en un segundo paso"
+        },
+        {
+          "id": "01KT81N3RWQE3GCPF7NSJV74BH",
+          "key": "D",
+          "text": "Reestructurar el prompt para intercalar implementación y tests, presentando cada función seguida inmediatamente de sus casos de test"
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RWAC7E1T686GSH9B8A",
+        "correctOptionKey": "B",
+        "text": "Incluir ejemplos few-shot que muestren código con una rama sin cobertura junto al comentario de revisión que identifica el caso de test faltante específico",
+        "justification": "El modelo ya detecta funciones completamente sin tests, pero falla en el juicio más ambiguo de si ramas específicas y caminos de error están cubiertos. Los ejemplos few-shot demuestran directamente ese patrón de decisión: una función con tests puede tener igualmente una rama condicional o un camino de excepción sin cobertura, y la revisión debe nombrar el caso de test faltante. Esto mejora la detección a nivel de ramas sin agregar una arquitectura multi-paso. Un checklist o prompt reordenado puede ayudar, pero los ejemplos son más efectivos para enseñar el comportamiento de revisión matizado."
+      },
+      "studyMetadata": {
+        "tags": ["claude_code_for_continuous_integration"],
+        "difficulty": "intermediate",
+        "sourceOrder": 15
+      }
+    },
+    {
+      "id": "01KT81N3RW6F9A6X0J8S3MH4GD",
+      "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+      "order": 16,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Sistema de Investigación Multi-Agente",
+        "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
+      },
+      "prompt": "Los usuarios reportan que los reportes finales a veces carecen de profundidad en subtemas específicos. La investigación muestra que el agente de análisis de documentos frecuentemente identifica brechas—por ejemplo, notando “las fuentes recuperadas discuten autenticación de API pero carecen de detalles sobre patrones de token refresh”—pero bajo el pipeline estricto actual, este insight no es accionable ya que la búsqueda ya se completó. ¿Cuál es el cambio arquitectónico más efectivo?",
+      "options": [
+        {
+          "id": "01KT81N3RWEW65MN8ECXRE4AYC",
+          "key": "A",
+          "text": "Hacer que el coordinador revise la salida del análisis en busca de indicadores de brecha y vuelva a invocar la búsqueda con consultas informadas por las brechas cuando se detecten."
+        },
+        {
+          "id": "01KT81N3RWTS592RAK111TEJC6",
+          "key": "B",
+          "text": "Hacer que el agente de síntesis adjunte puntajes de confianza a cada sección y marque las áreas con cobertura insuficiente para revisión manual."
+        },
+        {
+          "id": "01KT81N3RW0MK70WECXA5TCBPA",
+          "key": "C",
+          "text": "Agregar un agente de planificación de investigación antes de la fase de búsqueda que descomponga los temas en sub-preguntas específicas."
+        },
+        {
+          "id": "01KT81N3RW2CHMJF6N93CAPYJT",
+          "key": "D",
+          "text": "Hacer que el agente de análisis reporte brechas específicas al coordinador, que dispara búsquedas dirigidas y vuelve a invocar el análisis hasta que sea suficiente."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RW2CHMJF6N93CAPYJT",
+        "correctOptionKey": "D",
+        "text": "Hacer que el agente de análisis reporte brechas específicas al coordinador, que dispara búsquedas dirigidas y vuelve a invocar el análisis hasta que sea suficiente.",
+        "justification": "El problema no es solo la planificación inicial; el agente de análisis está descubriendo brechas de cobertura concretas después de ver el material recuperado. Esas brechas necesitan convertirse en señales accionables en la arquitectura. Que el agente de análisis devuelva subtemas específicos faltantes al coordinador permite que este realice búsquedas dirigidas, pase las nuevas fuentes de vuelta por el análisis e itere hasta que la cobertura sea adecuada. Las marcas de confianza o la revisión manual solo exponen la debilidad después del hecho, y un paso solo de planificación no puede reaccionar a brechas descubiertas durante el análisis."
+      },
+      "studyMetadata": {
+        "tags": ["multi_agent_research_system"],
+        "difficulty": "intermediate",
+        "sourceOrder": 16
+      }
+    },
+    {
+      "id": "01KT81N3RW6NPSN7Y2P0428FBA",
+      "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+      "order": 17,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Sistema de Investigación Multi-Agente",
+        "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
+      },
+      "prompt": "El agente de síntesis completa su paso inicial pero marca que tres preguntas clave de investigación permanecen sin respuesta porque los agentes de búsqueda web y análisis de documentos no encontraron información relevante sobre esos subtemas específicos. El coordinador actualmente procede directamente a la generación del reporte, produciendo reportes con cobertura incompleta. ¿Qué cambio mejoraría más efectivamente la completitud de la investigación?",
+      "options": [
+        {
+          "id": "01KT81N3RWH6YN9NHQ901A2M9P",
+          "key": "A",
+          "text": "Hacer que el coordinador evalúe la salida de síntesis en busca de brechas, luego vuelva a delegar en la búsqueda web y el análisis de documentos con consultas dirigidas antes de invocar la síntesis nuevamente."
+        },
+        {
+          "id": "01KT81N3RWGF603Y4QSY1DVV2N",
+          "key": "B",
+          "text": "Dar al agente de síntesis acceso directo a herramientas de búsqueda web para que pueda llenar de forma autónoma las brechas de conocimiento sin devolver el control al coordinador."
+        },
+        {
+          "id": "01KT81N3RWGR21RR537F63N2VB",
+          "key": "C",
+          "text": "Hacer que el agente de generación de reportes anote qué preguntas de investigación no pudieron responderse, para que los usuarios entiendan las limitaciones del resultado final."
+        },
+        {
+          "id": "01KT81N3RWJA73RWF0W2BC71MD",
+          "key": "D",
+          "text": "Aumentar la amplitud inicial de las consultas enviadas a la búsqueda web y análisis de documentos para reducir la probabilidad de omitir información relevante."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RWH6YN9NHQ901A2M9P",
+        "correctOptionKey": "A",
+        "text": "Hacer que el coordinador evalúe la salida de síntesis en busca de brechas, luego vuelva a delegar en la búsqueda web y el análisis de documentos con consultas dirigidas antes de invocar la síntesis nuevamente.",
+        "justification": "El agente de síntesis identificó preguntas de investigación sin respuesta específicas, por lo que el coordinador debería usar esas brechas para impulsar otro paso de investigación dirigida. Esto preserva la arquitectura liderada por el coordinador mientras permite que el pipeline mejore iterativamente la cobertura antes de la generación del reporte. Dar a síntesis acceso amplio de búsqueda debilita la separación de responsabilidades, solo anotar las limitaciones no mejora la completitud, y ampliar la búsqueda inicial es menos eficiente que usar las brechas concretas descubiertas durante la síntesis."
+      },
+      "studyMetadata": {
+        "tags": ["multi_agent_research_system"],
+        "difficulty": "intermediate",
+        "sourceOrder": 17
+      }
+    },
+    {
+      "id": "01KT81N3RWNNJ0B7ETY3R54GJ8",
+      "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+      "order": 18,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Sistema de Investigación Multi-Agente",
+        "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
+      },
+      "prompt": "Después de que los subagentes de búsqueda web y análisis de documentos completan sus tareas, el coordinador necesita iniciar el subagente de síntesis para sintetizar los hallazgos. ¿Cuál es el enfoque correcto para proveer al subagente de síntesis con la información que necesita?",
+      "options": [
+        {
+          "id": "01KT81N3RWP21F1XX94EA6WEPY",
+          "key": "A",
+          "text": "Pasar identificadores de referencia y configurar el subagente con acceso de lectura a un almacén de memoria compartida donde otros subagentes depositaron sus resultados"
+        },
+        {
+          "id": "01KT81N3RW5RFBHR12QVR1B3AF",
+          "key": "B",
+          "text": "Incluir los hallazgos completos de ambos subagentes directamente en el prompt del subagente de síntesis"
+        },
+        {
+          "id": "01KT81N3RWKBDDY739VV2JSXP1",
+          "key": "C",
+          "text": "Proveer al subagente con definiciones de herramientas que le permitan solicitar salidas de otros subagentes a través de callbacks"
+        },
+        {
+          "id": "01KT81N3RW0RFCVF36N7R6FBSJ",
+          "key": "D",
+          "text": "Iniciar el subagente con solo una breve descripción de tarea, confiando en la herencia automática de contexto del coordinador"
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RW5RFBHR12QVR1B3AF",
+        "correctOptionKey": "B",
+        "text": "Incluir los hallazgos completos de ambos subagentes directamente en el prompt del subagente de síntesis",
+        "justification": "Los subagentes operan con su propio contexto, por lo que el subagente de síntesis no debe depender de la herencia automática de la conversación del coordinador. El coordinador necesita pasar directamente las salidas de búsqueda web y análisis de documentos, idealmente en una forma estructurada que preserve las afirmaciones, evidencia, metadatos de fuente y atribución. Las referencias a memoria compartida o los mecanismos de callback agregan indirección innecesaria, mientras que una breve descripción de tarea dejaría al agente de síntesis sin la evidencia que debe combinar."
+      },
+      "studyMetadata": {
+        "tags": ["multi_agent_research_system"],
+        "difficulty": "intermediate",
+        "sourceOrder": 18
+      }
+    },
+    {
+      "id": "01KT81N3RWGA6W5CE41E0KE0YP",
+      "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+      "order": 19,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Sistema de Investigación Multi-Agente",
+        "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
+      },
+      "prompt": "El agente de búsqueda web recopiló varias fuentes relevantes para un tema de investigación. El agente de análisis de documentos ahora necesita examinar estas fuentes. ¿Cómo fluye típicamente la información entre estos dos subagentes especializados?",
+      "options": [
+        {
+          "id": "01KT81N3RWPV2Y4ZY62Y93ESQB",
+          "key": "A",
+          "text": "El agente de búsqueda web invoca directamente al agente de análisis de documentos, pasando las fuentes descubiertas como parámetros."
+        },
+        {
+          "id": "01KT81N3RW1B22K56Y87QJCX99",
+          "key": "B",
+          "text": "Ambos agentes acceden a un almacén de memoria compartida donde el agente de búsqueda web escribe los hallazgos y el agente de análisis de documentos los lee."
+        },
+        {
+          "id": "01KT81N3RWSF575NKE0Y62FNXE",
+          "key": "C",
+          "text": "El agente coordinador recibe la salida del agente de búsqueda web e incluye los hallazgos relevantes en el prompt al invocar al agente de análisis de documentos."
+        },
+        {
+          "id": "01KT81N3RW7CENFRQ942FPV07B",
+          "key": "D",
+          "text": "Los agentes se comunican a través de una cola de mensajes basada en eventos, con el agente de análisis de documentos suscripto a los eventos de finalización de búsqueda web."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RWSF575NKE0Y62FNXE",
+        "correctOptionKey": "C",
+        "text": "El agente coordinador recibe la salida del agente de búsqueda web e incluye los hallazgos relevantes en el prompt al invocar al agente de análisis de documentos.",
+        "justification": "En una arquitectura coordinador-subagente, los agentes especializados típicamente no se comunican directamente entre sí ni dependen de contexto compartido implícito. El coordinador gestiona la descomposición de tareas, la agregación de resultados y el enrutamiento de información. Después de que la búsqueda web se completa, el coordinador debe tomar los hallazgos de fuentes relevantes e incluirlos explícitamente al invocar al agente de análisis de documentos. Esto mantiene la comunicación observable y controlada mientras asegura que el siguiente subagente tenga el contexto que necesita."
+      },
+      "studyMetadata": {
+        "tags": ["multi_agent_research_system"],
+        "difficulty": "intermediate",
+        "sourceOrder": 19
+      }
+    },
+    {
+      "id": "01KT81N3RWCFE8BBP43HFKBPT4",
+      "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+      "order": 20,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Sistema de Investigación Multi-Agente",
+        "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
+      },
+      "prompt": "Al analizar casos legales complejos que citan múltiples precedentes, el subagente de análisis de documentos los procesa secuencialmente. Un caso emblemático que cita 12 precedentes tarda más de 3 minutos en analizarse por completo. ¿Cuál es la forma más efectiva de reducir esta latencia preservando la capacidad del coordinador para monitorear y depurar el sistema?",
+      "options": [
+        {
+          "id": "01KT81N3RWZ2GKM7VYYVAFKHAV",
+          "key": "A",
+          "text": "Implementar una cola de mensajes donde las tareas de análisis de precedentes sean procesadas asíncronamente por un pool de agentes trabajadores"
+        },
+        {
+          "id": "01KT81N3RW9SATG3E7577779SQ",
+          "key": "B",
+          "text": "Crear una jerarquía de agentes recursiva donde los agentes de análisis subdividan el trabajo entre agentes hijos hasta alcanzar la granularidad de un solo precedente"
+        },
+        {
+          "id": "01KT81N3RWCFWSY7KBYM5QETKZ",
+          "key": "C",
+          "text": "Habilitar al subagente de análisis de documentos para que genere dinámicamente sus propios subagentes especializados cuando encuentre casos con muchas citas"
+        },
+        {
+          "id": "01KT81N3RWMA3RJH8H6KHM5XGN",
+          "key": "D",
+          "text": "Hacer que el coordinador genere subagentes de análisis de documentos en paralelo, cada uno manejando un subconjunto de precedentes, luego agregar los resultados antes de la síntesis"
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RWMA3RJH8H6KHM5XGN",
+        "correctOptionKey": "D",
+        "text": "Hacer que el coordinador genere subagentes de análisis de documentos en paralelo, cada uno manejando un subconjunto de precedentes, luego agregar los resultados antes de la síntesis",
+        "justification": "El trabajo es naturalmente particionable por precedente, por lo que ejecutar múltiples subagentes de análisis de documentos en paralelo reduce la latencia. Mantener la generación y agregación en el coordinador preserva la observabilidad, el manejo de errores y la depurabilidad, porque el coordinador puede rastrear qué subconjunto analizó cada subagente y combinar los resultados antes de la síntesis. Las colas de mensajes, las jerarquías recursivas o los subagentes que generan sus propios subagentes agregan complejidad y hacen que el flujo de control sea más difícil de monitorear."
+      },
+      "studyMetadata": {
+        "tags": ["multi_agent_research_system"],
+        "difficulty": "intermediate",
+        "sourceOrder": 20
+      }
+    },
+    {
+      "id": "01KT81N3RWDY00S5VYB5CE2HE5",
+      "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+      "order": 21,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Sistema de Investigación Multi-Agente",
+        "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
+      },
+      "prompt": "Después de que el agente de búsqueda web y el agente de análisis de documentos completan sus tareas, el coordinador invoca al agente de síntesis. Sin embargo, el agente de síntesis responde que no puede completar la tarea porque no se proporcionaron hallazgos de investigación. ¿Cuál es la causa más probable de este problema?",
+      "options": [
+        {
+          "id": "01KT81N3RW2ZYMPYC785P7CT70",
+          "key": "A",
+          "text": "El agente de síntesis necesita herramientas que puedan obtener resultados directamente del historial de conversaciones de los otros agentes."
+        },
+        {
+          "id": "01KT81N3RWCXB13FXXXWF1BFMB",
+          "key": "B",
+          "text": "La ventana de contexto del agente de síntesis no es lo suficientemente grande para contener las salidas combinadas de ambos agentes anteriores."
+        },
+        {
+          "id": "01KT81N3RWYH5QG6EX9CSAN9EN",
+          "key": "C",
+          "text": "Los subagentes necesitan compartir una única conexión a la API para habilitar el compartido automático de contexto entre invocaciones."
+        },
+        {
+          "id": "01KT81N3RWNDSN5J8PF4FA0PW1",
+          "key": "D",
+          "text": "El coordinador no incluyó las salidas de los agentes anteriores en el prompt del agente de síntesis."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RWNDSN5J8PF4FA0PW1",
+        "correctOptionKey": "D",
+        "text": "El coordinador no incluyó las salidas de los agentes anteriores en el prompt del agente de síntesis.",
+        "justification": "Los subagentes no heredan automáticamente el historial completo de conversación del coordinador ni las salidas de otros subagentes. Si el agente de síntesis dice que no se proporcionaron hallazgos, el problema probable es que el coordinador lo invocó solo con la solicitud de tarea y omitió los resultados de búsqueda web y análisis de documentos. La solución es incluir esas salidas previas directamente en el prompt de síntesis, preferiblemente en una forma estructurada que preserve los metadatos de fuente y la evidencia."
+      },
+      "studyMetadata": {
+        "tags": ["multi_agent_research_system"],
+        "difficulty": "intermediate",
+        "sourceOrder": 21
+      }
+    },
+    {
+      "id": "01KT81N3RWYKZDVRZYMQH2F80X",
+      "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+      "order": 22,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Sistema de Investigación Multi-Agente",
+        "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
+      },
+      "prompt": "En producción, observás que las consultas simples de verificación de hechos (por ejemplo, \"¿En qué año se firmó el Acuerdo de París sobre el Clima?\") atraviesan los cuatro subagentes secuencialmente, consumiendo más de 40 segundos y tokens significativos por consulta. La investigación comparativa compleja se beneficia del pipeline completo. La distribución de consultas es diversa y evoluciona a medida que los usuarios descubren nuevas aplicaciones. ¿Cuál es el enfoque más efectivo para optimizar para variedad de complejidad de consultas?",
+      "options": [
+        {
+          "id": "01KT81N3RW54604K292XED88PG",
+          "key": "A",
+          "text": "Hacer que el coordinador analice cada consulta y decida dinámicamente qué subagentes invocar basándose en su evaluación de los requisitos de la consulta."
+        },
+        {
+          "id": "01KT81N3RW7X1ECG2PTQJTET20",
+          "key": "B",
+          "text": "Crear un camino rápido para preguntas fácticas que omita los subagentes por completo, enrutando todas las demás consultas a través del pipeline completo para garantizar la exhaustividad de la investigación."
+        },
+        {
+          "id": "01KT81N3RWRSTN5008K8ANY2SZ",
+          "key": "C",
+          "text": "Implementar enrutamiento basado en patrones que categorice las consultas por estructura (hecho único vs. comparativa vs. analítica) y mapee cada categoría a una combinación predefinida de subagentes."
+        },
+        {
+          "id": "01KT81N3RWSW818082EXFVAGBA",
+          "key": "D",
+          "text": "Entrenar un clasificador de complejidad de consultas con datos históricos etiquetados para predecir combinaciones óptimas de subagentes, reentrenando periódicamente a medida que los patrones de consulta evolucionan."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RW54604K292XED88PG",
+        "correctOptionKey": "A",
+        "text": "Hacer que el coordinador analice cada consulta y decida dinámicamente qué subagentes invocar basándose en su evaluación de los requisitos de la consulta.",
+        "justification": "La carga de trabajo tiene tipos de consultas diversas y en evolución, por lo que un pipeline fijo desperdicia tiempo en preguntas simples y el enrutamiento rígido se volverá frágil. El rol del coordinador es evaluar la complejidad de las consultas, descomponer tareas e invocar solo los subagentes necesarios para esa solicitud. Esto permite que las verificaciones de hechos simples tomen un camino más ligero mientras la investigación comparativa compleja sigue usando el flujo de trabajo multi-agente completo. Un camino rápido estático o una tabla de patrones maneja solo categorías conocidas, y un clasificador separado agrega sobrecarga de mantenimiento sin aprovechar el rol de orquestación existente del coordinador."
+      },
+      "studyMetadata": {
+        "tags": ["multi_agent_research_system"],
+        "difficulty": "intermediate",
+        "sourceOrder": 22
+      }
+    },
+    {
+      "id": "01KT81N3RWC8A6KA0T0S68ASK1",
+      "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+      "order": 23,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Sistema de Investigación Multi-Agente",
+        "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
+      },
+      "prompt": "Las revisiones de producción revelan un manejo inconsistente de la incertidumbre en los reportes finales. A veces, los hallazgos contradictorios de los subagentes se sintetizan en una declaración única y confiada (perdiendo matices), mientras que otras veces los reportes tienen demasiadas calificaciones (volviéndose inútiles). Cuando el agente de búsqueda web devuelve \"analistas de la industria estiman un tamaño de mercado de $50B (metodología varía)\" y el agente de análisis de documentos devuelve \"estudio revisado por pares estima $35B (±$7B, IC 95%)\", el coordinador elige uno arbitrariamente o produce declaraciones vagas como \"el mercado podría ser $35B-$50B dependiendo de factores\". ¿Qué enfoque sistemático aborda mejor esto?",
+      "options": [
+        {
+          "id": "01KT81N3RWDQE4DK4RXWJXH951",
+          "key": "A",
+          "text": "Implementar una capa de calibración de confianza que normalice las expresiones de incertidumbre de los subagentes a puntajes de probabilidad estandarizados (0.0-1.0), luego promediar ponderadamente los hallazgos por su confianza calibrada."
+        },
+        {
+          "id": "01KT81N3RW4BXSSD1MMV7HQXEQ",
+          "key": "B",
+          "text": "Configurar los subagentes para que solo reporten hallazgos que cumplan un umbral de alta confianza, filtrando la información incierta antes de que llegue al coordinador."
+        },
+        {
+          "id": "01KT81N3RWPA5ED733YAGZF5SP",
+          "key": "C",
+          "text": "Instruir al agente de síntesis para que estructure los reportes con secciones explícitas que distingan los hallazgos bien establecidos de los controvertidos, preservando las caracterizaciones originales de las fuentes y el contexto metodológico."
+        },
+        {
+          "id": "01KT81N3RWM2JPB8J45P7R2G1R",
+          "key": "D",
+          "text": "Agregar un subagente de verificación que cruce los hallazgos entre fuentes, pasando a síntesis solo las afirmaciones corroboradas por al menos dos fuentes independientes."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RWPA5ED733YAGZF5SP",
+        "correctOptionKey": "C",
+        "text": "Instruir al agente de síntesis para que estructure los reportes con secciones explícitas que distingan los hallazgos bien establecidos de los controvertidos, preservando las caracterizaciones originales de las fuentes y el contexto metodológico.",
+        "justification": "El problema es la síntesis inconsistente de la incertidumbre, no la falta de un único puntaje de confianza numérico. Los hallazgos contradictorios pero creíbles deben preservarse con atribución, caracterización de la fuente, intervalos de confianza y contexto metodológico. Estructurar el reporte para separar los hallazgos bien establecidos de los controvertidos evita la selección arbitraria sin caer en el sobre-precavido vago. Filtrar afirmaciones inciertas o requerir corroboración de dos fuentes descartaría matices útiles, y el promedio ponderado puede ocultar diferencias metodológicas importantes."
+      },
+      "studyMetadata": {
+        "tags": ["multi_agent_research_system"],
+        "difficulty": "intermediate",
+        "sourceOrder": 23
+      }
+    },
+    {
+      "id": "01KT81N3RX8Q4TGJE5WJ00R47V",
+      "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+      "order": 24,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Sistema de Investigación Multi-Agente",
+        "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
+      },
+      "prompt": "El coordinador proporciona instrucciones paso a paso detalladas al subagente de búsqueda web, especificando consultas de búsqueda exactas, prioridades de fuentes y filtros de fecha. El monitoreo de producción revela tres problemas: (1) el subagente reporta \"resultados insuficientes\" en lugar de probar enfoques alternativos cuando las búsquedas pre-especificadas fallan, (2) la calidad de la investigación cae para temas emergentes que no coinciden con los patrones esperados, y (3) el subagente raramente encuentra fuentes tangenciales valiosas. ¿Cuál es la forma más efectiva de mejorar la adaptabilidad del subagente?",
+      "options": [
+        {
+          "id": "01KT81N3RXY1RG0B316S1W1HHN",
+          "key": "A",
+          "text": "Eliminar los detalles procedimentales por completo, delegando con objetivos simples como \"investigá X a fondo\" y confiando en las capacidades generales del subagente."
+        },
+        {
+          "id": "01KT81N3RX0HVE3WMV9K84VEAD",
+          "key": "B",
+          "text": "Implementar un paso de clasificación de temas donde el coordinador categorice las solicitudes como \"bien definidas\" o \"exploratorias\" y use diferentes estilos de instrucción para cada categoría."
+        },
+        {
+          "id": "01KT81N3RXP21Z990D4MQNR5Y9",
+          "key": "C",
+          "text": "Especificar objetivos de investigación y criterios de calidad (amplitud de cobertura, diversidad de fuentes, actualidad) en lugar de pasos procedimentales, dejando que el subagente determine su estrategia de búsqueda."
+        },
+        {
+          "id": "01KT81N3RXRTS1DDQSN0Z2H5WA",
+          "key": "D",
+          "text": "Agregar directivas de respaldo explícitas a las instrucciones detalladas: \"Si las búsquedas especificadas arrojan menos de N resultados, intentar formulaciones de consulta alternativas antes de reportar el fallo\"."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RXP21Z990D4MQNR5Y9",
+        "correctOptionKey": "C",
+        "text": "Especificar objetivos de investigación y criterios de calidad (amplitud de cobertura, diversidad de fuentes, actualidad) en lugar de pasos procedimentales, dejando que el subagente determine su estrategia de búsqueda.",
+        "justification": "Los fallos provienen de sobre-restringir al subagente de búsqueda web con consultas y procedimientos fijos. Para temas emergentes o exploratorios, el subagente necesita espacio para adaptar su estrategia de búsqueda mientras se le sigue exigiendo estándares de calidad claros. Los objetivos y criterios como la amplitud, la diversidad de fuentes y la actualidad definen cómo es una buena investigación sin dictar pasos frágiles. Eliminar la guía por completo es demasiado vago, las cláusulas de respaldo solo parchean un modo de fallo, y la clasificación agrega complejidad mientras sigue dependiendo de estilos de instrucción predefinidos."
+      },
+      "studyMetadata": {
+        "tags": ["multi_agent_research_system"],
+        "difficulty": "intermediate",
+        "sourceOrder": 24
+      }
+    },
+    {
+      "id": "01KT81N3RXEJJ97KBXA8RANBQJ",
+      "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+      "order": 25,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Sistema de Investigación Multi-Agente",
+        "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
+      },
+      "prompt": "Tu pipeline de investigación multi-agente falló después de procesar 12 de 28 documentos. El agente de búsqueda web había identificado fuentes relevantes, el analizador de documentos había completado parcialmente la extracción, y el sintetizador había comenzado la identificación de patrones. Necesitás reanudar el procesamiento sin repetir trabajo ni perder la fidelidad de los hallazgos previos. ¿Qué enfoque de gestión de estado equilibra mejor la fidelidad de la información con la eficiencia del contexto al restaurar el estado del agente?",
+      "options": [
+        {
+          "id": "01KT81N3RXGF3DCX7YBHBAHNHD",
+          "key": "A",
+          "text": "Hacer que cada agente persista una exportación estructurada en una ubicación conocida. Al reanudar, el coordinador carga el manifiesto e inyecta el estado relevante en los prompts de los agentes."
+        },
+        {
+          "id": "01KT81N3RXHC82AVBPS6W4RFRG",
+          "key": "B",
+          "text": "Hacer que cada agente mantenga su propio archivo de estado persistente y lo recargue de forma independiente al inicio de cada sesión."
+        },
+        {
+          "id": "01KT81N3RXEVFZSS2A0G59M66E",
+          "key": "C",
+          "text": "Persistir el log de conversación del coordinador que contiene todas las delegaciones de tareas y respuestas, proveyéndolo a los agentes al reanudar."
+        },
+        {
+          "id": "01KT81N3RXWG0NDGD89T5943KX",
+          "key": "D",
+          "text": "Indexar todas las salidas de los agentes en un almacén vectorial compartido. Al reanudar, cada agente consulta el almacén usando búsqueda semántica para recuperar hallazgos previos relevantes."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RXGF3DCX7YBHBAHNHD",
+        "correctOptionKey": "A",
+        "text": "Hacer que cada agente persista una exportación estructurada en una ubicación conocida. Al reanudar, el coordinador carga el manifiesto e inyecta el estado relevante en los prompts de los agentes.",
+        "justification": "Las exportaciones de estado estructuradas preservan el progreso con alta fidelidad sin reproducir cada turno de conversación. Un manifiesto le da al coordinador un mapa confiable de qué fuentes fueron encontradas, qué documentos fueron procesados, qué extracciones están completas y qué trabajo de síntesis había comenzado. El coordinador puede entonces inyectar solo el estado relevante en cada prompt de agente reanudado. Los archivos de estado independientes de los agentes arriesgan una restauración inconsistente, los logs completos desperdician contexto, y la recuperación semántica puede omitir o distorsionar hallazgos previos exactos."
+      },
+      "studyMetadata": {
+        "tags": ["multi_agent_research_system"],
+        "difficulty": "intermediate",
+        "sourceOrder": 25
+      }
+    },
+    {
+      "id": "01KT81N3RXY3TDCTP2EWBDXJ9N",
+      "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+      "order": 26,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Sistema de Investigación Multi-Agente",
+        "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
+      },
+      "prompt": "El agente coordinador tiene AgentDefinitions configuradas para los cuatro subagentes especializados, cada uno con descripciones, prompts y restricciones de herramientas apropiadas. Durante las pruebas, notás que el coordinador razona correctamente sobre cuándo delegar—genera mensajes como \"Le pediré al agente de búsqueda web que encuentre fuentes sobre este tema\"—pero nunca ocurre ninguna ejecución de subagente. El coordinador luego procede como si la delegación hubiera ocurrido y continúa con información incompleta. Los logs no muestran errores. ¿Cuál es la causa más probable?",
+      "options": [
+        {
+          "id": "01KT81N3RXPXJQC1W8PCTAFA6D",
+          "key": "A",
+          "text": "Las AgentDefinitions están configuradas correctamente, pero el system prompt del coordinador no lista explícitamente los tipos de subagentes disponibles, impidiendo que el modelo sepa que pueden ser invocados."
+        },
+        {
+          "id": "01KT81N3RXTHQN7PGZYHCVTGQ9",
+          "key": "B",
+          "text": "La configuración max_tokens del coordinador es demasiado baja, causando que la invocación de la herramienta Task sea truncada antes de que se pueda especificar el parámetro del tipo de subagente."
+        },
+        {
+          "id": "01KT81N3RX4RED59QVR124X5BA",
+          "key": "C",
+          "text": "La configuración allowedTools del coordinador no incluye \"Task\", por lo que aunque puede razonar sobre la delegación, no puede invocar la herramienta necesaria para generar subagentes."
+        },
+        {
+          "id": "01KT81N3RX7XV0P4B2E2Z5F5FN",
+          "key": "D",
+          "text": "El aislamiento de contexto de los subagentes significa que las descripciones de tareas del coordinador no llegan automáticamente a los subagentes; necesitás configurar el reenvío explícito de contexto en ClaudeAgentOptions."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RX4RED59QVR124X5BA",
+        "correctOptionKey": "C",
+        "text": "La configuración allowedTools del coordinador no incluye \"Task\", por lo que aunque puede razonar sobre la delegación, no puede invocar la herramienta necesaria para generar subagentes.",
+        "justification": "Las entradas `AgentDefinition` describen los tipos de subagentes disponibles, pero el coordinador aún necesita permiso para usar el mecanismo que los genera. La herramienta `Task` es necesaria para la invocación de subagentes, por lo que si falta en `allowedTools`, el coordinador puede razonar sobre la delegación en lenguaje natural pero nunca ejecutar una llamada de subagente. El aislamiento de contexto afecta lo que los subagentes reciben después de ser generados; no explica por qué no ocurre ninguna ejecución de subagente en absoluto."
+      },
+      "studyMetadata": {
+        "tags": ["multi_agent_research_system"],
+        "difficulty": "intermediate",
+        "sourceOrder": 26
+      }
+    },
+    {
+      "id": "01KT81N3RXZ9S35AMBY8PVTKHG",
+      "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+      "order": 27,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Sistema de Investigación Multi-Agente",
+        "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
+      },
+      "prompt": "El agente de síntesis recibe hallazgos resumidos de los agentes de búsqueda web y análisis de documentos, luego pasa un resumen consolidado al generador de reportes. Durante las pruebas, descubrís que los reportes generados hacen afirmaciones fácticas sin citas apropiadas—el generador de reportes no puede atribuir declaraciones a sus fuentes originales porque esos metadatos se perdieron durante los pasos de resumen. ¿Cuál es el enfoque más efectivo para asegurar la atribución adecuada de fuentes en los reportes finales?",
+      "options": [
+        {
+          "id": "01KT81N3RXXNNSE4EC270EQ8SC",
+          "key": "A",
+          "text": "Omitir el resumen y pasar las salidas crudas completas de la búsqueda web y análisis de documentos directamente al generador de reportes."
+        },
+        {
+          "id": "01KT81N3RXX1E8EDEWNAX8MW3Z",
+          "key": "B",
+          "text": "Hacer que el generador de reportes consulte al agente de búsqueda web para re-localizar fuentes de las afirmaciones en el reporte final."
+        },
+        {
+          "id": "01KT81N3RX8GJ5NDQ0XW5XB79C",
+          "key": "C",
+          "text": "Hacer que cada agente genere datos estructurados separando los resúmenes de contenido de los metadatos de fuente (URLs, nombres de documentos, números de página)."
+        },
+        {
+          "id": "01KT81N3RXN06VT2J35HGGSJF4",
+          "key": "D",
+          "text": "Instruir al agente de síntesis para que incorpore referencias de fuentes en línea dentro del texto de su resumen usando un formato de cita consistente."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RX8GJ5NDQ0XW5XB79C",
+        "correctOptionKey": "C",
+        "text": "Hacer que cada agente genere datos estructurados separando los resúmenes de contenido de los metadatos de fuente (URLs, nombres de documentos, números de página).",
+        "justification": "La atribución de fuentes se pierde porque el resumen comprime las afirmaciones sin preservar su procedencia. Las salidas estructuradas que mantienen los resúmenes separados de los metadatos de fuente permiten que los agentes posteriores preserven y fusionen los mapeos afirmación-fuente durante la síntesis y generación de reportes. Pasar las salidas crudas desperdicia contexto, relocalizar fuentes después es poco confiable, y las citas en línea dentro del texto son más fáciles de omitir o distorsionar que los metadatos estructurados explícitos."
+      },
+      "studyMetadata": {
+        "tags": ["multi_agent_research_system"],
+        "difficulty": "intermediate",
+        "sourceOrder": 27
+      }
+    },
+    {
+      "id": "01KT81N3RXBQ1HHNJ51NGG3M1K",
+      "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+      "order": 28,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Sistema de Investigación Multi-Agente",
+        "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
+      },
+      "prompt": "Configuraste el sistema para que los cuatro subagentes tengan acceso al conjunto completo de 18 herramientas. Durante las pruebas, los agentes frecuentemente llaman a herramientas fuera de su especialización—el agente de síntesis intenta búsquedas web, y el generador de reportes intenta analizar documentos. ¿Cuál es la causa principal de este comportamiento deficiente de selección de herramientas?",
+      "options": [
+        {
+          "id": "01KT81N3RXWNVDRK6CRV9QHWJA",
+          "key": "A",
+          "text": "Elegir entre 18 herramientas en lugar de 4-5 relevantes aumenta la complejidad de la decisión más allá de los umbrales de selección confiable."
+        },
+        {
+          "id": "01KT81N3RXA27QR94HW75S2Q8H",
+          "key": "B",
+          "text": "El coordinador no puede rastrear qué capacidades tiene cada subagente, lo que lleva a tareas mal enrutadas."
+        },
+        {
+          "id": "01KT81N3RX93S78C7GQ1DZSC04",
+          "key": "C",
+          "text": "Las descripciones de rol de los agentes en sus system prompts entran en conflicto con tener acceso a herramientas fuera de ese rol."
+        },
+        {
+          "id": "01KT81N3RXT3TRCE7FHFRZAQF9",
+          "key": "D",
+          "text": "Las definiciones de herramientas consumen demasiado espacio de la ventana de contexto, dejando espacio insuficiente para el contenido de la tarea."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RXWNVDRK6CRV9QHWJA",
+        "correctOptionKey": "A",
+        "text": "Elegir entre 18 herramientas en lugar de 4-5 relevantes aumenta la complejidad de la decisión más allá de los umbrales de selección confiable.",
+        "justification": "Darle a cada subagente las 18 herramientas hace que la selección de herramientas sea más difícil y alienta el mal uso entre roles. Un agente de síntesis con herramientas de búsqueda web y un generador de reportes con herramientas de análisis de documentos pueden elegir capacidades fuera de su especialización porque el conjunto de herramientas disponibles es demasiado amplio. El mejor diseño es el acceso acotado a herramientas: cada subagente debe recibir solo las herramientas necesarias para su rol, con herramientas entre roles limitadas solo para necesidades específicas de alta frecuencia."
+      },
+      "studyMetadata": {
+        "tags": ["multi_agent_research_system"],
+        "difficulty": "intermediate",
+        "sourceOrder": 28
+      }
+    },
+    {
+      "id": "01KT81N3RXNPT76C1327WEQ2V8",
+      "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+      "order": 29,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Sistema de Investigación Multi-Agente",
+        "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
+      },
+      "prompt": "En producción, los reportes finales frecuentemente contienen afirmaciones sin la atribución adecuada de fuentes. La investigación muestra que mientras los agentes de búsqueda web y análisis de documentos adjuntan correctamente las citas a sus salidas, el agente de síntesis pierde el rastro de qué fuentes respaldan qué conclusiones al combinar los hallazgos. ¿Cuál es el cambio arquitectónico más efectivo?",
+      "options": [
+        {
+          "id": "01KT81N3RX4X50HB07WKDFG6FD",
+          "key": "A",
+          "text": "Agregar un paso de verificación donde el generador de reportes use coincidencia de similitud semántica contra las fuentes originales para reconstruir qué afirmaciones provienen de qué documentos."
+        },
+        {
+          "id": "01KT81N3RXF29TDR7668QNNENB",
+          "key": "B",
+          "text": "Hacer que el coordinador inyecte prefijos de identificador de fuente en el texto antes de cada traspaso, luego analice estos prefijos en la generación del reporte para reconstruir las citas."
+        },
+        {
+          "id": "01KT81N3RX67FYGCNJJ98H4DDM",
+          "key": "C",
+          "text": "Mantener transcriptos completos de todas las interacciones de subagentes y agregar un agente de resolución de citas para analizar los logs y determinar las atribuciones antes de la generación del reporte."
+        },
+        {
+          "id": "01KT81N3RXTE38HGHGX2JKM3V2",
+          "key": "D",
+          "text": "Requerir que todos los subagentes generen mapeos estructurados afirmación-fuente que el agente de síntesis debe preservar y fusionar al combinar hallazgos de múltiples fuentes."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RXTE38HGHGX2JKM3V2",
+        "correctOptionKey": "D",
+        "text": "Requerir que todos los subagentes generen mapeos estructurados afirmación-fuente que el agente de síntesis debe preservar y fusionar al combinar hallazgos de múltiples fuentes.",
+        "justification": "El paso de síntesis es donde se pierde la atribución, por lo que la arquitectura debe hacer la procedencia explícita y duradera antes de que ocurra la síntesis. Los mapeos estructurados afirmación-fuente permiten que el agente de síntesis fusione conclusiones mientras retiene qué fuentes respaldan cada afirmación. Reconstruir citas después del hecho mediante similitud semántica, logs o prefijos de texto es frágil y puede hacer atribuciones incorrectas; preservar los mapeos a través del pipeline es más confiable."
+      },
+      "studyMetadata": {
+        "tags": ["multi_agent_research_system"],
+        "difficulty": "intermediate",
+        "sourceOrder": 29
+      }
+    },
+    {
+      "id": "01KT81N3RXT5EGBRVZKFHD6ZQH",
+      "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+      "order": 30,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Sistema de Investigación Multi-Agente",
+        "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
+      },
+      "prompt": "El monitoreo de producción muestra que las consultas de seguimiento como \"resumí lo que aprendimos sobre tendencias de mercado\" tardan consistentemente más de 40 segundos. La investigación revela que el coordinador genera el subagente de síntesis para cada solicitud de resumen, pasando más de 80K tokens de hallazgos acumulados. El coordinador ya tiene estos hallazgos en su contexto de la orquestación de la investigación. ¿Cuál es la forma más efectiva de mejorar el tiempo de respuesta para estos resúmenes de seguimiento?",
+      "options": [
+        {
+          "id": "01KT81N3RXSEW7DQEBE5J5ZR5Y",
+          "key": "A",
+          "text": "Hacer que el coordinador maneje las solicitudes de resumen directas usando su contexto existente, reservando la generación de subagentes para el análisis complejo."
+        },
+        {
+          "id": "01KT81N3RXQ1C7HK1782CWX55W",
+          "key": "B",
+          "text": "Pre-generar y cachear resúmenes con múltiples granularidades cada vez que se acumulen nuevos hallazgos."
+        },
+        {
+          "id": "01KT81N3RX4E1Z4FVX349CQ7PM",
+          "key": "C",
+          "text": "Generar el subagente de síntesis con contexto reducido y hacer que solicite hallazgos específicos al coordinador bajo demanda."
+        },
+        {
+          "id": "01KT81N3RXJ436MV1M7ZH0YHVQ",
+          "key": "D",
+          "text": "Habilitar el caché de prompts en el subagente de síntesis para reducir la sobrecarga de transferir repetidamente los mismos hallazgos de investigación."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RXSEW7DQEBE5J5ZR5Y",
+        "correctOptionKey": "A",
+        "text": "Hacer que el coordinador maneje las solicitudes de resumen directas usando su contexto existente, reservando la generación de subagentes para el análisis complejo.",
+        "justification": "El coordinador ya tiene los hallazgos acumulados en contexto, por lo que generar un subagente de síntesis y pasar más de 80K tokens para un resumen de seguimiento simple agrega latencia y costo evitables. El coordinador debe decidir dinámicamente si una solicitud necesita un subagente especialista; los resúmenes directos pueden responderse directamente, mientras que la síntesis compleja o el nuevo análisis aún pueden delegarse. El caché o la pre-generación de resúmenes puede ayudar en casos específicos, pero la mejora más directa es evitar la invocación innecesaria de subagentes."
+      },
+      "studyMetadata": {
+        "tags": ["multi_agent_research_system"],
+        "difficulty": "intermediate",
+        "sourceOrder": 30
+      }
+    },
+    {
+      "id": "01KT81N3RXJ6V12ZKZQ2A40ZST",
+      "topicId": "01KT81BA4J2675N47R42Q4C716",
+      "order": 31,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Productividad del Desarrollador con Claude",
+        "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
+      },
+      "prompt": "Tu agente pasó 25 minutos explorando el subsistema de renderizado de un motor de juegos—leyendo código de shaders, gestión de buffers y lógica de sincronización de frames. Un ingeniero ahora le pide que entienda cómo el motor de físicas se integra con el renderizado para los overlays de debug de colisiones. Notás que las respuestas recientes hacen referencia a \"patrones de renderizado típicos\" en lugar de las clases específicas VulkanPipeline y FrameGraph que descubrió antes.\n¿Cuál es el enfoque más efectivo?",
+      "options": [
+        {
+          "id": "01KT81N3RXTZWMFP4715KSZD02",
+          "key": "A",
+          "text": "Continuar en el contexto actual con prompts más dirigidos que hagan referencia a las clases específicas por nombre."
+        },
+        {
+          "id": "01KT81N3RXS9G0F5Q2W00KS87X",
+          "key": "B",
+          "text": "Resumir los hallazgos clave de renderizado, luego iniciar un sub-agente para la exploración de físicas con ese resumen en su contexto inicial."
+        },
+        {
+          "id": "01KT81N3RXZYYP5DY0BMMP7S3S",
+          "key": "C",
+          "text": "Usar /clear para resetear el contexto por completo, luego comenzar de cero con la exploración de físicas usando las rutas de archivo del CLAUDE.md del proyecto."
+        },
+        {
+          "id": "01KT81N3RX8T8CS4X8TSZ5FGAP",
+          "key": "D",
+          "text": "Iniciar un sub-agente para explorar físicas de forma independiente, luego sintetizar manualmente sus hallazgos con el conocimiento de renderizado acumulado en la conversación principal."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RXS9G0F5Q2W00KS87X",
+        "correctOptionKey": "B",
+        "text": "Resumir los hallazgos clave de renderizado, luego iniciar un sub-agente para la exploración de físicas con ese resumen en su contexto inicial.",
+        "justification": "La sesión actual muestra degradación de contexto: las respuestas están derivando hacia patrones de renderizado genéricos en lugar de usar las clases específicas ya descubiertas. Resumir los hallazgos concretos de renderizado preserva el estado importante, y darle ese resumen a un subagente enfocado en físicas aísla la siguiente exploración mientras mantiene el contexto de integración necesario. Continuar en el contexto degradado arriesga respuestas más genéricas, limpiar el contexto descartaría descubrimientos útiles, y explorar físicas de forma independiente haría la integración más difícil."
+      },
+      "studyMetadata": {
+        "tags": ["developer_productivity_with_claude"],
+        "difficulty": "intermediate",
+        "sourceOrder": 31
+      }
+    },
+    {
+      "id": "01KT81N3RXQZ76VKF05H2657A0",
+      "topicId": "01KT81BA4J2675N47R42Q4C716",
+      "order": 32,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Productividad del Desarrollador con Claude",
+        "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
+      },
+      "prompt": "Configuraste tu agente Claude con tres servidores MCP: uno para operaciones git, uno para gestión de tickets Jira y uno para búsqueda de documentación. Cuando un usuario le pide al agente \"crear una rama para JIRA-123 y agregar links de documentación al ticket\", ¿cómo accede el agente a las herramientas de estos servidores?",
+      "options": [
+        {
+          "id": "01KT81N3RXG3Q447EB695F2YBJ",
+          "key": "A",
+          "text": "El agente selecciona automáticamente el servidor más relevante basándose en la solicitud y carga solo las herramientas de ese servidor."
+        },
+        {
+          "id": "01KT81N3RXS1GWXS1VCZC3CA68",
+          "key": "B",
+          "text": "Las herramientas de todos los servidores MCP configurados se descubren en el momento de la conexión y están disponibles simultáneamente para el agente."
+        },
+        {
+          "id": "01KT81N3RXVXG9BTG41MZSF0VN",
+          "key": "C",
+          "text": "El agente consulta cada servidor secuencialmente para determinar cuál maneja cada herramienta, enrutando las llamadas basándose en los prefijos del nombre de herramienta."
+        },
+        {
+          "id": "01KT81N3RXYAWA8N978D4C3WGH",
+          "key": "D",
+          "text": "Debés especificar qué servidor MCP usar en cada turno, y el agente solo puede acceder a las herramientas de un servidor a la vez."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RXS1GWXS1VCZC3CA68",
+        "correctOptionKey": "B",
+        "text": "Las herramientas de todos los servidores MCP configurados se descubren en el momento de la conexión y están disponibles simultáneamente para el agente.",
+        "justification": "Cuando se configuran múltiples servidores MCP, sus herramientas se descubren cuando el agente se conecta y se ponen disponibles juntas. El agente puede por lo tanto usar la herramienta git para la rama, la herramienta Jira para el ticket y la herramienta de búsqueda de documentación para los links en el mismo flujo de trabajo. No necesita seleccionar solo un servidor por turno ni consultar servidores secuencialmente para determinar la propiedad."
+      },
+      "studyMetadata": {
+        "tags": ["developer_productivity_with_claude"],
+        "difficulty": "intermediate",
+        "sourceOrder": 32
+      }
+    },
+    {
+      "id": "01KT81N3RYHFVN7311YFG36073",
+      "topicId": "01KT81BA4J2675N47R42Q4C716",
+      "order": 33,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Productividad del Desarrollador con Claude",
+        "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
+      },
+      "prompt": "Un ingeniero usó el agente ayer para analizar un módulo de autenticación legado, identificando dos enfoques distintos de refactoring: extraer un microservicio versus refactorizar en el lugar. Hoy quiere explorar ambos enfoques en profundidad—hacer que el agente proponga cambios de código específicos para cada uno—antes de decidir cuál implementar. ¿Cuál es la forma más efectiva de estructurar esta exploración?",
+      "options": [
+        {
+          "id": "01KT81N3RXN79Y5Y4C4Z7G9EA6",
+          "key": "A",
+          "text": "Iniciar dos sesiones nuevas, proveyendo manualmente un resumen de los hallazgos del análisis de ayer para establecer el contexto."
+        },
+        {
+          "id": "01KT81N3RXGMSQQ5VJMBWZE919",
+          "key": "B",
+          "text": "Usar fork_session para crear dos ramas desde el análisis de ayer, explorando un enfoque en cada fork."
+        },
+        {
+          "id": "01KT81N3RYW4N5JX5YDB03EJ3X",
+          "key": "C",
+          "text": "Reanudar la sesión de ayer para explorar el primer enfoque, luego iniciar una nueva sesión para el segundo, recreando manualmente el contexto original."
+        },
+        {
+          "id": "01KT81N3RYECK7N9CCRWGW4D64",
+          "key": "D",
+          "text": "Reanudar la sesión de ayer y explorar ambos enfoques secuencialmente dentro del mismo hilo de conversación."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RXGMSQQ5VJMBWZE919",
+        "correctOptionKey": "B",
+        "text": "Usar fork_session para crear dos ramas desde el análisis de ayer, explorando un enfoque en cada fork.",
+        "justification": "El ingeniero quiere comparar dos enfoques de refactoring divergentes que comparten la misma base de análisis previo. `fork_session` está diseñado para esto: crea ramas independientes desde el contexto existente para que cada enfoque pueda explorarse en profundidad sin contaminar al otro. Comenzar de cero o recrear el contexto manualmente arriesga perder detalles, mientras que explorar ambos secuencialmente en una conversación puede mezclar suposiciones y recomendaciones entre las dos estrategias."
+      },
+      "studyMetadata": {
+        "tags": ["developer_productivity_with_claude"],
+        "difficulty": "intermediate",
+        "sourceOrder": 33
+      }
+    },
+    {
+      "id": "01KT81N3RYQ95W4F6W48W28AA6",
+      "topicId": "01KT81BA4J2675N47R42Q4C716",
+      "order": 34,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Productividad del Desarrollador con Claude",
+        "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
+      },
+      "prompt": "Tu herramienta de exploración de codebase almacena IDs de sesión para permitir a los ingenieros continuar investigaciones a través de sesiones de trabajo. Un ingeniero pasó una hora ayer analizando un módulo de autenticación legado, construyendo contexto sobre su arquitectura y dependencias. Quiere continuar hoy. El ID de sesión es válido, pero el control de versiones muestra que 3 de los 12 archivos que el agente leyó anteriormente fueron modificados durante la noche por el merge de un compañero. ¿Qué enfoque equilibra mejor la eficiencia y la precisión?",
+      "options": [
+        {
+          "id": "01KT81N3RYZYKP6A6RMYZ09TX2",
+          "key": "A",
+          "text": "Iniciar una sesión nueva para asegurar que el agente trabaje con el estado actual del codebase sin suposiciones desactualizadas"
+        },
+        {
+          "id": "01KT81N3RY06S3S539GFGFP473",
+          "key": "B",
+          "text": "Reanudar la sesión y de inmediato hacer que el agente vuelva a leer los 12 archivos analizados anteriormente"
+        },
+        {
+          "id": "01KT81N3RYV7EK9G57BSYB2ZK5",
+          "key": "C",
+          "text": "Reanudar la sesión e informar al agente qué archivos específicos cambiaron para un re-análisis dirigido"
+        },
+        {
+          "id": "01KT81N3RYNABSEBWWR74HDP52",
+          "key": "D",
+          "text": "Reanudar la sesión sin informar al agente sobre los archivos modificados"
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RYV7EK9G57BSYB2ZK5",
+        "correctOptionKey": "C",
+        "text": "Reanudar la sesión e informar al agente qué archivos específicos cambiaron para un re-análisis dirigido",
+        "justification": "La mayor parte del contexto de la sesión anterior sigue siendo útil, pero algunas observaciones a nivel de archivo pueden estar desactualizadas. Reanudar la sesión preserva la hora de comprensión arquitectónica acumulada, mientras que identificar explícitamente los tres archivos modificados permite al agente volver a leer y actualizar solo las suposiciones afectadas. Comenzar de cero o volver a leer los doce archivos desperdicia trabajo, y reanudar sin mencionar los cambios arriesga conclusiones inexactas basadas en contenidos de archivos desactualizados."
+      },
+      "studyMetadata": {
+        "tags": ["developer_productivity_with_claude"],
+        "difficulty": "intermediate",
+        "sourceOrder": 34
+      }
+    },
+    {
+      "id": "01KT81N3RY03QN182KHPV110FB",
+      "topicId": "01KT81BA4J2675N47R42Q4C716",
+      "order": 35,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Productividad del Desarrollador con Claude",
+        "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
+      },
+      "prompt": "Durante las pruebas, observás que en sesiones de exploración extendidas (más de 30 minutos), el agente comienza a dar respuestas inconsistentes sobre la estructura del código que discutió antes. Los ingenieros reportan tener que repetir el contexto sobre módulos que ya exploraron. ¿Cuál es el enfoque más efectivo para abordar esto?",
+      "options": [
+        {
+          "id": "01KT81N3RYKB3PNBENTCXG352A",
+          "key": "A",
+          "text": "Crear resúmenes de todos los archivos fuente antes de que comience la exploración, cargando solo estas representaciones comprimidas en el contexto."
+        },
+        {
+          "id": "01KT81N3RY6PF9T7RHK99H5X58",
+          "key": "B",
+          "text": "Implementar limpieza automática del contexto cada 15 minutos para asegurar que el agente comience con contexto fresco y no contaminado."
+        },
+        {
+          "id": "01KT81N3RY3K96A8A2WJQQ28D9",
+          "key": "C",
+          "text": "Cambiar a un nivel de modelo de mayor capacidad para proporcionar más espacio de ventana de contexto para los datos de exploración acumulados."
+        },
+        {
+          "id": "01KT81N3RYG70D1GY66Y7B407K",
+          "key": "D",
+          "text": "Hacer que el agente mantenga un archivo de notas que registre los hallazgos clave, referenciándolo para preguntas posteriores."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RYG70D1GY66Y7B407K",
+        "correctOptionKey": "D",
+        "text": "Hacer que el agente mantenga un archivo de notas que registre los hallazgos clave, referenciándolo para preguntas posteriores.",
+        "justification": "La exploración extendida de codebase puede degradarse cuando el contexto se llena de salidas verbosas de herramientas y los detalles más antiguos se vuelven menos confiables. Un archivo de notas preserva los hallazgos clave fuera del contexto de conversación transitorio, dando al agente una referencia estable para módulos, clases, dependencias y conclusiones ya descubiertas. Limpiar el contexto descarta trabajo útil, pre-resumir todos los archivos es costoso y superficial, y un modelo más grande no garantiza por sí mismo que los hallazgos importantes permanezcan organizados y referenciados de forma consistente."
+      },
+      "studyMetadata": {
+        "tags": ["developer_productivity_with_claude"],
+        "difficulty": "intermediate",
+        "sourceOrder": 35
+      }
+    },
+    {
+      "id": "01KT81N3RYFFNMXYBXRZ13ZZRQ",
+      "topicId": "01KT81BA4J2675N47R42Q4C716",
+      "order": 36,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Productividad del Desarrollador con Claude",
+        "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
+      },
+      "prompt": "Un ingeniero le pide a tu agente que agregue tests exhaustivos a un codebase legado con 200 archivos y cobertura de tests mínima existente. El ingeniero no especificó qué módulos priorizar. ¿Cómo debería el agente descomponer esta tarea abierta?",
+      "options": [
+        {
+          "id": "01KT81N3RYQDRJ8C5EXAXMZNT9",
+          "key": "A",
+          "text": "Crear un cronograma de tests fijo de antemano basado en la estructura de directorios, asignando igual esfuerzo a cada directorio de nivel superior sin importar la complejidad del código o la importancia para el negocio."
+        },
+        {
+          "id": "01KT81N3RYG6RF6PHABPFCG1NP",
+          "key": "B",
+          "text": "Leer sistemáticamente los 200 archivos para crear un inventario completo de funciones antes de escribir cualquier test, asegurando que el plan de testing tenga en cuenta cada función antes de comenzar."
+        },
+        {
+          "id": "01KT81N3RYH5T68NHCHTZF0J40",
+          "key": "C",
+          "text": "Empezar a escribir tests para el primer módulo alfabéticamente, usando los fallos de tests e imports para descubrir archivos relacionados de forma orgánica."
+        },
+        {
+          "id": "01KT81N3RY4R08E7P6J07H5WZ5",
+          "key": "D",
+          "text": "Usar Glob y Grep para mapear la estructura del codebase, identificar módulos fuertemente acoplados, crear un plan priorizado para áreas de alto impacto y revisar a medida que se descubren dependencias."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RY4R08E7P6J07H5WZ5",
+        "correctOptionKey": "D",
+        "text": "Usar Glob y Grep para mapear la estructura del codebase, identificar módulos fuertemente acoplados, crear un plan priorizado para áreas de alto impacto y revisar a medida que se descubren dependencias.",
+        "justification": "Para una tarea abierta en un gran codebase legado, el agente primero debe construir un mapa incremental del sistema en lugar de leer cada archivo o comenzar arbitrariamente. `Glob` puede identificar la estructura de archivos y los tests existentes, mientras que `Grep` puede revelar puntos de entrada, imports, sitios de llamada y acoplamiento. Esa información respalda un plan de testing priorizado enfocado en los módulos de alto impacto, y el plan puede adaptarse a medida que las dependencias y áreas de riesgo se vuelven más claras."
+      },
+      "studyMetadata": {
+        "tags": ["developer_productivity_with_claude"],
+        "difficulty": "intermediate",
+        "sourceOrder": 36
+      }
+    },
+    {
+      "id": "01KT81N3RYGTVQ4DDDJY03D79E",
+      "topicId": "01KT81BA4J2675N47R42Q4C716",
+      "order": 37,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Productividad del Desarrollador con Claude",
+        "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
+      },
+      "prompt": "Tu agente necesita insertar una nueva función helper en el medio de un módulo utilitario de 150 líneas, entre dos funciones existentes. La herramienta Edit falla porque su parámetro old_string no puede encontrar texto único para hacer coincidir — el archivo tiene docstrings, nombres de variables y patrones estructurales repetitivos. ¿Cuál es la forma más confiable de completar esta inserción?",
+      "options": [
+        {
+          "id": "01KT81N3RYB5W9S1TRKK4PMJE2",
+          "key": "A",
+          "text": "Usar Bash para agregar la definición de la función al final del archivo usando sintaxis heredoc"
+        },
+        {
+          "id": "01KT81N3RY7WM01GHZ0T8Y9HX6",
+          "key": "B",
+          "text": "Usar Edit con un old_string extremadamente largo que capture más de 30 líneas de contexto para garantizar la unicidad"
+        },
+        {
+          "id": "01KT81N3RY6AP7ZCV7PZ6ADE31",
+          "key": "C",
+          "text": "Usar el parámetro replace_all de Edit para apuntar a un patrón común e incorporar la nueva función en el texto de reemplazo"
+        },
+        {
+          "id": "01KT81N3RY7F6GJ4ZRJD8FG22F",
+          "key": "D",
+          "text": "Usar Read para cargar el archivo, agregar la función en la ubicación apropiada, luego usar Write para escribir el archivo actualizado"
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RY7F6GJ4ZRJD8FG22F",
+        "correctOptionKey": "D",
+        "text": "Usar Read para cargar el archivo, agregar la función en la ubicación apropiada, luego usar Write para escribir el archivo actualizado",
+        "justification": "Cuando `Edit` no puede encontrar un `old_string` único, seguir forzando un reemplazo arriesga modificar la ubicación incorrecta o fallar nuevamente. Leer el archivo completo, insertar la función helper en la ubicación correcta en el contenido completo y escribir el archivo actualizado es la alternativa confiable para texto ambiguo o repetitivo. Agregar con Bash colocaría la función incorrectamente, los strings de coincidencia muy largos son frágiles, y `replace_all` contra un patrón común no es seguro."
+      },
+      "studyMetadata": {
+        "tags": ["developer_productivity_with_claude"],
+        "difficulty": "intermediate",
+        "sourceOrder": 37
+      }
+    },
+    {
+      "id": "01KT81N3RY40AYFABS7YQ8FQVY",
+      "topicId": "01KT81BA4J2675N47R42Q4C716",
+      "order": 38,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Productividad del Desarrollador con Claude",
+        "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
+      },
+      "prompt": "Un ingeniero le pide a tu agente que identifique los caminos de código sin tests en un módulo de procesamiento de pagos legado que abarca 45 archivos. Después de leer los primeros 8 archivos fuente, las respuestas del agente se vuelven notablemente menos precisas—está olvidando patrones de código discutidos previamente y todavía no localizó todos los archivos de test ni trazó los flujos de pago críticos. ¿Cuál es el enfoque más efectivo para completar esta investigación?",
+      "options": [
+        {
+          "id": "01KT81N3RYN0YVDN2JHXN0CJMY",
+          "key": "A",
+          "text": "Limpiar el contexto con /clear, luego releer selectivamente solo los archivos más críticos descubiertos hasta ahora, escribiendo los hallazgos clave en un archivo de notas que persiste entre reinicios de contexto."
+        },
+        {
+          "id": "01KT81N3RYY2YEKKE8BXMDN621",
+          "key": "B",
+          "text": "Documentar todos los hallazgos actuales en un reporte de resumen, limpiar el contexto por completo, luego usar ese reporte como única referencia para continuar la investigación."
+        },
+        {
+          "id": "01KT81N3RY0YH0QGSN19JZHJ5T",
+          "key": "C",
+          "text": "Iniciar subagentes para investigar preguntas específicas (por ejemplo, \"encontrar todos los archivos de test para el procesamiento de pagos\", \"rastrear las dependencias del flujo de reembolso\") mientras el agente principal coordina los hallazgos y preserva la comprensión de alto nivel."
+        },
+        {
+          "id": "01KT81N3RYCVSF0DNKB0BZAB6G",
+          "key": "D",
+          "text": "Cambiar a usar Grep para buscar nombres de funciones específicos en lugar de leer archivos completos, reduciendo el contenido cargado en el contexto para la exploración restante."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RY0YH0QGSN19JZHJ5T",
+        "correctOptionKey": "C",
+        "text": "Iniciar subagentes para investigar preguntas específicas (por ejemplo, \"encontrar todos los archivos de test para el procesamiento de pagos\", \"rastrear las dependencias del flujo de reembolso\") mientras el agente principal coordina los hallazgos y preserva la comprensión de alto nivel.",
+        "justification": "La investigación es amplia y el contexto ya está degradado. Iniciar subagentes enfocados permite que cada uno maneje una tarea de descubrimiento acotada, como localizar tests de pagos o rastrear dependencias de reembolso, sin inundar el contexto principal con cada lectura de archivo. El agente principal puede coordinar y sintetizar los resultados. Limpiar el contexto o depender de un único resumen arriesga perder detalles, y usar solo `Grep` ayuda a buscar pero no resuelve la necesidad más amplia de dividir y coordinar la investigación."
+      },
+      "studyMetadata": {
+        "tags": ["developer_productivity_with_claude"],
+        "difficulty": "intermediate",
+        "sourceOrder": 38
+      }
+    },
+    {
+      "id": "01KT81N3RYDAXGZ29CXZTFTJEB",
+      "topicId": "01KT81BA4J2675N47R42Q4C716",
+      "order": 39,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Productividad del Desarrollador con Claude",
+        "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
+      },
+      "prompt": "Un ingeniero le pide al agente que encuentre todos los callers de una función antes de eliminarla. La función está definida en una biblioteca central pero también se expone a través de módulos wrapper que renombran la función para uso específico del dominio (por ejemplo, calculateTax en la biblioteca se convierte en computeOrderTax en el módulo de órdenes). ¿Qué estrategia de exploración identificará más confiablemente todos los callers?",
+      "options": [
+        {
+          "id": "01KT81N3RY37SFHHHGTPYGME82",
+          "key": "A",
+          "text": "Usar Grep para buscar el nombre original de la función en todo el codebase."
+        },
+        {
+          "id": "01KT81N3RY17AH7K07MWZF5Q0F",
+          "key": "B",
+          "text": "Leer la biblioteca y los módulos wrapper para identificar todos los nombres expuestos de la función, luego usar Grep para cada nombre en todo el codebase."
+        },
+        {
+          "id": "01KT81N3RYR7NNPREEMA3Z5F6Q",
+          "key": "C",
+          "text": "Usar Grep para encontrar todos los archivos que importan desde la biblioteca o los módulos wrapper, luego leer cada archivo para verificar si usa la función."
+        },
+        {
+          "id": "01KT81N3RYC9TB2N8PEA8WWT4K",
+          "key": "D",
+          "text": "Buscar el nombre de la función en la documentación del proyecto para entender los patrones de uso previstos y navegar a los puntos de integración documentados."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RY17AH7K07MWZF5Q0F",
+        "correctOptionKey": "B",
+        "text": "Leer la biblioteca y los módulos wrapper para identificar todos los nombres expuestos de la función, luego usar Grep para cada nombre en todo el codebase.",
+        "justification": "Buscar solo el nombre original de la función omitirá los callers que usen alias a nivel de wrapper como `computeOrderTax`. La estrategia confiable es entender cómo se exporta y renombra la función a través de los módulos wrapper, recopilar todos los nombres expuestos y luego buscar cada nombre en todo el codebase. Las búsquedas solo de imports aún pueden omitir el uso indirecto o con alias, y la documentación no es una fuente completa de los sitios de llamada reales."
+      },
+      "studyMetadata": {
+        "tags": ["developer_productivity_with_claude"],
+        "difficulty": "intermediate",
+        "sourceOrder": 39
+      }
+    },
+    {
+      "id": "01KT81N3RYSVFSX6Q8AK182XRN",
+      "topicId": "01KT81BA4J2675N47R42Q4C716",
+      "order": 40,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Productividad del Desarrollador con Claude",
+        "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
+      },
+      "prompt": "Una ingeniera usó Claude Code ayer para investigar los flujos de autenticación en un monolito legado, acumulando contexto significativo durante una sesión de 2 horas. Hoy quiere continuar esa investigación específica. Desde entonces trabajó en otros tres codebases y sabe que la sesión se llamaba \"auth-deep-dive\". ¿Cómo debería reanudarla?",
+      "options": [
+        {
+          "id": "01KT81N3RY5X1N583SREVGY7B7",
+          "key": "A",
+          "text": "Usar --session-id con el UUID del archivo de transcripción de la sesión de ayer"
+        },
+        {
+          "id": "01KT81N3RYAG0KG0WW38QZ6NYY",
+          "key": "B",
+          "text": "Usar --resume auth-deep-dive para cargar esa sesión específica por nombre"
+        },
+        {
+          "id": "01KT81N3RYPESKCK4MJQT3FZ80",
+          "key": "C",
+          "text": "Usar --continue para retomar donde dejó la conversación más reciente"
+        },
+        {
+          "id": "01KT81N3RYE0RQKNBR31GWZJ3X",
+          "key": "D",
+          "text": "Comenzar de cero y volver a leer los mismos archivos"
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RYAG0KG0WW38QZ6NYY",
+        "correctOptionKey": "B",
+        "text": "Usar --resume auth-deep-dive para cargar esa sesión específica por nombre",
+        "justification": "La ingeniera quiere continuar una investigación específica con nombre, no simplemente la conversación más reciente. `--resume auth-deep-dive` carga esa sesión nombrada y preserva el contexto acumulado del análisis de autenticación previo. `--continue` arriesgaría reanudar una de las otras sesiones de codebase en las que trabajó después, y comenzar de cero desperdiciaría las dos horas de exploración previa."
+      },
+      "studyMetadata": {
+        "tags": ["developer_productivity_with_claude"],
+        "difficulty": "intermediate",
+        "sourceOrder": 40
+      }
+    },
+    {
+      "id": "01KT81N3RYF21RYS0B50DRCA4B",
+      "topicId": "01KT81BA4J2675N47R42Q4C716",
+      "order": 41,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Productividad del Desarrollador con Claude",
+        "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
+      },
+      "prompt": "Tu asistente de revisión de código necesita analizar pull requests y proporcionar feedback sobre tres aspectos: cumplimiento del estilo de código, posibles problemas de seguridad y completitud de la documentación. Cada aspecto requiere leer archivos, ejecutar herramientas de análisis y generar una sección del reporte. El proceso de revisión sigue el mismo flujo de trabajo de tres pasos para cada PR.\n¿Qué patrón de descomposición de tareas es más apropiado para este flujo de trabajo?",
+      "options": [
+        {
+          "id": "01KT81N3RY1J1V2A3Q6WV8P9WK",
+          "key": "A",
+          "text": "Orquestador-trabajadores—tener un LLM central que analice cada PR para determinar dinámicamente qué verificaciones son necesarias, luego delegar en LLMs trabajadores especializados para cada subtarea identificada."
+        },
+        {
+          "id": "01KT81N3RY6FXGGZ3EY6DV6TE6",
+          "key": "B",
+          "text": "Enrutamiento—clasificar cada PR por tipo (feature, bugfix, refactor) primero, luego enrutar a diferentes prompts de revisión optimizados para esa categoría."
+        },
+        {
+          "id": "01KT81N3RYVHBQFPFYTBHKBRM0",
+          "key": "C",
+          "text": "Encadenamiento de prompts—dividir la revisión en pasos secuenciales donde cada aspecto (estilo, seguridad, documentación) se analiza por separado, con las salidas combinadas en un paso final de síntesis."
+        },
+        {
+          "id": "01KT81N3RYM2VM1P738G132CX0",
+          "key": "D",
+          "text": "Prompt único integral—incluir todas las instrucciones en un prompt y dejar que el modelo maneje los tres aspectos simultáneamente."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RYVHBQFPFYTBHKBRM0",
+        "correctOptionKey": "C",
+        "text": "Encadenamiento de prompts—dividir la revisión en pasos secuenciales donde cada aspecto (estilo, seguridad, documentación) se analiza por separado, con las salidas combinadas en un paso final de síntesis.",
+        "justification": "La revisión tiene los mismos pasos conocidos para cada PR, y cada aspecto se beneficia de atención enfocada. El encadenamiento de prompts se adapta a flujos de trabajo multi-paso predecibles: ejecutar pasadas separadas para estilo, seguridad y documentación, luego combinar las salidas en una síntesis final. Los patrones orquestador-trabajador son mejores cuando las subtareas necesarias son dinámicas, el enrutamiento es para elegir entre diferentes flujos de trabajo, y un único prompt integral arriesga la dilución de atención en las tres dimensiones de revisión."
+      },
+      "studyMetadata": {
+        "tags": ["developer_productivity_with_claude"],
+        "difficulty": "intermediate",
+        "sourceOrder": 41
+      }
+    },
+    {
+      "id": "01KT81N3RYF650NAXV9J1DS8BJ",
+      "topicId": "01KT81BA4J2675N47R42Q4C716",
+      "order": 42,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Productividad del Desarrollador con Claude",
+        "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
+      },
+      "prompt": "Un ingeniero le pide al agente que encuentre todos los archivos en el monorepo que importan el paquete @company/auth para entender cómo se usa la autenticación en los servicios. ¿Qué herramienta integrada es más apropiada para esta tarea?",
+      "options": [
+        {
+          "id": "01KT81N3RYGKD8MRE78VKK7N4F",
+          "key": "A",
+          "text": "Glob, para encontrar archivos con \"auth\" en su nombre o ruta"
+        },
+        {
+          "id": "01KT81N3RY4G5QJBR1G24K70QS",
+          "key": "B",
+          "text": "Bash, para ejecutar find . -type d -name \"*auth*\" y explorar los directorios coincidentes"
+        },
+        {
+          "id": "01KT81N3RY9N0FJQH4MWQ1ZBGV",
+          "key": "C",
+          "text": "Read, comenzando con los archivos package.json para rastrear las declaraciones de dependencias"
+        },
+        {
+          "id": "01KT81N3RY2DY2JGCXSJGRDP7D",
+          "key": "D",
+          "text": "Grep, para buscar el patrón de declaración de importación en los contenidos de los archivos"
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RY2DY2JGCXSJGRDP7D",
+        "correctOptionKey": "D",
+        "text": "Grep, para buscar el patrón de declaración de importación en los contenidos de los archivos",
+        "justification": "El ingeniero necesita encontrar archivos cuyos contenidos importen `@company/auth`. `Grep` es la herramienta integrada apropiada para buscar en los contenidos de los archivos patrones como declaraciones de importación, nombres de funciones o mensajes de error. `Glob` busca rutas de archivo, `Read` es demasiado manual como primer paso, y usar `Bash` para inspeccionar directorios omitirá las importaciones en archivos cuyas rutas no incluyen `auth`."
+      },
+      "studyMetadata": {
+        "tags": ["developer_productivity_with_claude"],
+        "difficulty": "intermediate",
+        "sourceOrder": 42
+      }
+    },
+    {
+      "id": "01KT81N3RZ8S696SAMWM2XK5TT",
+      "topicId": "01KT81BA4J2675N47R42Q4C716",
+      "order": 43,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Productividad del Desarrollador con Claude",
+        "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
+      },
+      "prompt": "Un ingeniero que acaba de unirse al equipo le pide al agente que le ayude a entender la arquitectura de autenticación y autorización antes de hacer mejoras de seguridad. El codebase tiene más de 800 archivos en múltiples servicios. ¿Qué estrategia de exploración construirá la comprensión más efectivamente, dadas las herramientas integradas de Claude y los límites de contexto?",
+      "options": [
+        {
+          "id": "01KT81N3RZ1D2C5R3CAV9CSNVQ",
+          "key": "A",
+          "text": "Leer todos los archivos que contengan \"auth\", \"login\", \"permission\" o \"token\" en su contenido o nombre de archivo."
+        },
+        {
+          "id": "01KT81N3RZG1Y644GYD66G0ZZV",
+          "key": "B",
+          "text": "Leer primero los archivos CLAUDE.md y README, luego pedirle al ingeniero que especifique qué 10-15 archivos son más importantes para entender el sistema de auth."
+        },
+        {
+          "id": "01KT81N3RZK0Y32EGPHRYZZQDE",
+          "key": "C",
+          "text": "Usar Grep para encontrar los puntos de entrada de autenticación, leer esos archivos, luego seguir las importaciones y llamadas de funciones para mapear el flujo de autenticación de forma incremental."
+        },
+        {
+          "id": "01KT81N3RZQNGM37WVKEGDZ522",
+          "key": "D",
+          "text": "Lanzar subagentes en paralelo para explorar diferentes servicios simultáneamente, luego sintetizar sus hallazgos en una descripción arquitectónica."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RZK0Y32EGPHRYZZQDE",
+        "correctOptionKey": "C",
+        "text": "Usar Grep para encontrar los puntos de entrada de autenticación, leer esos archivos, luego seguir las importaciones y llamadas de funciones para mapear el flujo de autenticación de forma incremental.",
+        "justification": "Con más de 800 archivos, leer todos los archivos relacionados con auth de antemano inundaría el contexto y aún así podría no revelar el flujo. El mejor enfoque es incremental: usar `Grep` para encontrar puntos de entrada concretos de autenticación y autorización, `Read` los archivos relevantes, luego seguir las importaciones, los sitios de llamada y las dependencias para construir el mapa de arquitectura. Esto mantiene el contexto enfocado y basado en caminos de código reales. Los subagentes en paralelo pueden ayudar después, pero el primer paso debe establecer los puntos de entrada y el flujo reales."
+      },
+      "studyMetadata": {
+        "tags": ["developer_productivity_with_claude"],
+        "difficulty": "intermediate",
+        "sourceOrder": 43
+      }
+    },
+    {
+      "id": "01KT81N3RZ8E7WATSEYGN3EYQV",
+      "topicId": "01KT81BA4J2675N47R42Q4C716",
+      "order": 44,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Productividad del Desarrollador con Claude",
+        "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
+      },
+      "prompt": "Un ingeniero le pide al agente que entienda cómo funciona la capa de caché antes de agregar un nuevo disparador de invalidación de caché. Después de búsquedas iniciales con Grep, el agente identificó que la lógica de caché abarca 15 archivos incluyendo decoradores, middleware y clases de servicio (~8.000 líneas en total). ¿Cuál es el siguiente paso más efectivo para construir comprensión mientras se gestionan las restricciones de contexto?",
+      "options": [
+        {
+          "id": "01KT81N3RZGNYR540MFMNDDJXR",
+          "key": "A",
+          "text": "Usar la herramienta Read para cargar secuencialmente los 15 archivos, construyendo comprensión completa de toda la implementación de caché."
+        },
+        {
+          "id": "01KT81N3RZX4X8WY7C2K3T8699",
+          "key": "B",
+          "text": "Analizar las importaciones y las jerarquías de clases para identificar la clase base de caché, leer ese archivo para entender la interfaz, luego rastrear las implementaciones de invalidación específicas."
+        },
+        {
+          "id": "01KT81N3RZ8B708JP5A1K0A4J3",
+          "key": "C",
+          "text": "Usar Grep para buscar patrones \"invalidate\" y \"expire\" en todos los archivos, luego leer solo esos rangos de líneas específicos con contexto circundante mínimo."
+        },
+        {
+          "id": "01KT81N3RZFYX3DZC0722MFFJ2",
+          "key": "D",
+          "text": "Usar Glob para encontrar archivos que coincidan con patrones comunes de caché (cache.py, caching/), priorizar los archivos más grandes leyéndolos primero, luego verificar los archivos más pequeños para detectar brechas."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RZX4X8WY7C2K3T8699",
+        "correctOptionKey": "B",
+        "text": "Analizar las importaciones y las jerarquías de clases para identificar la clase base de caché, leer ese archivo para entender la interfaz, luego rastrear las implementaciones de invalidación específicas.",
+        "justification": "Después de encontrar un amplio conjunto de archivos relacionados con caché, el siguiente paso debe reducir el problema a la estructura del sistema. Identificar la abstracción de caché base y leer su interfaz da un modelo mental estable, luego rastrear las implementaciones de invalidación sigue la arquitectura real. Leer los 15 archivos sobrecargaría el contexto, las búsquedas solo de palabras clave para `invalidate` y `expire` pueden omitir el flujo de control importante, y priorizar por tamaño de archivo no es un indicador confiable de importancia arquitectónica."
+      },
+      "studyMetadata": {
+        "tags": ["developer_productivity_with_claude"],
+        "difficulty": "intermediate",
+        "sourceOrder": 44
+      }
+    },
+    {
+      "id": "01KT81N3RZ71SDX5Z7GAW92ZKH",
+      "topicId": "01KT81BA4J2675N47R42Q4C716",
+      "order": 45,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Productividad del Desarrollador con Claude",
+        "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
+      },
+      "prompt": "El subagente de exploración de un ingeniero pasó 30 minutos analizando un sistema de pagos legado, leyendo 47 archivos y documentando los flujos de datos. La sesión fue interrumpida cuando se cayó la conexión del ingeniero. Mientras estuvo fuera, un compañero de equipo mergeó un PR que renombró dos funciones utilitarias. El ingeniero quiere continuar la misma exploración. ¿Cuál es el enfoque más efectivo?",
+      "options": [
+        {
+          "id": "01KT81N3RZ7F95ABPXMQBMBRVH",
+          "key": "A",
+          "text": "Reanudar el subagente desde su transcripción anterior sin mencionar los cambios—la comprensión de la arquitectura sigue siendo válida."
+        },
+        {
+          "id": "01KT81N3RZXNSM3KA9ZEKJXPM1",
+          "key": "B",
+          "text": "Lanzar un subagente nuevo con un resumen de los hallazgos previos."
+        },
+        {
+          "id": "01KT81N3RZGY5GXHMQ152C82XR",
+          "key": "C",
+          "text": "Reanudar el subagente desde su transcripción anterior e informarle sobre las funciones renombradas."
+        },
+        {
+          "id": "01KT81N3RZZVS35931VTSRCXEW",
+          "key": "D",
+          "text": "Lanzar un subagente nuevo e incluir la transcripción anterior en el prompt inicial como contexto."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RZGY5GXHMQ152C82XR",
+        "correctOptionKey": "C",
+        "text": "Reanudar el subagente desde su transcripción anterior e informarle sobre las funciones renombradas.",
+        "justification": "La exploración anterior contiene contexto útil sustancial, por lo que reiniciar desperdiciaría trabajo. Sin embargo, el merge del compañero significa que algunas observaciones previas pueden estar desactualizadas. Reanudar la sesión mientras se le dice explícitamente al agente qué funciones utilitarias fueron renombradas le permite preservar los 30 minutos de análisis y realizar un re-análisis dirigido alrededor de los símbolos cambiados. Reanudar silenciosamente arriesga suposiciones desactualizadas, y pasar una transcripción previa completa a un subagente nuevo es ineficiente."
+      },
+      "studyMetadata": {
+        "tags": ["developer_productivity_with_claude"],
+        "difficulty": "intermediate",
+        "sourceOrder": 45
+      }
+    },
+    {
+      "id": "01KT81N3RZ6JA0DSHVD77DF9PS",
+      "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+      "order": 46,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Generación de Código con Claude Code",
+        "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
+      },
+      "prompt": "Te encargaron agregar actualizaciones en tiempo real a la aplicación. Esto podría implementarse usando WebSockets, Server-Sent Events o polling, cada uno con diferente complejidad, soporte de navegador y requisitos de infraestructura. ¿Cuál es la forma más efectiva de comenzar esta tarea?",
+      "options": [
+        {
+          "id": "01KT81N3RZ62GGRZMHPG0E67JF",
+          "key": "A",
+          "text": "Comenzar la ejecución directa con WebSockets, luego refactorizar si surgen problemas de infraestructura."
+        },
+        {
+          "id": "01KT81N3RZAJJNYARKKEA42GWT",
+          "key": "B",
+          "text": "Entrar en modo plan para explorar la arquitectura, evaluar los trade-offs y presentar opciones para la aprobación del equipo antes de implementar."
+        },
+        {
+          "id": "01KT81N3RZFR5E4WFK05Z4NP87",
+          "key": "C",
+          "text": "Usar ejecución directa con un prompt pidiendo a Claude que analice todos los enfoques e implemente el que determine como mejor."
+        },
+        {
+          "id": "01KT81N3RZ1D4NCNRC0MQWE9HY",
+          "key": "D",
+          "text": "Usar ejecución directa para implementar polling primero, luego evaluar si actualizar a WebSockets después."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RZAJJNYARKKEA42GWT",
+        "correctOptionKey": "B",
+        "text": "Entrar en modo plan para explorar la arquitectura, evaluar los trade-offs y presentar opciones para la aprobación del equipo antes de implementar.",
+        "justification": "Las actualizaciones en tiempo real implican trade-offs arquitectónicos entre WebSockets, Server-Sent Events y polling, incluyendo requisitos de infraestructura, soporte de navegador, complejidad operacional y necesidades del producto. El modo plan es apropiado antes de la implementación porque permite que Claude investigue la arquitectura existente, compare las opciones y produzca una propuesta de decisión para el equipo. La ejecución directa comprometería prematuramente un enfoque antes de entender los trade-offs."
+      },
+      "studyMetadata": {
+        "tags": ["code_generation_with_claude_code"],
+        "difficulty": "intermediate",
+        "sourceOrder": 46
+      }
+    },
+    {
+      "id": "01KT81N3RZB1Z43B6XT1EJRY3V",
+      "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+      "order": 47,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Generación de Código con Claude Code",
+        "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
+      },
+      "prompt": "El CLAUDE.md de tu equipo incluye una regla: \"Usar indentación de 4 espacios y siempre ejecutar el formato Prettier\". A pesar de esto, las revisiones de código revelan que aproximadamente el 30% de los archivos que genera Claude Code usan formato inconsistente—a veces indentación de 2 espacios, a veces sin trailing commas. Agregar énfasis (\"IMPORTANTE: DEBÉS usar el formato Prettier\") reduce las violaciones a aproximadamente el 15%, pero no las elimina. ¿Cuál es la forma más efectiva de asegurar que todo el código generado tenga formato consistente?",
+      "options": [
+        {
+          "id": "01KT81N3RZQ60V7R76YHKZWY6B",
+          "key": "A",
+          "text": "Agregar un hook Stop con una verificación basada en prompts que evalúe si el código generado sigue los estándares de formato y solicite a Claude que corrija las violaciones."
+        },
+        {
+          "id": "01KT81N3RZSXFJ1QGGXKNKFMZA",
+          "key": "B",
+          "text": "Dividir las reglas de formato en archivos .claude/rules/ con alcance de ruta que se cargan cuando Claude trabaja en tipos de archivos coincidentes."
+        },
+        {
+          "id": "01KT81N3RZAXGVCGJ5SMR3TA4K",
+          "key": "C",
+          "text": "Extraer las reglas de formato en un skill dedicado que Claude carga automáticamente al generar código, con ejemplos más detallados del formato correcto."
+        },
+        {
+          "id": "01KT81N3RZ8PSQF0Q3N2BTXGSD",
+          "key": "D",
+          "text": "Configurar un hook PostToolUse con un matcher Edit|Write que ejecute automáticamente Prettier en cada archivo que Claude modifica."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RZ8PSQF0Q3N2BTXGSD",
+        "correctOptionKey": "D",
+        "text": "Configurar un hook PostToolUse con un matcher Edit|Write que ejecute automáticamente Prettier en cada archivo que Claude modifica.",
+        "justification": "El formato es una preocupación de post-procesamiento determinista, por lo que debe ser aplicado por herramientas en lugar de depender del cumplimiento del prompt. Un hook `PostToolUse` que coincida con `Edit` y `Write` puede ejecutar automáticamente Prettier en los archivos modificados, eliminando la indentación inconsistente y los problemas de trailing comma sin importar lo que Claude generó inicialmente. Más énfasis en las instrucciones, reglas con alcance de ruta o skills pueden mejorar el comportamiento, pero aún dependen de que el modelo siga la guía de formato."
+      },
+      "studyMetadata": {
+        "tags": ["code_generation_with_claude_code"],
+        "difficulty": "intermediate",
+        "sourceOrder": 47
+      }
+    },
+    {
+      "id": "01KT81N3RZDVDWJPPBH92R5AG6",
+      "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+      "order": 48,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Generación de Código con Claude Code",
+        "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
+      },
+      "prompt": "Necesitás agregar una validación de fechas que asegure que las fechas de los eventos sean en el futuro. Esto requiere agregar una declaración condicional a una función existente en un único archivo. ¿Cuál es el enfoque más apropiado?",
+      "options": [
+        {
+          "id": "01KT81N3RZWY7JS0F66W3WSZPF",
+          "key": "A",
+          "text": "Comenzar con el modo de pensamiento extendido habilitado para asegurar un razonamiento exhaustivo sobre la lógica de validación"
+        },
+        {
+          "id": "01KT81N3RZ2HXN611380RHAZ31",
+          "key": "B",
+          "text": "Entrar en modo plan para analizar cómo la validación podría impactar otras partes del flujo de reservas"
+        },
+        {
+          "id": "01KT81N3RZW0VMMAZB9EN2TV0F",
+          "key": "C",
+          "text": "Usar ejecución directa para hacer el cambio"
+        },
+        {
+          "id": "01KT81N3RZZWKSMWTWSDJCM2RP",
+          "key": "D",
+          "text": "Entrar primero en modo plan para crear una estrategia de implementación detallada antes de hacer el cambio"
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RZW0VMMAZB9EN2TV0F",
+        "correctOptionKey": "C",
+        "text": "Usar ejecución directa para hacer el cambio",
+        "justification": "Esta es una modificación simple y bien delimitada: agregar un condicional de validación a una función existente en un único archivo. La ejecución directa es apropiada para cambios con alcance claro y bajo riesgo arquitectónico. El modo plan es mejor para cambios en múltiples archivos, decisiones arquitectónicas o tareas con múltiples enfoques viables, y el pensamiento extendido es innecesario para una verificación de validación directa."
+      },
+      "studyMetadata": {
+        "tags": ["code_generation_with_claude_code"],
+        "difficulty": "intermediate",
+        "sourceOrder": 48
+      }
+    },
+    {
+      "id": "01KT81N3RZ5F73KKZGD0DRDTWH",
+      "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+      "order": 49,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Generación de Código con Claude Code",
+        "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
+      },
+      "prompt": "Tu equipo frecuentemente migra componentes de React a Vue. Escribiste un flujo de trabajo paso a paso para que Claude Code lo siga durante cada migración, y querés que todos los desarrolladores del equipo lo invoquen escribiendo /migrate-component. El flujo de trabajo debe mantenerse sincronizado a medida que el equipo lo itera. ¿Dónde deberías colocar el archivo skill?",
+      "options": [
+        {
+          "id": "01KT81N3RZ7DKM6TG9Q059S0NB",
+          "key": "A",
+          "text": "En .claude/skills/migrate-component/SKILL.md en la raíz del proyecto, comprometido en el control de versiones"
+        },
+        {
+          "id": "01KT81N3RZ297M3S4EMEXMMVKJ",
+          "key": "B",
+          "text": "En el .claude/settings.json del proyecto usando una entrada skillOverrides para registrar y definir el flujo de trabajo"
+        },
+        {
+          "id": "01KT81N3RZ34KYJ2BBHFRGP9G8",
+          "key": "C",
+          "text": "Como un bloque de instrucciones detallado en el archivo CLAUDE.md de la raíz del proyecto"
+        },
+        {
+          "id": "01KT81N3RZQR9A1VESCP9EX0A5",
+          "key": "D",
+          "text": "En ~/.claude/skills/migrate-component/SKILL.md en la máquina de cada desarrollador"
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RZ7DKM6TG9Q059S0NB",
+        "correctOptionKey": "A",
+        "text": "En .claude/skills/migrate-component/SKILL.md en la raíz del proyecto, comprometido en el control de versiones",
+        "justification": "Un flujo de trabajo que debe ser compartido por todos los desarrolladores y mantenerse sincronizado a medida que el equipo lo mejora pertenece al repositorio, no a la configuración personal de cada desarrollador. Un skill de proyecto en `.claude/skills/migrate-component/SKILL.md` puede versionarse, revisarse y actualizarse con el codebase. `CLAUDE.md` cargaría el flujo de trabajo en cada conversación de forma innecesaria, y los archivos de skill por usuario irían divergiendo entre máquinas."
+      },
+      "studyMetadata": {
+        "tags": ["code_generation_with_claude_code"],
+        "difficulty": "intermediate",
+        "sourceOrder": 49
+      }
+    },
+    {
+      "id": "01KT81N3RZTTMC0NNFJSM3STY5",
+      "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+      "order": 50,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Generación de Código con Claude Code",
+        "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
+      },
+      "prompt": "Tu equipo conectó un servidor MCP personalizado que proporciona plantillas de flujo de trabajo DevOps. El servidor expone varios prompts MCP (como deploy_checklist e incident_response) además de herramientas. ¿Cómo se vuelven accesibles estos prompts MCP dentro de Claude Code?",
+      "options": [
+        {
+          "id": "01KT81N3RZVJ9JXMFC61A4W1S8",
+          "key": "A",
+          "text": "Se agregan al registro de herramientas de Claude Code junto con las herramientas del servidor, invocados automáticamente por el modelo cuando son relevantes para la tarea."
+        },
+        {
+          "id": "01KT81N3RZDJMH3RG9FFW0F5ER",
+          "key": "B",
+          "text": "Se anteponen automáticamente a cada conversación como contexto adicional de nivel de sistema, influyendo en el comportamiento de Claude durante toda la sesión."
+        },
+        {
+          "id": "01KT81N3RZAFV3F8BA3B86339N",
+          "key": "C",
+          "text": "Se exponen como recursos mencionables con @ junto a los archivos, obtenidos y adjuntados a tu mensaje cuando se los referencia."
+        },
+        {
+          "id": "01KT81N3RZAKK72QZWV4BXQW1D",
+          "key": "D",
+          "text": "Aparecen como slash commands (por ejemplo, /mcp__servername__deploy_checklist) que podés invocar, con argumentos pasados después del nombre del comando."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RZAKK72QZWV4BXQW1D",
+        "correctOptionKey": "D",
+        "text": "Aparecen como slash commands (por ejemplo, /mcp__servername__deploy_checklist) que podés invocar, con argumentos pasados después del nombre del comando.",
+        "justification": "Los prompts MCP son plantillas de prompt reutilizables expuestas por el servidor. En Claude Code, se exponen para invocación explícita como slash commands, usando una forma con namespace que identifica el servidor MCP y el nombre del prompt. No son herramientas seleccionadas automáticamente por el modelo, no son contexto de sistema antepuesto a cada conversación, y no son recursos mencionables con `@` como archivos o catálogos."
+      },
+      "studyMetadata": {
+        "tags": ["code_generation_with_claude_code"],
+        "difficulty": "intermediate",
+        "sourceOrder": 50
+      }
+    },
+    {
+      "id": "01KT81N3RZBQMDNJ030HT06WYY",
+      "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+      "order": 51,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Generación de Código con Claude Code",
+        "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
+      },
+      "prompt": "Tu monorepo contiene estándares de código compartidos en /docs/standards/: security-rules.md (para servicios que manejan datos de usuario), testing-patterns.md (para todos los paquetes) y api-conventions.md (para servicios expuestos como API). Tus 15 paquetes están organizados por dominio de feature (/packages/auth/, /packages/billing/, /packages/notifications/, etc.) sin convenciones de nombres que indiquen cuáles manejan datos de usuario o exponen APIs. Se espera que los mantenedores de paquetes configuren sus propios ajustes de desarrollo local, ya que conocen los requisitos de dominio de su paquete. Actualmente, todos los archivos CLAUDE.md de los paquetes duplican los tres estándares, aplicando guía irrelevante. ¿Cuál es el enfoque más efectivo?",
+      "options": [
+        {
+          "id": "01KT81N3RZ1VERFM8HNZSTJ4K5",
+          "key": "A",
+          "text": "Poner todos los estándares en el CLAUDE.md raíz con instrucciones de anulación como \"ignorar security-rules.md al trabajar en paquetes que no manejan datos de usuario\"."
+        },
+        {
+          "id": "01KT81N3RZHXYHABME329TSD3Y",
+          "key": "B",
+          "text": "Crear un shared-standards.md que use @imports para combinar los tres estándares, luego hacer que el CLAUDE.md de cada paquete importe ese archivo combinado."
+        },
+        {
+          "id": "01KT81N3RZ4QP7JAFN4R92ND0C",
+          "key": "C",
+          "text": "Crear archivos .claude/rules/ para cada estándar con rutas en frontmatter YAML que listen cada directorio de paquete donde ese estándar debe aplicarse."
+        },
+        {
+          "id": "01KT81N3RZ88M9VTGF4BXY29X2",
+          "key": "D",
+          "text": "Usar @imports en el CLAUDE.md de cada paquete para referenciar solo los archivos de estándares relevantes para ese paquete, basándose en el conocimiento de dominio del mantenedor."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RZ88M9VTGF4BXY29X2",
+        "correctOptionKey": "D",
+        "text": "Usar @imports en el CLAUDE.md de cada paquete para referenciar solo los archivos de estándares relevantes para ese paquete, basándose en el conocimiento de dominio del mantenedor.",
+        "justification": "Los estándares son modulares, pero la aplicabilidad depende del conocimiento de dominio que no puede inferirse de las rutas o nombres de los paquetes. Usar `@import` en el `CLAUDE.md` de cada paquete permite que los mantenedores incluyan solo los estándares que realmente aplican a su paquete mientras los archivos fuente permanecen centralizados en `/docs/standards/`. Las instrucciones de ignorar a nivel raíz y las importaciones combinadas seguirían cargando guía irrelevante, mientras que las reglas con alcance de ruta requieren mantener listas explícitas de paquetes para criterios que no son obvios a partir de las rutas."
+      },
+      "studyMetadata": {
+        "tags": ["code_generation_with_claude_code"],
+        "difficulty": "intermediate",
+        "sourceOrder": 51
+      }
+    },
+    {
+      "id": "01KT81N3RZHNQKFFB0S2RA4FFT",
+      "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+      "order": 52,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Generación de Código con Claude Code",
+        "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
+      },
+      "prompt": "Documentaste las convenciones de manejo de errores de API en un archivo CLAUDE.md en la raíz del proyecto, especificando que los handlers de endpoints deben usar una clase ApiError personalizada. Después de varias sesiones, notás que Claude Code a veces sigue estas convenciones y a veces usa bloques try/catch genéricos con mensajes de texto. La inconsistencia parece aleatoria entre diferentes sesiones de codificación. ¿Cuál es el primer paso diagnóstico más eficiente?",
+      "options": [
+        {
+          "id": "01KT81N3RZ65V3AEXBF7VEQH58",
+          "key": "A",
+          "text": "Buscar instrucciones conflictivas en ~/.claude/CLAUDE.md o ~/.claude/rules/ que puedan estar anulando las convenciones del proyecto."
+        },
+        {
+          "id": "01KT81N3RZGF3RGC2QRYDWHVFQ",
+          "key": "B",
+          "text": "Crear reglas específicas de ruta en .claude/rules/handlers.md con frontmatter YAML que delimite las instrucciones de manejo de errores a los archivos de handlers de API."
+        },
+        {
+          "id": "01KT81N3RZ0T4B0F9GSM5WGKC2",
+          "key": "C",
+          "text": "Agregar ejemplos de código más detallados a tu CLAUDE.md que muestren el patrón exacto de uso de ApiError para diferentes tipos de endpoints."
+        },
+        {
+          "id": "01KT81N3RZR5XXG304P2XQCDQQ",
+          "key": "D",
+          "text": "Ejecutar /memory para verificar qué archivos de memoria están cargados y confirmar que tu CLAUDE.md está incluido."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3RZR5XXG304P2XQCDQQ",
+        "correctOptionKey": "D",
+        "text": "Ejecutar /memory para verificar qué archivos de memoria están cargados y confirmar que tu CLAUDE.md está incluido.",
+        "justification": "Antes de cambiar la configuración, el paso diagnóstico más rápido es confirmar si Claude Code está realmente cargando el archivo de memoria del proyecto esperado en las sesiones donde el comportamiento es inconsistente. `/memory` muestra qué archivos de memoria están activos, ayudando a identificar problemas de jerarquía o carga. Agregar ejemplos o reglas específicas de ruta puede ser útil después, pero primero no verifica que el `CLAUDE.md` existente esté siendo aplicado."
+      },
+      "studyMetadata": {
+        "tags": ["code_generation_with_claude_code"],
+        "difficulty": "intermediate",
+        "sourceOrder": 52
+      }
+    },
+    {
+      "id": "01KT81N3S03YTS2VVG2YJP4V6Z",
+      "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+      "order": 53,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Generación de Código con Claude Code",
+        "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
+      },
+      "prompt": "Tu equipo tiene tres requisitos para el comportamiento de Claude Code en tu proyecto:\n\n1. Claude nunca debe modificar archivos en el directorio db/migrations/\n2. Claude debería preferir tu módulo de logging personalizado sobre console.log\n3. Todos los archivos TypeScript deben formatearse automáticamente con Prettier después de cada edición\n\nLos tres están actualmente escritos como instrucciones en el CLAUDE.md de tu proyecto. Durante una sesión de refactoring compleja, un desarrollador descubre que Claude editó un archivo de migración, violando el requisito #1. ¿Cómo deberías reestructurar estos requisitos en los mecanismos de configuración de Claude Code?",
+      "options": [
+        {
+          "id": "01KT81N3S0CEFPRRN7D5ZAXY8G",
+          "key": "A",
+          "text": "Reescribir los tres requisitos en CLAUDE.md usando lenguaje directivo más fuerte y agregar ejemplos few-shot que demuestren a Claude rechazando editar archivos de migración y ejecutando Prettier después de las ediciones."
+        },
+        {
+          "id": "01KT81N3S0JWG7G1HXQ0RSS253",
+          "key": "B",
+          "text": "Agregar Edit(./db/migrations/**) a permissions.deny en la configuración del proyecto, mantener la preferencia de logging en CLAUDE.md y agregar un hook PostToolUse en la herramienta Edit que ejecute Prettier en los archivos TypeScript modificados."
+        },
+        {
+          "id": "01KT81N3S0TBC485MTNDBESKWZ",
+          "key": "C",
+          "text": "Mover los tres requisitos a .claude/rules/ como reglas con alcance de ruta: una apuntando a db/migrations/** que prohíbe editar esos archivos, y otras apuntando a **/*.ts para la convención de logging y la instrucción de formato."
+        },
+        {
+          "id": "01KT81N3S0TV6TJ4DH3P8KCN23",
+          "key": "D",
+          "text": "Configurar hooks para los tres: un script de hook PreToolUse que bloquee las llamadas Edit dirigidas a db/migrations/, un script de hook PreToolUse que agregue contexto de convención de logging antes de las ediciones, y un hook PostToolUse que ejecute Prettier después de ediciones de TypeScript."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3S0JWG7G1HXQ0RSS253",
+        "correctOptionKey": "B",
+        "text": "Agregar Edit(./db/migrations/**) a permissions.deny en la configuración del proyecto, mantener la preferencia de logging en CLAUDE.md y agregar un hook PostToolUse en la herramienta Edit que ejecute Prettier en los archivos TypeScript modificados.",
+        "justification": "Estos requisitos tienen diferentes necesidades de aplicación. “Nunca modificar migraciones” es una regla de seguridad estricta y debe ser aplicada por permisos en lugar de instrucciones de prompt. Preferir un módulo de logging personalizado es una convención de código de todo el proyecto, por lo que `CLAUDE.md` es apropiado. El formato después de las ediciones es automatización determinista, por lo que un hook `PostToolUse` debe ejecutar Prettier en los archivos TypeScript modificados. Una redacción más fuerte o reglas de prompt con alcance de ruta aún dependen del cumplimiento del modelo para requisitos que deben aplicarse mecánicamente."
+      },
+      "studyMetadata": {
+        "tags": ["code_generation_with_claude_code"],
+        "difficulty": "intermediate",
+        "sourceOrder": 53
+      }
+    },
+    {
+      "id": "01KT81N3S0CPT5MC0XY26NDZHH",
+      "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+      "order": 54,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Generación de Código con Claude Code",
+        "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
+      },
+      "prompt": "Una auditoría de seguridad requiere actualizar tu biblioteca de autenticación de v2 a v3. La guía de migración documenta cambios que rompen compatibilidad: authenticate() ahora devuelve una Promise en lugar de aceptar un callback, el tipo User tiene campos reestructurados y se eliminaron tres métodos deprecados. Grep muestra que la biblioteca se importa en 45 archivos en varios módulos. ¿Cuál es el enfoque más efectivo?",
+      "options": [
+        {
+          "id": "01KT81N3S09SR307YSSCD73FGR",
+          "key": "A",
+          "text": "Pegar los cambios que rompen compatibilidad de la guía de migración en tu prompt y usar ejecución directa para actualizar todos los usos en los 45 archivos."
+        },
+        {
+          "id": "01KT81N3S0JG2QV0J3B5XX74Y3",
+          "key": "B",
+          "text": "Actualizar la versión de la dependencia, ejecutar el conjunto de tests y usar Claude Code para corregir cada fallo a medida que aparece."
+        },
+        {
+          "id": "01KT81N3S01PBZ41AE12RM2N4Q",
+          "key": "C",
+          "text": "Crear un comando slash personalizado que encapsule las transformaciones de migración y ejecutarlo contra cada archivo sin exploración previa del código."
+        },
+        {
+          "id": "01KT81N3S046X4JKYKC40SP6NM",
+          "key": "D",
+          "text": "Entrar en plan mode para explorar el uso de la librería en todos los módulos, mapear los caminos de código afectados y luego crear una estrategia de migración antes de implementar."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3S046X4JKYKC40SP6NM",
+        "correctOptionKey": "D",
+        "text": "Entrar en plan mode para explorar el uso de la librería en todos los módulos, mapear los caminos de código afectados y luego crear una estrategia de migración antes de implementar.",
+        "justification": "Esta es una migración multi-archivo con cambios de API que rompen compatibilidad en 45 archivos. El plan mode es apropiado porque Claude Code debe primero mapear los diferentes patrones de uso, entender los cambios de callback a Promise, identificar los supuestos del tipo `User` afectados y planificar cómo reemplazar los métodos eliminados antes de editar. La ejecución directa o las correcciones basadas en fallos de tests probablemente producirían cambios fragmentados y perderían los patrones entre módulos."
+      },
+      "studyMetadata": {
+        "tags": ["code_generation_with_claude_code"],
+        "difficulty": "intermediate",
+        "sourceOrder": 54
+      }
+    },
+    {
+      "id": "01KT81N3S0S92C7QHM5RM2ANMW",
+      "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+      "order": 55,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Generación de Código con Claude Code",
+        "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
+      },
+      "prompt": "Estás implementando una capa de caché para respuestas de API para acelerar el endpoint /products. Tenés una idea aproximada—Redis con un TTL de 5 minutos—pero sos nuevo en caching en producción y no estás seguro de qué otras consideraciones requiere una implementación robusta. ¿Cuál es la forma más efectiva de iniciar tu flujo de trabajo iterativo?",
+      "options": [
+        {
+          "id": "01KT81N3S0BGAWSMSJR8HA52R8",
+          "key": "A",
+          "text": "Empezar con una solicitud mínima: 'Agregar caché Redis a /products con TTL de 5 minutos.' Agregar funcionalidades y corregir problemas a través de prompts de seguimiento a medida que surjan durante las pruebas."
+        },
+        {
+          "id": "01KT81N3S0WE8CMJHQM0XXBP0C",
+          "key": "B",
+          "text": "Usar plan mode para analizar la implementación actual del endpoint /products y luego proporcionar los requisitos de caché una vez que Claude explique cómo está estructurado el código existente."
+        },
+        {
+          "id": "01KT81N3S0EWCZDZ7A67DDXCKX",
+          "key": "C",
+          "text": "Escribir una especificación con los requisitos conocidos y marcadores 'TBD' para las áreas inciertas, haciendo que Claude proponga soluciones para cada TBD mientras implementa."
+        },
+        {
+          "id": "01KT81N3S0C4XZ7D3F5BEC4BJH",
+          "key": "D",
+          "text": "Pedirle a Claude que te entreviste sobre los requisitos de caché antes de implementar, identificando consideraciones como estrategias de invalidación, capas de caché, garantías de consistencia y modos de fallo."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3S0C4XZ7D3F5BEC4BJH",
+        "correctOptionKey": "D",
+        "text": "Pedirle a Claude que te entreviste sobre los requisitos de caché antes de implementar, identificando consideraciones como estrategias de invalidación, capas de caché, garantías de consistencia y modos de fallo.",
+        "justification": "El usuario tiene una idea de implementación aproximada pero le falta claridad sobre los requisitos de producción. El patrón de entrevista es apropiado porque ayuda a identificar consideraciones de diseño que el desarrollador puede no haber anticipado, como invalidación, consistencia, comportamiento de fallback, cache stampedes, observabilidad y modos de fallo. Empezar con una implementación mínima o completar marcadores `TBD` probablemente perdería decisiones importantes, mientras que el plan mode solo puede analizar la estructura del código sin obtener los requisitos de producto y operacionales faltantes."
+      },
+      "studyMetadata": {
+        "tags": ["code_generation_with_claude_code"],
+        "difficulty": "intermediate",
+        "sourceOrder": 55
+      }
+    },
+    {
+      "id": "01KT81N3S0671ZK85V2M9E2RWZ",
+      "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+      "order": 56,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Generación de Código con Claude Code",
+        "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
+      },
+      "prompt": "Estás implementando un algoritmo de recorrido de grafos complejo con requisitos de rendimiento específicos y casos borde a manejar (nodos desconectados, ciclos, aristas ponderadas). Querés estructurar tu flujo de trabajo para un refinamiento iterativo eficiente con Claude. ¿Qué enfoque permitirá más efectivamente la mejora progresiva a lo largo de múltiples iteraciones?",
+      "options": [
+        {
+          "id": "01KT81N3S09E6V726X7WEPXCG8",
+          "key": "A",
+          "text": "Escribir un conjunto de tests que cubra el comportamiento esperado, los casos borde y los requisitos de rendimiento antes de la implementación. Pedirle a Claude que escriba código que pase los tests, luego iterar compartiendo los fallos de tests con cada solicitud de refinamiento."
+        },
+        {
+          "id": "01KT81N3S0BS7Z1Y7N91ATX45D",
+          "key": "B",
+          "text": "Proporcionarle a Claude una implementación de referencia de la documentación, luego pedirle que reescriba el código para que coincida con el estilo de tu código y agregue el manejo de casos borde requeridos, comparando los resultados con la referencia."
+        },
+        {
+          "id": "01KT81N3S041E7N1KERKAD090P",
+          "key": "C",
+          "text": "Proporcionarle a Claude una especificación detallada en lenguaje natural del algoritmo, incluyendo todos los requisitos y casos borde. Revisar cada salida manualmente y proporcionar retroalimentación descriptiva sobre qué comportamiento necesita cambiar."
+        },
+        {
+          "id": "01KT81N3S0RHKSG57R599BCATG",
+          "key": "D",
+          "text": "Hacer que Claude investigue extensamente el algoritmo y cree un plan de implementación detallado usando pensamiento extendido, luego implementar la solución completa basándose en ese plan."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3S09E6V726X7WEPXCG8",
+        "correctOptionKey": "A",
+        "text": "Escribir un conjunto de tests que cubra el comportamiento esperado, los casos borde y los requisitos de rendimiento antes de la implementación. Pedirle a Claude que escriba código que pase los tests, luego iterar compartiendo los fallos de tests con cada solicitud de refinamiento.",
+        "justification": "Para un algoritmo complejo, los tests proporcionan retroalimentación concreta y repetible a lo largo de las iteraciones. Cubrir nodos desconectados, ciclos, aristas ponderadas, salidas esperadas y restricciones de rendimiento le da a Claude un objetivo claro y convierte cada refinamiento en una respuesta específica a los casos que fallan. La revisión en lenguaje natural sola es menos precisa, y un plan detallado no garantiza la corrección en los casos borde sin retroalimentación ejecutable."
+      },
+      "studyMetadata": {
+        "tags": ["code_generation_with_claude_code"],
+        "difficulty": "intermediate",
+        "sourceOrder": 56
+      }
+    },
+    {
+      "id": "01KT81N3S04CBZ9PEMR21VH3N1",
+      "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+      "order": 57,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Generación de Código con Claude Code",
+        "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
+      },
+      "prompt": "Tu equipo quiere que Claude siga un checklist detallado de revisión de código (8 ítems que cubren cambios de API, cobertura de tests, documentación, seguridad, etc.) al revisar pull requests. El equipo también usa Claude extensamente para otras tareas: escribir nuevas funcionalidades, depurar problemas de producción y generar documentación. Actualmente, los desarrolladores pegan el checklist al inicio de cada sesión de revisión. ¿Qué enfoque aborda mejor esta necesidad del flujo de trabajo?",
+      "options": [
+        {
+          "id": "01KT81N3S0DYM5RBDR4E3PBPBZ",
+          "key": "A",
+          "text": "Configurar plan mode como predeterminado para las sesiones de revisión de código."
+        },
+        {
+          "id": "01KT81N3S0QG0VX80RDR13B7QV",
+          "key": "B",
+          "text": "Crear un subagente de revisión dedicado con el checklist embebido en su configuración."
+        },
+        {
+          "id": "01KT81N3S0EDG5D32GE8PNTZJF",
+          "key": "C",
+          "text": "Agregar el checklist al archivo CLAUDE.md del proyecto bajo una sección 'Code Review'."
+        },
+        {
+          "id": "01KT81N3S017MNXVZ23Z8G7HXF",
+          "key": "D",
+          "text": "Crear un comando slash /review que contenga el checklist, invocado al iniciar las revisiones."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3S017MNXVZ23Z8G7HXF",
+        "correctOptionKey": "D",
+        "text": "Crear un comando slash /review que contenga el checklist, invocado al iniciar las revisiones.",
+        "justification": "Un comando slash se adapta a un flujo de trabajo repetible que los desarrolladores inician intencionalmente solo para revisiones de pull requests. Mantiene el checklist detallado fuera de las sesiones ordinarias de funcionalidades, depuración y documentación, a la vez que le da al equipo un procedimiento de revisión consistente sin pegar el checklist manualmente cada vez."
+      },
+      "studyMetadata": {
+        "tags": ["code_generation_with_claude_code"],
+        "difficulty": "intermediate",
+        "sourceOrder": 57
+      }
+    },
+    {
+      "id": "01KT81N3S0REMK190Z3ZJVQZEG",
+      "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+      "order": 58,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Generación de Código con Claude Code",
+        "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
+      },
+      "prompt": "Tu equipo está configurando servidores MCP en Claude Code. Querés agregar un servidor compartido de búsqueda de venues al que todos los miembros del equipo deberían tener acceso, y personalmente querés agregar un servidor experimental de playlists de música que solo vos estás probando. ¿Qué enfoque de configuración aplica correctamente los scopes de servidores MCP?",
+      "options": [
+        {
+          "id": "01KT81N3S083JPTCP97Z64915E",
+          "key": "A",
+          "text": "Agregar el servidor de venues a ~/.claude.json y el servidor de playlists a .mcp.json"
+        },
+        {
+          "id": "01KT81N3S0PC0HEN3AC9PN5560",
+          "key": "B",
+          "text": "Agregar ambos servidores al archivo .mcp.json a nivel de proyecto"
+        },
+        {
+          "id": "01KT81N3S0RGB1X2J4PGZ7P83X",
+          "key": "C",
+          "text": "Agregar el servidor de venues a .mcp.json y el servidor de playlists a ~/.claude.json"
+        },
+        {
+          "id": "01KT81N3S03SCBAXY5C2ZESAQZ",
+          "key": "D",
+          "text": "Agregar ambos servidores a tu ~/.claude.json local"
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3S0RGB1X2J4PGZ7P83X",
+        "correctOptionKey": "C",
+        "text": "Agregar el servidor de venues a .mcp.json y el servidor de playlists a ~/.claude.json",
+        "justification": "Un servidor que todos los miembros del equipo deben usar pertenece al `.mcp.json` con scope de proyecto, porque puede compartirse con el repositorio. Un servidor experimental personal pertenece al `~/.claude.json` con scope de usuario, porque debe afectar solo al desarrollador que lo está probando."
+      },
+      "studyMetadata": {
+        "tags": ["code_generation_with_claude_code"],
+        "difficulty": "intermediate",
+        "sourceOrder": 58
+      }
+    },
+    {
+      "id": "01KT81N3S0TW6567F0VNBA1TC4",
+      "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+      "order": 59,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Generación de Código con Claude Code",
+        "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
+      },
+      "prompt": "Un bug crítico está afectando a los usuarios de producción. Los logs de error muestran excepciones en el módulo OrderProcessing con un stack trace claro que apunta a una función específica. Nunca trabajaste con este módulo antes. ¿Cuál es el enfoque más efectivo?",
+      "options": [
+        {
+          "id": "01KT81N3S0P5GZZRRRRW1XRGNS",
+          "key": "A",
+          "text": "Entrar en plan mode para explorar la arquitectura y dependencias del módulo antes de intentar cualquier corrección."
+        },
+        {
+          "id": "01KT81N3S0R6GX4CKM888Y5PWD",
+          "key": "B",
+          "text": "Empezar con ejecución directa para recopilar información inicial, luego cambiar a plan mode para diseñar una solución integral antes de implementar cualquier cambio."
+        },
+        {
+          "id": "01KT81N3S01GXT6G2B9ZVWNSTX",
+          "key": "C",
+          "text": "Usar ejecución directa para examinar el stack trace, leer el código relevante e implementar una corrección una vez que se identifica la causa raíz."
+        },
+        {
+          "id": "01KT81N3S0WF3EV8FF39YMM9GV",
+          "key": "D",
+          "text": "Usar plan mode para analizar el error en el contexto del diseño del módulo, enumerar las posibles causas raíz y priorizar las correcciones sistemáticamente."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3S01GXT6G2B9ZVWNSTX",
+        "correctOptionKey": "C",
+        "text": "Usar ejecución directa para examinar el stack trace, leer el código relevante e implementar una corrección una vez que se identifica la causa raíz.",
+        "justification": "El problema es urgente y ya está bien delimitado por los logs y el stack trace. La ejecución directa permite a Claude inspeccionar la función que falla, seguir el camino de código inmediato, identificar la causa raíz y aplicar una corrección específica sin gastar tiempo en una fase de planificación arquitectónica más amplia que no es necesaria dada la evidencia disponible."
+      },
+      "studyMetadata": {
+        "tags": ["code_generation_with_claude_code"],
+        "difficulty": "intermediate",
+        "sourceOrder": 59
+      }
+    },
+    {
+      "id": "01KT81N3S0C1M5J6RM7SWACX1G",
+      "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+      "order": 60,
+      "type": "multiple_choice",
+      "scenario": {
+        "title": "Generación de Código con Claude Code",
+        "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
+      },
+      "prompt": "Le pediste a Claude Code que construya una funcionalidad de generación de reportes PDF. La implementación inicial consulta la base de datos correctamente, pero la salida tiene problemas de formato: las columnas de la tabla son demasiado estrechas causando truncamiento de contenido, las fechas se muestran sin el formato correcto y el manejo de saltos de página es incorrecto. Notaste que estos problemas interactúan—cambiar el ancho de las columnas afecta cómo se renderizan las fechas, y los saltos de página dependen de la altura del contenido. ¿Cuál es el enfoque más efectivo para iterar hacia una solución funcional?",
+      "options": [
+        {
+          "id": "01KT81N3S04JFQZBRG78TGCH7G",
+          "key": "A",
+          "text": "Abordar el problema del ancho de columnas primero con medidas específicas, verificar que funcione, luego corregir el formato de fechas dentro de las columnas corregidas, luego ajustar los saltos de página—testeando después de cada cambio."
+        },
+        {
+          "id": "01KT81N3S0CP6RCP4X5M1M66T0",
+          "key": "B",
+          "text": "Empezar de cero con un prompt detallado que especifique todos los requisitos de formato desde el principio."
+        },
+        {
+          "id": "01KT81N3S0B0YAFZ4YJVYMY2AE",
+          "key": "C",
+          "text": "Mostrarle a Claude un ejemplo de un reporte correctamente formateado y pedirle que coincida con esa salida, en lugar de listar los problemas técnicos específicos."
+        },
+        {
+          "id": "01KT81N3S0AKZ8JRD2EDNPXS84",
+          "key": "D",
+          "text": "Proporcionar los tres problemas en un único mensaje detallado con especificaciones exactas para cada uno, permitiendo que Claude los aborde juntos en una sola actualización."
+        }
+      ],
+      "answer": {
+        "correctOptionId": "01KT81N3S0AKZ8JRD2EDNPXS84",
+        "correctOptionKey": "D",
+        "text": "Proporcionar los tres problemas en un único mensaje detallado con especificaciones exactas para cada uno, permitiendo que Claude los aborde juntos en una sola actualización.",
+        "justification": "Los problemas de formato interactúan entre sí, por lo que corregirlos de uno en uno puede hacer que los cambios posteriores invaliden el trabajo anterior. Proporcionar los requisitos de ancho de columnas, formato de fechas y saltos de página juntos le da a Claude el conjunto completo de restricciones necesarias para producir una actualización de layout coherente."
+      },
+      "studyMetadata": {
+        "tags": ["code_generation_with_claude_code"],
+        "difficulty": "intermediate",
+        "sourceOrder": 60
+      }
+    }
+  ]
+}

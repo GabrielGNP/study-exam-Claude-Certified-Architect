@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="doc_title">Claude Architect · Arena de Estudio</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- ============ PANTALLA: MENU ============ -->
+  <section id="screen-home" class="screen active">
+    <header class="home-header">
+      <div class="brand">
+        <span class="brand-glyph">✳</span>
+        <div>
+          <h1 data-i18n="app_title">Arena de Estudio</h1>
+          <p class="subtitle" id="subtitle"></p>
+        </div>
+      </div>
+      <div class="lang-switch" id="lang-switch" role="group" aria-label="Language">
+        <button class="lang-btn" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </header>
+
+    <div class="mode-grid">
+      <!-- Modo 1 -->
+      <article class="mode-card" data-mode="timeattack">
+        <div class="mode-icon">⏱️</div>
+        <h2 data-i18n="mode1_title">Contra Reloj</h2>
+        <p data-i18n="mode1_desc">Responde tantas preguntas como puedas antes de que se acabe el tiempo. Sin repetir hasta agotar el banco.</p>
+        <label class="field-label" for="ta-time" data-i18n="duration_label">Duración</label>
+        <select id="ta-time" class="select"></select>
+        <button class="btn btn-primary" id="start-timeattack" data-i18n="mode1_btn">Iniciar Contra Reloj</button>
+      </article>
+
+      <!-- Modo 2 -->
+      <article class="mode-card" data-mode="survival">
+        <div class="mode-icon">🔥</div>
+        <h2 data-i18n="mode2_title">Supervivencia</h2>
+        <p data-i18n="mode2_desc">Encadena respuestas correctas. Un solo fallo y vuelves al inicio. ¿Puedes completar el banco entero sin errar?</p>
+        <div class="mode-note" data-i18n="mode2_note">Se registra tu racha y tu tiempo cada vez que fallas.</div>
+        <button class="btn btn-primary" id="start-survival" data-i18n="mode2_btn">Iniciar Supervivencia</button>
+      </article>
+    </div>
+
+    <div class="records-wrap">
+      <div class="records-panel">
+        <h3 data-i18n="records_ta_title">🏆 Récords · Contra Reloj</h3>
+        <div class="records-filter">
+          <label for="rec-ta-time" data-i18n="duration_filter">Duración:</label>
+          <select id="rec-ta-time" class="select select-sm"></select>
+        </div>
+        <div id="records-timeattack" class="records-list"></div>
+      </div>
+
+      <div class="records-panel">
+        <h3 data-i18n="records_sv_title">🔥 Récords · Supervivencia</h3>
+        <div class="records-filter"><span class="muted" data-i18n="records_sv_sub">Mejores rachas sin fallar</span></div>
+        <div id="records-survival" class="records-list"></div>
+      </div>
+    </div>
+
+    <footer class="home-footer">
+      <button class="btn-ghost btn-danger-ghost" id="clear-records" data-i18n="clear_records">Borrar récords</button>
+      <span class="muted small" data-i18n="offline_note">100% offline · tus datos se guardan solo en este navegador</span>
+    </footer>
+  </section>
+
+  <!-- ============ PANTALLA: JUEGO ============ -->
+  <section id="screen-game" class="screen">
+    <div class="game-topbar">
+      <button class="btn-ghost" id="quit-game" data-i18n="quit">← Salir</button>
+      <div id="game-status" class="game-status"></div>
+      <div id="game-timer" class="game-timer">00:00</div>
+    </div>
+
+    <!-- barra de progreso (modo supervivencia) -->
+    <div id="progress-wrap" class="progress-wrap" hidden>
+      <div class="progress-bar"><div id="progress-fill" class="progress-fill"></div></div>
+      <div id="progress-label" class="progress-label"></div>
+    </div>
+
+    <div class="question-area">
+      <div id="q-topic" class="q-topic"></div>
+      <div id="q-scenario" class="q-scenario"></div>
+      <h2 id="q-prompt" class="q-prompt"></h2>
+      <div id="q-options" class="options"></div>
+    </div>
+
+    <div id="feedback" class="feedback" hidden></div>
+  </section>
+
+  <!-- ============ PANTALLA: RESULTADOS ============ -->
+  <section id="screen-results" class="screen">
+    <div class="results-inner">
+      <h1 id="results-title">Resultados</h1>
+      <div id="results-summary" class="results-summary"></div>
+      <div id="results-record" class="results-record" hidden></div>
+
+      <div id="results-review-wrap" class="review-wrap">
+        <h3 id="review-heading"></h3>
+        <div id="results-review" class="review-list"></div>
+      </div>
+
+      <div class="results-actions">
+        <button class="btn btn-primary" id="results-retry" data-i18n="results_retry">Jugar de nuevo</button>
+        <button class="btn-ghost" id="results-home" data-i18n="results_home">Volver al menú</button>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

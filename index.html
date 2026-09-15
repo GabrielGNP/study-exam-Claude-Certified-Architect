@@ -19,11 +19,24 @@
           <p class="subtitle" id="subtitle"></p>
         </div>
       </div>
-      <div class="lang-switch" id="lang-switch" role="group" aria-label="Language">
+      <div class="lang-switch" role="group" aria-label="Language">
         <button class="lang-btn" data-lang="es">ES</button>
         <button class="lang-btn" data-lang="en">EN</button>
       </div>
     </header>
+
+    <div class="exam-cta">
+      <span class="exam-cta-icon">🎓</span>
+      <span class="exam-cta-text">
+        <strong data-i18n="exam_title">Simulacro de Examen</strong>
+        <small data-i18n="exam_desc">4 de 6 escenarios al azar · 60 preguntas · aprobar 720/1000</small>
+        <span class="exam-cta-badge" data-i18n="exam_cta_badge">Lo más parecido al real</span>
+      </span>
+      <span class="exam-cta-actions">
+        <button class="btn btn-primary" id="exam-start-official" data-i18n="exam_btn_official">Oficial · 2 h</button>
+        <button class="btn-ghost" id="exam-start-practice" data-i18n="exam_btn_practice">Práctica · 90 min</button>
+      </span>
+    </div>
 
     <div class="mode-grid">
       <!-- Modo 1 -->
@@ -46,6 +59,15 @@
       </article>
     </div>
 
+    <button class="study-cta" id="open-study">
+      <span class="study-cta-icon">📚</span>
+      <span class="study-cta-text">
+        <strong data-i18n="study_title">Modo Estudio</strong>
+        <small data-i18n="study_desc">Repasa todas las preguntas con su respuesta correcta y justificación, agrupadas por tema.</small>
+      </span>
+      <span class="study-cta-arrow">→</span>
+    </button>
+
     <div class="records-wrap">
       <div class="records-panel">
         <h3 data-i18n="records_ta_title">🏆 Récords · Contra Reloj</h3>
@@ -61,6 +83,12 @@
         <div class="records-filter"><span class="muted" data-i18n="records_sv_sub">Mejores rachas sin fallar</span></div>
         <div id="records-survival" class="records-list"></div>
       </div>
+
+      <div class="records-panel">
+        <h3 data-i18n="exam_records_title">🎓 Récords · Examen</h3>
+        <div class="records-filter"><span class="muted" data-i18n="exam_records_sub">Mejor puntaje sobre 1000</span></div>
+        <div id="records-exam" class="records-list"></div>
+      </div>
     </div>
 
     <footer class="home-footer">
@@ -74,7 +102,13 @@
     <div class="game-topbar">
       <button class="btn-ghost" id="quit-game" data-i18n="quit">← Salir</button>
       <div id="game-status" class="game-status"></div>
-      <div id="game-timer" class="game-timer">00:00</div>
+      <div class="topbar-right">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button class="lang-btn" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <div id="game-timer" class="game-timer">00:00</div>
+      </div>
     </div>
 
     <!-- barra de progreso (modo supervivencia) -->
@@ -84,6 +118,7 @@
     </div>
 
     <div class="question-area">
+      <div id="q-id" class="qid-wrap"></div>
       <div id="q-topic" class="q-topic"></div>
       <div id="q-scenario" class="q-scenario"></div>
       <h2 id="q-prompt" class="q-prompt"></h2>
@@ -93,9 +128,104 @@
     <div id="feedback" class="feedback" hidden></div>
   </section>
 
+  <!-- ============ PANTALLA: MODO ESTUDIO ============ -->
+  <section id="screen-study" class="screen">
+    <div class="study-topbar">
+      <button class="btn-ghost" id="study-home" data-i18n="study_back">← Menú</button>
+      <h1 class="study-heading" data-i18n="study_heading">Modo Estudio · Todas las preguntas</h1>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button class="lang-btn" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </div>
+    <div class="study-toolbar">
+      <div id="study-index" class="study-index"></div>
+      <div class="study-toggle-all">
+        <button class="btn-ghost btn-xs" id="study-expand" data-i18n="study_expand">Expandir todo</button>
+        <button class="btn-ghost btn-xs" id="study-collapse" data-i18n="study_collapse">Contraer todo</button>
+      </div>
+    </div>
+    <div id="study-content" class="study-content"></div>
+  </section>
+
+  <!-- ============ PANTALLA: EXAMEN ============ -->
+  <section id="screen-exam" class="screen">
+    <div class="game-topbar">
+      <button class="btn-ghost" id="exam-quit" data-i18n="quit">← Salir</button>
+      <div id="exam-progress-info" class="game-status"></div>
+      <div class="topbar-right">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button class="lang-btn" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <div id="exam-timer" class="game-timer">90:00</div>
+      </div>
+    </div>
+
+    <div class="question-area">
+      <div id="exam-id" class="qid-wrap"></div>
+      <div id="exam-topic" class="q-topic"></div>
+      <div id="exam-scenario" class="q-scenario"></div>
+      <h2 id="exam-prompt" class="q-prompt"></h2>
+      <div id="exam-options" class="options"></div>
+    </div>
+
+    <div class="exam-nav">
+      <button class="btn-ghost" id="exam-prev" data-i18n="exam_prev">← Anterior</button>
+      <button class="btn-ghost" id="exam-mark" data-i18n="exam_mark">⚑ Marcar</button>
+      <button class="btn-ghost" id="exam-next" data-i18n="exam_next">Siguiente →</button>
+      <button class="btn btn-primary" id="exam-submit" data-i18n="exam_submit">Finalizar examen</button>
+    </div>
+
+    <div class="exam-palette-wrap">
+      <div class="exam-legend">
+        <span><i class="dot answered"></i><span data-i18n="exam_legend_answered">respondida</span></span>
+        <span><i class="dot"></i><span data-i18n="exam_legend_pending">sin responder</span></span>
+        <span><i class="dot marked"></i><span data-i18n="exam_legend_marked">marcada</span></span>
+      </div>
+      <div id="exam-palette" class="exam-palette"></div>
+    </div>
+  </section>
+
+  <!-- ============ PANTALLA: RESULTADOS DEL EXAMEN ============ -->
+  <section id="screen-exam-results" class="screen">
+    <div class="results-inner">
+      <div class="results-topbar">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button class="lang-btn" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+      </div>
+      <h1 id="exam-result-title">Resultado</h1>
+      <div id="exam-score-card" class="exam-score-card"></div>
+      <div id="exam-result-summary" class="results-summary"></div>
+
+      <div class="exam-breakdown-wrap">
+        <h3 data-i18n="exam_breakdown_title">Desglose por escenario</h3>
+        <div id="exam-breakdown" class="exam-breakdown"></div>
+      </div>
+
+      <div class="review-wrap">
+        <h3 data-i18n="exam_review_title">Repaso completo</h3>
+        <div id="exam-review" class="review-list"></div>
+      </div>
+
+      <div class="results-actions">
+        <button class="btn btn-primary" id="exam-retry" data-i18n="exam_new">Nuevo examen</button>
+        <button class="btn-ghost" id="exam-results-home" data-i18n="results_home">Volver al menú</button>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ PANTALLA: RESULTADOS ============ -->
   <section id="screen-results" class="screen">
     <div class="results-inner">
+      <div class="results-topbar">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button class="lang-btn" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+      </div>
       <h1 id="results-title">Resultados</h1>
       <div id="results-summary" class="results-summary"></div>
       <div id="results-record" class="results-record" hidden></div>

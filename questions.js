@@ -22,19 +22,34 @@ window.QUESTION_BANKS["es"] = {
    "id": "01KT81BA4J2675N47R42Q4C716",
    "order": 3,
    "title": "Productividad del Desarrollador con Claude",
-   "questionCount": 30
+   "questionCount": 29
   },
   {
    "id": "01KT81BA4JJHS623EN20YJ4JZ1",
    "order": 4,
    "title": "Generación de Código con Claude Code",
-   "questionCount": 30
+   "questionCount": 27
+  },
+  {
+   "id": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 5,
+   "title": "Agente de Resolución de Soporte al Cliente",
+   "questionCount": 50
+  },
+  {
+   "id": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 6,
+   "title": "Extracción de Datos Estructurados",
+   "questionCount": 45
   }
  ],
  "questions": [
   {
    "id": "01KT81N3RTZKP46GW353B7QPQA",
    "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+   "order": 1,
+   "sourceOrder": 1,
+   "variant": false,
    "scenario": {
     "title": "Claude Code para Integración Continua",
     "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
@@ -67,6 +82,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RT20D62GS0H9NAYG9G",
    "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+   "order": 2,
+   "sourceOrder": 2,
+   "variant": false,
    "scenario": {
     "title": "Claude Code para Integración Continua",
     "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
@@ -99,6 +117,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RTXEKM0BV2S96564Q5",
    "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+   "order": 3,
+   "sourceOrder": 3,
+   "variant": false,
    "scenario": {
     "title": "Claude Code para Integración Continua",
     "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
@@ -131,6 +152,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RTJSPDS2TFG4K2BJAJ",
    "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+   "order": 4,
+   "sourceOrder": 4,
+   "variant": false,
    "scenario": {
     "title": "Claude Code para Integración Continua",
     "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
@@ -163,6 +187,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RTEZJKR5AZKKPH66C8",
    "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+   "order": 5,
+   "sourceOrder": 5,
+   "variant": false,
    "scenario": {
     "title": "Claude Code para Integración Continua",
     "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
@@ -195,6 +222,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RVYXJMRQ62M326SB42",
    "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+   "order": 6,
+   "sourceOrder": 6,
+   "variant": false,
    "scenario": {
     "title": "Claude Code para Integración Continua",
     "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
@@ -227,6 +257,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RV6GH7MHTX84DBR863",
    "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+   "order": 7,
+   "sourceOrder": 7,
+   "variant": false,
    "scenario": {
     "title": "Claude Code para Integración Continua",
     "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
@@ -259,6 +292,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RVZY0BD03BKT26KNMV",
    "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+   "order": 8,
+   "sourceOrder": 8,
+   "variant": false,
    "scenario": {
     "title": "Claude Code para Integración Continua",
     "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
@@ -291,6 +327,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RVF49N9MZKNFTKD5AZ",
    "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+   "order": 9,
+   "sourceOrder": 9,
+   "variant": false,
    "scenario": {
     "title": "Claude Code para Integración Continua",
     "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
@@ -323,6 +362,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RVHF1RDAY99N25R5P1",
    "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+   "order": 10,
+   "sourceOrder": 10,
+   "variant": false,
    "scenario": {
     "title": "Claude Code para Integración Continua",
     "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
@@ -355,6 +397,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RVQ7DZADFKFKGNM1BW",
    "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+   "order": 11,
+   "sourceOrder": 11,
+   "variant": false,
    "scenario": {
     "title": "Claude Code para Integración Continua",
     "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
@@ -387,6 +432,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RVFQ5MJ2N2W0HX1JMZ",
    "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+   "order": 12,
+   "sourceOrder": 12,
+   "variant": false,
    "scenario": {
     "title": "Claude Code para Integración Continua",
     "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
@@ -419,6 +467,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RVJ5B7A6GS57J0S5W6",
    "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+   "order": 13,
+   "sourceOrder": 13,
+   "variant": false,
    "scenario": {
     "title": "Claude Code para Integración Continua",
     "body": "[ilegible]"
@@ -451,6 +502,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RV9QP7F2EXVX3V8FJ4",
    "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+   "order": 14,
+   "sourceOrder": 14,
+   "variant": false,
    "scenario": {
     "title": "Claude Code para Integración Continua",
     "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
@@ -483,6 +537,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RWQ2TM730EQJNRC6MQ",
    "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+   "order": 15,
+   "sourceOrder": 15,
+   "variant": false,
    "scenario": {
     "title": "Claude Code para Integración Continua",
     "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
@@ -515,6 +572,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RW6F9A6X0J8S3MH4GD",
    "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+   "order": 16,
+   "sourceOrder": 16,
+   "variant": false,
    "scenario": {
     "title": "Sistema de Investigación Multi-Agente",
     "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
@@ -547,6 +607,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RW6NPSN7Y2P0428FBA",
    "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+   "order": 17,
+   "sourceOrder": 17,
+   "variant": false,
    "scenario": {
     "title": "Sistema de Investigación Multi-Agente",
     "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
@@ -579,6 +642,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RWNNJ0B7ETY3R54GJ8",
    "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+   "order": 18,
+   "sourceOrder": 18,
+   "variant": false,
    "scenario": {
     "title": "Sistema de Investigación Multi-Agente",
     "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
@@ -611,6 +677,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RWGA6W5CE41E0KE0YP",
    "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+   "order": 19,
+   "sourceOrder": 19,
+   "variant": false,
    "scenario": {
     "title": "Sistema de Investigación Multi-Agente",
     "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
@@ -643,6 +712,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RWCFE8BBP43HFKBPT4",
    "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+   "order": 20,
+   "sourceOrder": 20,
+   "variant": false,
    "scenario": {
     "title": "Sistema de Investigación Multi-Agente",
     "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
@@ -675,6 +747,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RWDY00S5VYB5CE2HE5",
    "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+   "order": 21,
+   "sourceOrder": 21,
+   "variant": false,
    "scenario": {
     "title": "Sistema de Investigación Multi-Agente",
     "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
@@ -707,6 +782,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RWYKZDVRZYMQH2F80X",
    "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+   "order": 22,
+   "sourceOrder": 22,
+   "variant": false,
    "scenario": {
     "title": "Sistema de Investigación Multi-Agente",
     "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
@@ -739,6 +817,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RWC8A6KA0T0S68ASK1",
    "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+   "order": 23,
+   "sourceOrder": 23,
+   "variant": false,
    "scenario": {
     "title": "Sistema de Investigación Multi-Agente",
     "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
@@ -771,6 +852,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RX8Q4TGJE5WJ00R47V",
    "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+   "order": 24,
+   "sourceOrder": 24,
+   "variant": false,
    "scenario": {
     "title": "Sistema de Investigación Multi-Agente",
     "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
@@ -803,6 +887,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RXEJJ97KBXA8RANBQJ",
    "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+   "order": 25,
+   "sourceOrder": 25,
+   "variant": false,
    "scenario": {
     "title": "Sistema de Investigación Multi-Agente",
     "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
@@ -835,6 +922,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RXY3TDCTP2EWBDXJ9N",
    "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+   "order": 26,
+   "sourceOrder": 26,
+   "variant": false,
    "scenario": {
     "title": "Sistema de Investigación Multi-Agente",
     "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
@@ -867,6 +957,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RXZ9S35AMBY8PVTKHG",
    "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+   "order": 27,
+   "sourceOrder": 27,
+   "variant": false,
    "scenario": {
     "title": "Sistema de Investigación Multi-Agente",
     "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
@@ -899,6 +992,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RXBQ1HHNJ51NGG3M1K",
    "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+   "order": 28,
+   "sourceOrder": 28,
+   "variant": false,
    "scenario": {
     "title": "Sistema de Investigación Multi-Agente",
     "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
@@ -931,6 +1027,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RXNPT76C1327WEQ2V8",
    "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+   "order": 29,
+   "sourceOrder": 29,
+   "variant": false,
    "scenario": {
     "title": "Sistema de Investigación Multi-Agente",
     "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
@@ -963,6 +1062,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RXT5EGBRVZKFHD6ZQH",
    "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+   "order": 30,
+   "sourceOrder": 30,
+   "variant": false,
    "scenario": {
     "title": "Sistema de Investigación Multi-Agente",
     "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
@@ -995,6 +1097,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RXJ6V12ZKZQ2A40ZST",
    "topicId": "01KT81BA4J2675N47R42Q4C716",
+   "order": 31,
+   "sourceOrder": 31,
+   "variant": false,
    "scenario": {
     "title": "Productividad del Desarrollador con Claude",
     "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
@@ -1027,6 +1132,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RXQZ76VKF05H2657A0",
    "topicId": "01KT81BA4J2675N47R42Q4C716",
+   "order": 32,
+   "sourceOrder": 32,
+   "variant": false,
    "scenario": {
     "title": "Productividad del Desarrollador con Claude",
     "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
@@ -1059,6 +1167,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RYHFVN7311YFG36073",
    "topicId": "01KT81BA4J2675N47R42Q4C716",
+   "order": 33,
+   "sourceOrder": 33,
+   "variant": false,
    "scenario": {
     "title": "Productividad del Desarrollador con Claude",
     "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
@@ -1091,6 +1202,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RYQ95W4F6W48W28AA6",
    "topicId": "01KT81BA4J2675N47R42Q4C716",
+   "order": 34,
+   "sourceOrder": 34,
+   "variant": false,
    "scenario": {
     "title": "Productividad del Desarrollador con Claude",
     "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
@@ -1123,6 +1237,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RY03QN182KHPV110FB",
    "topicId": "01KT81BA4J2675N47R42Q4C716",
+   "order": 35,
+   "sourceOrder": 35,
+   "variant": false,
    "scenario": {
     "title": "Productividad del Desarrollador con Claude",
     "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
@@ -1155,6 +1272,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RYFFNMXYBXRZ13ZZRQ",
    "topicId": "01KT81BA4J2675N47R42Q4C716",
+   "order": 36,
+   "sourceOrder": 36,
+   "variant": false,
    "scenario": {
     "title": "Productividad del Desarrollador con Claude",
     "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
@@ -1187,6 +1307,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RYGTVQ4DDDJY03D79E",
    "topicId": "01KT81BA4J2675N47R42Q4C716",
+   "order": 37,
+   "sourceOrder": 37,
+   "variant": false,
    "scenario": {
     "title": "Productividad del Desarrollador con Claude",
     "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
@@ -1219,6 +1342,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RY40AYFABS7YQ8FQVY",
    "topicId": "01KT81BA4J2675N47R42Q4C716",
+   "order": 38,
+   "sourceOrder": 38,
+   "variant": false,
    "scenario": {
     "title": "Productividad del Desarrollador con Claude",
     "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
@@ -1251,6 +1377,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RYDAXGZ29CXZTFTJEB",
    "topicId": "01KT81BA4J2675N47R42Q4C716",
+   "order": 39,
+   "sourceOrder": 39,
+   "variant": false,
    "scenario": {
     "title": "Productividad del Desarrollador con Claude",
     "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
@@ -1283,6 +1412,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RYSVFSX6Q8AK182XRN",
    "topicId": "01KT81BA4J2675N47R42Q4C716",
+   "order": 40,
+   "sourceOrder": 40,
+   "variant": false,
    "scenario": {
     "title": "Productividad del Desarrollador con Claude",
     "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
@@ -1315,6 +1447,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RYF21RYS0B50DRCA4B",
    "topicId": "01KT81BA4J2675N47R42Q4C716",
+   "order": 41,
+   "sourceOrder": 41,
+   "variant": false,
    "scenario": {
     "title": "Productividad del Desarrollador con Claude",
     "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
@@ -1347,6 +1482,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RYF650NAXV9J1DS8BJ",
    "topicId": "01KT81BA4J2675N47R42Q4C716",
+   "order": 42,
+   "sourceOrder": 42,
+   "variant": false,
    "scenario": {
     "title": "Productividad del Desarrollador con Claude",
     "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
@@ -1379,6 +1517,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RZ8S696SAMWM2XK5TT",
    "topicId": "01KT81BA4J2675N47R42Q4C716",
+   "order": 43,
+   "sourceOrder": 43,
+   "variant": false,
    "scenario": {
     "title": "Productividad del Desarrollador con Claude",
     "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
@@ -1411,6 +1552,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RZ8E7WATSEYGN3EYQV",
    "topicId": "01KT81BA4J2675N47R42Q4C716",
+   "order": 44,
+   "sourceOrder": 44,
+   "variant": false,
    "scenario": {
     "title": "Productividad del Desarrollador con Claude",
     "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
@@ -1443,6 +1587,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RZ71SDX5Z7GAW92ZKH",
    "topicId": "01KT81BA4J2675N47R42Q4C716",
+   "order": 45,
+   "sourceOrder": 45,
+   "variant": false,
    "scenario": {
     "title": "Productividad del Desarrollador con Claude",
     "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
@@ -1475,6 +1622,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RZ6JA0DSHVD77DF9PS",
    "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+   "order": 46,
+   "sourceOrder": 46,
+   "variant": false,
    "scenario": {
     "title": "Generación de Código con Claude Code",
     "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
@@ -1507,6 +1657,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RZB1Z43B6XT1EJRY3V",
    "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+   "order": 47,
+   "sourceOrder": 47,
+   "variant": false,
    "scenario": {
     "title": "Generación de Código con Claude Code",
     "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
@@ -1539,6 +1692,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RZDVDWJPPBH92R5AG6",
    "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+   "order": 48,
+   "sourceOrder": 48,
+   "variant": false,
    "scenario": {
     "title": "Generación de Código con Claude Code",
     "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
@@ -1571,6 +1727,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RZ5F73KKZGD0DRDTWH",
    "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+   "order": 49,
+   "sourceOrder": 49,
+   "variant": false,
    "scenario": {
     "title": "Generación de Código con Claude Code",
     "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
@@ -1603,6 +1762,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RZTTMC0NNFJSM3STY5",
    "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+   "order": 50,
+   "sourceOrder": 50,
+   "variant": false,
    "scenario": {
     "title": "Generación de Código con Claude Code",
     "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
@@ -1635,6 +1797,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RZBQMDNJ030HT06WYY",
    "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+   "order": 51,
+   "sourceOrder": 51,
+   "variant": false,
    "scenario": {
     "title": "Generación de Código con Claude Code",
     "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
@@ -1667,6 +1832,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3RZHNQKFFB0S2RA4FFT",
    "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+   "order": 52,
+   "sourceOrder": 52,
+   "variant": false,
    "scenario": {
     "title": "Generación de Código con Claude Code",
     "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
@@ -1699,6 +1867,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3S03YTS2VVG2YJP4V6Z",
    "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+   "order": 53,
+   "sourceOrder": 53,
+   "variant": false,
    "scenario": {
     "title": "Generación de Código con Claude Code",
     "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
@@ -1731,6 +1902,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3S0CPT5MC0XY26NDZHH",
    "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+   "order": 54,
+   "sourceOrder": 54,
+   "variant": false,
    "scenario": {
     "title": "Generación de Código con Claude Code",
     "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
@@ -1763,6 +1937,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3S0S92C7QHM5RM2ANMW",
    "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+   "order": 55,
+   "sourceOrder": 55,
+   "variant": false,
    "scenario": {
     "title": "Generación de Código con Claude Code",
     "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
@@ -1795,6 +1972,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3S0671ZK85V2M9E2RWZ",
    "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+   "order": 56,
+   "sourceOrder": 56,
+   "variant": false,
    "scenario": {
     "title": "Generación de Código con Claude Code",
     "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
@@ -1827,6 +2007,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3S04CBZ9PEMR21VH3N1",
    "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+   "order": 57,
+   "sourceOrder": 57,
+   "variant": false,
    "scenario": {
     "title": "Generación de Código con Claude Code",
     "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
@@ -1859,6 +2042,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3S0REMK190Z3ZJVQZEG",
    "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+   "order": 58,
+   "sourceOrder": 58,
+   "variant": false,
    "scenario": {
     "title": "Generación de Código con Claude Code",
     "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
@@ -1891,6 +2077,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3S0TW6567F0VNBA1TC4",
    "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+   "order": 59,
+   "sourceOrder": 59,
+   "variant": false,
    "scenario": {
     "title": "Generación de Código con Claude Code",
     "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
@@ -1923,6 +2112,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "01KT81N3S0C1M5J6RM7SWACX1G",
    "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+   "order": 60,
+   "sourceOrder": 60,
+   "variant": false,
    "scenario": {
     "title": "Generación de Código con Claude Code",
     "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
@@ -1953,8 +2145,1761 @@ window.QUESTION_BANKS["es"] = {
    "difficulty": "intermediate"
   },
   {
+   "id": "16NZHE8NDJRD27K97THYP3G15P",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 61,
+   "sourceOrder": 61,
+   "variant": false,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "En el 12% de los casos el agente omite `get_customer` y llama a `lookup_order` usando solo el nombre que dijo el cliente, lo que a veces identifica mal la cuenta y genera reembolsos incorrectos. ¿Qué cambio lo resuelve de forma más fiable?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Un prerequisito programático que bloquee `lookup_order` y `process_refund` hasta que `get_customer` haya devuelto un customer ID verificado."
+    },
+    {
+     "key": "B",
+     "text": "Reforzar el system prompt para exigir la verificación de identidad antes de cualquier operación sobre órdenes."
+    },
+    {
+     "key": "C",
+     "text": "Añadir ejemplos few-shot que muestren al agente llamando siempre a `get_customer` primero."
+    },
+    {
+     "key": "D",
+     "text": "Un clasificador de ruteo que habilite solo el subconjunto de tools apropiado para cada request."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "La lógica de negocio crítica —verificar identidad antes de reembolsar— exige garantías deterministas que el prompt no puede dar. Un prerequisito programático que bloquea las tools posteriores hasta que `get_customer` verifica la cuenta elimina el fallo por diseño. Reforzar el prompt o los few-shot dependen de cumplimiento probabilístico, insuficiente cuando hay dinero e identidad de por medio; el clasificador de ruteo cambia qué tools están disponibles, no el orden de ejecución, que es el problema real."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "C580FASHETYTCCRZXMN133QM3Y",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 62,
+   "sourceOrder": 62,
+   "variant": false,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "El agente llama a `get_customer` cuando el usuario pregunta por una orden ('revisa mi orden #12345') en vez de a `lookup_order`. Ambas tools tienen descripciones mínimas y aceptan identificadores parecidos. ¿Cuál es el primer paso más efectivo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Añadir 5-8 ejemplos few-shot de selección correcta de tool."
+    },
+    {
+     "key": "B",
+     "text": "Expandir la descripción de cada tool con formatos de entrada, consultas de ejemplo, casos borde y fronteras (cuándo usar una frente a la otra)."
+    },
+    {
+     "key": "C",
+     "text": "Un router que parsee la entrada y preseleccione la tool por palabras clave."
+    },
+    {
+     "key": "D",
+     "text": "Consolidar ambas tools en una única `lookup_entity`."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "B",
+    "justification": "Las descripciones de las tools son el mecanismo primario de selección del modelo; descripciones mínimas producen confusión entre tools similares. Expandirlas ataca la causa raíz con bajo esfuerzo y alta palanca. Los few-shot añaden tokens sin corregir la causa, el router por keywords es sobre-ingeniería, y consolidar es válido pero más costoso que un primer paso."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "GHAG13XM8G4BY47DVQW2BZ4BYX",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 63,
+   "sourceOrder": 63,
+   "variant": false,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "El agente alcanza un 55% de resolución (meta 80%). Escala casos fáciles (reemplazos por daño con foto) y solo resuelve los complejos (excepciones de política). ¿Cuál es la mejor forma de mejorar la calibración de la escalada?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Definir criterios de escalada explícitos y añadir ejemplos few-shot de cuándo escalar frente a cuándo resolver."
+    },
+    {
+     "key": "B",
+     "text": "Que el agente reporte su propia confianza (1-10) y rutee a un humano por debajo de un umbral."
+    },
+    {
+     "key": "C",
+     "text": "Entrenar un clasificador con tickets históricos etiquetados."
+    },
+    {
+     "key": "D",
+     "text": "Usar análisis de sentimiento para escalar cuando se detecta frustración."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "El problema son límites de decisión poco claros; criterios explícitos con few-shot enseñan cuándo escalar y cuándo resolver. La confianza auto-reportada del LLM está mal calibrada, un clasificador entrenado es sobre-ingeniería, y el sentimiento no correlaciona con la complejidad real del caso."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "2CN7YJ2QTAB91YJT7M6DCNR0T5",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 64,
+   "sourceOrder": 64,
+   "variant": false,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "La política exige que ningún reembolso automático supere los $500; por encima debe ir a un humano. Hoy la regla está escrita en mayúsculas en el system prompt, pero ocasionalmente el agente procesa reembolsos mayores. ¿Cuál es el enfoque más fiable?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Un hook `PreToolUse` que intercepte las llamadas a `process_refund`, bloquee los montos superiores a $500 y los redirija a escalada humana."
+    },
+    {
+     "key": "B",
+     "text": "Repetir la regla con mayor énfasis y ejemplos en el system prompt."
+    },
+    {
+     "key": "C",
+     "text": "Añadir la restricción del límite a la descripción de la tool `process_refund`."
+    },
+    {
+     "key": "D",
+     "text": "Un paso de revisión posterior que verifique los reembolsos emitidos y revierta los que excedan el límite."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Las reglas de negocio y de cumplimiento críticas deben vivir en la capa determinista de middleware, no en el tejido probabilístico del prompt. Un hook `PreToolUse` bloquea la acción antes de que toque el backend, garantizando el límite. El énfasis en el prompt o en la descripción sigue dependiendo del cumplimiento del modelo, y revertir después ya permitió que ocurriera el reembolso indebido."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "RZQP7697FEVFCREVJ7S78ZZ76K",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 65,
+   "sourceOrder": 65,
+   "variant": false,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "Cuando `process_refund` falla, la tool devuelve siempre 'Operation failed'. El agente no distingue un timeout transitorio de una violación de política, así que reintenta operaciones que nunca deberían reintentarse. ¿Qué diseño de respuesta de error habilita mejor la recuperación adecuada?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Que la tool reintente internamente con backoff y devuelva 'unavailable' tras agotar los reintentos."
+    },
+    {
+     "key": "B",
+     "text": "Registrar el error detallado en los logs del servidor y devolver al agente un mensaje genérico para no exponer detalles."
+    },
+    {
+     "key": "C",
+     "text": "Devolver metadata estructurada con `isError`, `errorCategory` (transient/validation/permission/business) e `isRetryable`, más una descripción legible."
+    },
+    {
+     "key": "D",
+     "text": "Que el agente escale al humano ante cualquier fallo de la tool."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "C",
+    "justification": "Respuestas uniformes impiden que el agente decida bien la recuperación. Metadata estructurada con la categoría del error y si es reintentable permite reintentar los transitorios y no reintentar los de negocio. El backoff interno oculta el contexto, un mensaje genérico repite el problema, y escalar ante cualquier fallo desperdicia la recuperación de fallos transitorios."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "1P0DZYY9A91VZNKSDF2J098VMJ",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 66,
+   "sourceOrder": 66,
+   "variant": false,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "Cuando el agente escala a un humano, el operador recibe todo el registro del chat y pierde tiempo reconstruyendo el caso. ¿Qué mejora el handoff de forma más efectiva?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Generar un paquete de escalada estructurado (customer_id, issue_summary, order_id, root_cause, actions_taken[], refund_amount, recommended_action, escalation_reason)."
+    },
+    {
+     "key": "B",
+     "text": "Adjuntar la transcripción completa de la conversación con marcas de tiempo."
+    },
+    {
+     "key": "C",
+     "text": "Un resumen en prosa libre generado por el modelo al momento de escalar."
+    },
+    {
+     "key": "D",
+     "text": "Un enlace al historial del cliente para que el operador lo consulte manualmente."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "El operador humano no debería leer todo el chat; necesita un resumen estructurado y accionable. Un paquete de handoff con los hechos clave y la acción recomendada permite continuar sin reconstruir el caso. La transcripción completa o un enlace trasladan el trabajo al humano, y un resumen en prosa libre es menos fiable y puede omitir campos críticos."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "7P4AKHCMQZ6PR1WWG597SB4NJS",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 67,
+   "sourceOrder": 67,
+   "variant": false,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "Un cliente escribe: 'No quiero un bot, páseme con una persona ahora mismo.' El agente igualmente intenta diagnosticar el problema y ofrecer soluciones antes de escalar. ¿Cuál es el comportamiento correcto?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Escalar a un humano de inmediato al tratarse de un pedido explícito, sin intentar investigar primero."
+    },
+    {
+     "key": "B",
+     "text": "Intentar resolver el problema una vez y escalar solo si el intento falla."
+    },
+    {
+     "key": "C",
+     "text": "Analizar el sentimiento para confirmar la frustración antes de decidir escalar."
+    },
+    {
+     "key": "D",
+     "text": "Pedir al cliente que explique su problema para evaluar si realmente requiere un humano."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Un pedido explícito de hablar con un humano es un disparador de escalada que debe honrarse de inmediato. Insistir en resolver, medir el sentimiento o interrogar al cliente ignora la solicitud directa y degrada la experiencia; esos pasos aplican cuando el issue es directo y el cliente no ha exigido un humano."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "8SV0T4PKHS7DZDQEPWMFNNMXCZ",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 68,
+   "sourceOrder": 68,
+   "variant": false,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "`get_customer` devuelve tres clientes distintos que coinciden con el nombre proporcionado. ¿Qué debe hacer el agente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Pedir al cliente identificadores adicionales (email, número de orden o código postal) para desambiguar antes de continuar."
+    },
+    {
+     "key": "B",
+     "text": "Elegir la coincidencia con la actividad de cuenta más reciente como la más probable."
+    },
+    {
+     "key": "C",
+     "text": "Elegir la coincidencia cuyo perfil esté más completo."
+    },
+    {
+     "key": "D",
+     "text": "Procesar la consulta para las tres cuentas y dejar que el cliente identifique la correcta en la respuesta."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Con múltiples coincidencias, elegir por heurística arriesga actuar sobre la cuenta equivocada —especialmente grave antes de operaciones sobre órdenes o reembolsos—. Lo correcto es pedir identificadores adicionales para verificar la identidad. Adivinar por recencia o completitud, o exponer datos de tres cuentas, compromete la exactitud y la privacidad."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "5CTSDGN88MD1SSNWM0RP6NQ8A3",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 69,
+   "sourceOrder": 69,
+   "variant": false,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "En conversaciones largas de varios turnos, el agente empieza a olvidar el número de orden y el monto de reembolso acordado porque el historial se va resumiendo. ¿Cuál es la forma más efectiva de preservar estos datos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Extraer los hechos transaccionales (montos, fechas, order IDs, estados) a un bloque persistente de 'case facts' incluido en cada prompt, fuera del historial resumido."
+    },
+    {
+     "key": "B",
+     "text": "Aumentar la longitud del resumen para que conserve más detalles de cada turno."
+    },
+    {
+     "key": "C",
+     "text": "Cambiar a un modelo con ventana de contexto mayor para no resumir nunca."
+    },
+    {
+     "key": "D",
+     "text": "Repetir todo el historial completo sin resumir en cada request."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Los valores transaccionales precisos se pierden cuando la summarización progresiva los condensa. Mantener un bloque de 'case facts' con esos datos en cada prompt, separado del historial resumido, los preserva de forma fiable. Un resumen más largo sigue arriesgando pérdida, un modelo más grande no garantiza retener el dato exacto, y repetir todo el historial desperdicia contexto."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "NSY0WXVNGD9Y36Q30N89CXZ8K9",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 70,
+   "sourceOrder": 70,
+   "variant": false,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "Las tools de pedidos y de facturación devuelven las fechas en formatos distintos (timestamps Unix, ISO 8601 y códigos numéricos de estado), lo que confunde al agente al comparar eventos. ¿Cuál es el enfoque más fiable para unificarlos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Un hook `PostToolUse` que intercepte los resultados de las tools y normalice fechas y estados a un formato uniforme antes de que el modelo los procese."
+    },
+    {
+     "key": "B",
+     "text": "Instruir en el prompt al agente para que convierta mentalmente cada formato al comparar."
+    },
+    {
+     "key": "C",
+     "text": "Añadir a cada descripción de tool una nota sobre el formato que devuelve."
+    },
+    {
+     "key": "D",
+     "text": "Un paso de post-procesamiento que reformatee la respuesta final del agente al usuario."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Normalizar formatos heterogéneos es una transformación determinista que debe hacerse antes de que el modelo razone. Un hook `PostToolUse` transforma los resultados de las tools a un formato uniforme de forma fiable. Pedirlo en el prompt depende del cumplimiento del modelo, documentar el formato no lo unifica, y reformatear la salida final no ayuda al razonamiento intermedio."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "9BJ69C0R78NAP6DNAEZZ0HGE03",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 71,
+   "sourceOrder": 71,
+   "variant": false,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "Tu equipo propone dar al agente de soporte acceso a las 20 herramientas internas (pedidos, facturación, envíos, marketing, analítica…) 'por si acaso'. En pruebas, el agente a veces invoca tools ajenas a soporte. ¿Cuál es el mejor diseño?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Dar al agente solo el conjunto reducido de tools que su rol necesita (get_customer, lookup_order, process_refund, escalate_to_human) y añadir tools puntuales solo ante necesidades reales de alta frecuencia."
+    },
+    {
+     "key": "B",
+     "text": "Mantener las 20 tools pero añadir instrucciones en el prompt para que use solo las de soporte."
+    },
+    {
+     "key": "C",
+     "text": "Mantener las 20 tools y un clasificador que preseleccione cuáles mostrar por request."
+    },
+    {
+     "key": "D",
+     "text": "Fusionar las tools relacionadas en unas pocas tools genéricas de propósito amplio."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Un conjunto de tools demasiado grande degrada la fiabilidad de selección y fomenta el mal uso entre dominios. El principio de menor privilegio —solo las tools del rol— es el mejor diseño. Las instrucciones en el prompt siguen dependiendo del cumplimiento, un clasificador es sobre-ingeniería, y fusionar en tools genéricas reintroduce la ambigüedad de selección."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "068VHSGT0D3RYPMYSXGQT7NNBX",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 72,
+   "sourceOrder": 72,
+   "variant": false,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "En el bucle agéntico del agente de soporte, ¿cómo debe decidir la aplicación anfitriona que el turno terminó y que el texto es la respuesta final para el cliente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Evaluando estrictamente que `stop_reason` sea `end_turn`."
+    },
+    {
+     "key": "B",
+     "text": "Buscando frases como 'listo' o 'resuelto' en el texto de la respuesta."
+    },
+    {
+     "key": "C",
+     "text": "Deteniéndose al alcanzar un tope fijo de iteraciones (p. ej. 50)."
+    },
+    {
+     "key": "D",
+     "text": "Comprobando si la respuesta del asistente contiene texto en vez de una llamada a tool."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "El control de flujo del bucle agéntico se basa en la señal del servidor `stop_reason`; `end_turn` indica que el modelo terminó. Parsear texto en lenguaje natural es frágil ante variaciones de formato, el tope de iteraciones es solo un fallback de seguridad, y la mera presencia de texto no distingue de forma fiable un turno intermedio de la respuesta final."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "10HX087CSB4FK0ZQMPCVQSVEGM",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 73,
+   "sourceOrder": 73,
+   "variant": false,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "Cada llamada a `get_customer` devuelve más de 40 campos, pero el agente solo necesita 5 (nombre, email, tier, estado de cuenta y order IDs). En conversaciones largas ese volumen llena el contexto y degrada las respuestas. ¿Cuál es la mejor solución?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Recortar la salida de la tool a solo los campos relevantes antes de que se acumule en el contexto."
+    },
+    {
+     "key": "B",
+     "text": "Aumentar el tamaño de la ventana de contexto cambiando de modelo."
+    },
+    {
+     "key": "C",
+     "text": "Resumir periódicamente toda la conversación cuando el contexto crece."
+    },
+    {
+     "key": "D",
+     "text": "Pedir en el prompt que el agente ignore los campos irrelevantes."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Los resultados de tools acumulan tokens desproporcionados a su relevancia. Recortarlos a los campos necesarios antes de que entren al contexto ataca la causa directa. Un modelo mayor no evita la acumulación, resumir arriesga perder hechos transaccionales precisos, y pedir 'ignorar' en el prompt no impide que esos tokens ocupen y ensucien el contexto."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "XQXDTJ3ZWJD79H3W4FW08F895X",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 74,
+   "sourceOrder": 74,
+   "variant": false,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "Un cliente pide igualar el precio de un competidor. La política de la empresa solo cubre ajustes de precio dentro del propio sitio y no dice nada sobre competidores. ¿Qué debe hacer el agente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Escalar a un humano porque la política es ambigua o silenciosa sobre este pedido específico."
+    },
+    {
+     "key": "B",
+     "text": "Denegar el pedido porque la política no lo contempla explícitamente."
+    },
+    {
+     "key": "C",
+     "text": "Conceder el ajuste asumiendo que es equivalente a un ajuste del propio sitio."
+    },
+    {
+     "key": "D",
+     "text": "Reportar alta incertidumbre y dejar que el cliente decida si insiste."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Las excepciones y los vacíos de política —no solo los casos complejos— son disparadores válidos de escalada. Cuando la política no cubre el pedido, un humano debe decidir. Denegar o conceder por cuenta propia inventa política, y trasladar la decisión al cliente no resuelve el vacío."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "HSAC0N6K9EGC6KS4N28J7WTVEE",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 75,
+   "sourceOrder": 75,
+   "variant": false,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "Un cliente escribe un único mensaje con tres asuntos: un reembolso por un artículo dañado, una pregunta sobre el estado de otro pedido y una queja de facturación. ¿Cuál es el mejor enfoque para resolverlo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Descomponer el mensaje en los tres asuntos, atender cada uno con su tool correspondiente y sintetizar una respuesta unificada."
+    },
+    {
+     "key": "B",
+     "text": "Atender solo el asunto más urgente y pedir al cliente que reenvíe los demás por separado."
+    },
+    {
+     "key": "C",
+     "text": "Escalar a un humano porque el mensaje contiene múltiples asuntos."
+    },
+    {
+     "key": "D",
+     "text": "Responder los tres asuntos con una única llamada a una tool genérica."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Un request multi-tema debe separarse en asuntos distintos, resolver cada uno con la tool adecuada y sintetizar una resolución unificada. Atender solo uno o pedir reenvíos degrada la experiencia, escalar por el mero hecho de haber varios asuntos es innecesario, y no existe una tool genérica que resuelva asuntos heterogéneos en una sola llamada."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "WWHWE7QD3ZWG4RSAAHWEYV7816",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 76,
+   "sourceOrder": 76,
+   "variant": false,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Tu extractor a veces produce JSON con errores de sintaxis (comas faltantes, comillas sin cerrar) que rompen el parser posterior. ¿Cuál es el enfoque más fiable para garantizar una salida conforme al esquema?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Definir la extracción como una tool con un JSON schema como input y tomar los datos del bloque `tool_use` de la respuesta."
+    },
+    {
+     "key": "B",
+     "text": "Pedir en el prompt 'devuelve solo JSON válido' y añadir ejemplos del formato."
+    },
+    {
+     "key": "C",
+     "text": "Un paso de post-procesamiento que intente reparar el JSON malformado con expresiones regulares."
+    },
+    {
+     "key": "D",
+     "text": "Bajar la temperatura a 0 para que el modelo sea más consistente con la sintaxis."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "`tool_use` con un JSON schema es el mecanismo más fiable para salida conforme al esquema porque elimina los errores de sintaxis JSON por construcción. Pedirlo en el prompt sigue permitiendo errores, reparar con regex es frágil, y bajar la temperatura reduce la variación pero no garantiza JSON válido."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "XT8Z6F0NKCHC82W2FK55MQN3KS",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 77,
+   "sourceOrder": 77,
+   "variant": false,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Ya usas `tool_use` con un schema estricto y el JSON siempre es sintácticamente válido. Aun así, algunas facturas extraídas tienen line items que no suman el total declarado y valores en campos equivocados. ¿Qué lo explica mejor?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Los schemas estrictos eliminan los errores de sintaxis pero no los semánticos; hace falta validación de contenido (p. ej. comparar la suma de line items con el total)."
+    },
+    {
+     "key": "B",
+     "text": "El schema no es lo bastante estricto; añadir más campos required lo corregirá."
+    },
+    {
+     "key": "C",
+     "text": "El modelo necesita una temperatura más baja para calcular bien los totales."
+    },
+    {
+     "key": "D",
+     "text": "El documento fuente debe estar corrupto; conviene rechazarlo."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Un schema garantiza la forma, no el significado: no impide que los números no cuadren o que un valor caiga en el campo equivocado. Se necesita validación semántica del contenido. Más campos required o menor temperatura no atacan la corrección semántica, y asumir corrupción del documento ignora que el fallo es de extracción."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "4VTRC7V57DNV383D8HKJ2XKGN2",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 78,
+   "sourceOrder": 78,
+   "variant": false,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Algunos contratos no incluyen una fecha de renovación, pero tu schema la marca como required. El modelo entonces inventa fechas plausibles para satisfacer el campo. ¿Cuál es la mejor solución?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Hacer el campo nullable/opcional para que el modelo pueda dejarlo vacío en vez de fabricar un valor."
+    },
+    {
+     "key": "B",
+     "text": "Añadir al prompt la instrucción 'no inventes datos que no estén en el documento'."
+    },
+    {
+     "key": "C",
+     "text": "Un paso de validación posterior que marque las fechas de renovación sospechosas."
+    },
+    {
+     "key": "D",
+     "text": "Reintentar la extracción con el mismo documento hasta que devuelva un valor consistente."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Marcar como required un campo que puede no existir empuja al modelo a fabricar valores. Hacerlo nullable/opcional le permite dejarlo vacío legítimamente. La instrucción en el prompt es menos fiable, la validación posterior no evita la fabricación, y reintentar no crea información que no está en el documento."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "9EQ6BJN86QVB0CW4P47FX76NW3",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 79,
+   "sourceOrder": 79,
+   "variant": false,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Una extracción falla la validación porque el importe total no coincide con la suma de los conceptos. ¿Cuál es la forma más efectiva de que el sistema se autocorrija?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Un follow-up que incluya el documento original, la extracción fallida y los errores de validación específicos para guiar la corrección."
+    },
+    {
+     "key": "B",
+     "text": "Reintentar la misma solicitud sin cambios varias veces hasta que pase."
+    },
+    {
+     "key": "C",
+     "text": "Marcar el documento para revisión humana sin intentar corregir."
+    },
+    {
+     "key": "D",
+     "text": "Reducir el número de campos extraídos para bajar la probabilidad de error."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "El retry con feedback de error anexa los errores de validación concretos al reintento para que el modelo corrija el problema específico. Reintentar sin cambios repite el mismo fallo, escalar de inmediato desaprovecha una corrección barata, y reducir campos degrada la extracción en vez de corregirla."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "Q8ENHSGD1Z3K74RYM6Y25E9QS2",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 80,
+   "sourceOrder": 80,
+   "variant": false,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "La validación falla porque falta el número de identificación fiscal del proveedor. Al inspeccionar el documento, ese dato no aparece en ninguna parte. ¿Cuál es la acción correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Reconocer que el reintento no ayudará porque la información no está en la fuente, y marcar el campo como ausente para revisión u obtención externa."
+    },
+    {
+     "key": "B",
+     "text": "Reintentar con feedback de error hasta que el modelo lo encuentre."
+    },
+    {
+     "key": "C",
+     "text": "Dejar que el modelo infiera el identificador a partir del nombre del proveedor."
+    },
+    {
+     "key": "D",
+     "text": "Bajar la temperatura y volver a extraer el documento completo."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "El retry corrige errores de formato o estructura, pero es inútil cuando la información sencillamente no está en el documento. Lo correcto es reconocer la ausencia y marcarla, no reintentar en bucle, ni inferir/inventar el dato, ni reprocesar esperando que aparezca algo que no existe."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "1WMWFQZEQSTEFDQPE84M6EWV6H",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 81,
+   "sourceOrder": 81,
+   "variant": false,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Clasificas cada documento en un enum de tipos (invoice, receipt, contract). Aparecen documentos que no encajan en ninguna categoría y otros demasiado ambiguos para clasificar. ¿Cuál es el mejor diseño de schema?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Añadir un valor `other` con un campo de detalle en texto para categorías extensibles y un valor `unclear` para los casos ambiguos."
+    },
+    {
+     "key": "B",
+     "text": "Forzar siempre la categoría más cercana entre las tres existentes."
+    },
+    {
+     "key": "C",
+     "text": "Ampliar el enum con todas las categorías imaginables por adelantado."
+    },
+    {
+     "key": "D",
+     "text": "Eliminar el enum y dejar el tipo como texto libre."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Un enum con `other` + detalle permite categorización extensible sin fabricar, y `unclear` captura la ambigüedad de forma explícita. Forzar la categoría más cercana introduce clasificaciones erróneas, enumerar todo por adelantado es inviable, y el texto libre pierde la estructura que aporta el enum."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "3TP57A18EFDAWTSV6RFRQMCXY9",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 82,
+   "sourceOrder": 82,
+   "variant": false,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Quieres detectar automáticamente cuándo el total de una factura extraída no cuadra con sus conceptos. ¿Qué diseño de salida lo habilita mejor?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Extraer tanto `stated_total` (el total del documento) como `calculated_total` (la suma de los conceptos) para poder comparar y detectar discrepancias."
+    },
+    {
+     "key": "B",
+     "text": "Extraer solo `stated_total` y confiar en que el documento es correcto."
+    },
+    {
+     "key": "C",
+     "text": "Pedir al modelo que confirme en prosa que los números cuadran."
+    },
+    {
+     "key": "D",
+     "text": "Redondear ambos valores para que las pequeñas diferencias desaparezcan."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Extraer por separado el total declarado y el total calculado permite una comprobación determinista de consistencia. Confiar en el total declarado no detecta discrepancias, una confirmación en prosa no es verificable, y redondear oculta errores reales en vez de detectarlos."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "8218A44K1M7D16K25N193CVESV",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 83,
+   "sourceOrder": 83,
+   "variant": false,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Debes extraer datos de 50.000 documentos archivados para una auditoría trimestral. No es urgente y toleras hasta un día de latencia; quieres minimizar el costo. ¿Qué enfoque es el más apropiado?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Enviar las extracciones a la Message Batches API con un `custom_id` por documento y recuperar los resultados al completarse el lote."
+    },
+    {
+     "key": "B",
+     "text": "Procesar los 50.000 documentos con la API síncrona en paralelo para terminar antes."
+    },
+    {
+     "key": "C",
+     "text": "Concatenar muchos documentos por request para reducir el número de llamadas."
+    },
+    {
+     "key": "D",
+     "text": "Esperar a poder revisar cada documento manualmente antes de extraer."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Una carga grande, no bloqueante y tolerante a la latencia encaja con la Message Batches API, que reduce el costo un 50% y usa `custom_id` para correlacionar cada documento. La API síncrona no ofrece el ahorro, concatenar documentos degrada la estructura y la correlación, y la revisión manual previa no aplica a 50.000 documentos."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "TZ7QA076BYGXKMPJ62907GCTRR",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 84,
+   "sourceOrder": 84,
+   "variant": false,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Tras un lote de extracción, 300 de 50.000 documentos fallaron por exceder el contexto. ¿Cuál es la forma más eficiente de completarlos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Reenviar en un nuevo lote solo los documentos fallidos (por su `custom_id`), troceando los que excedieron el contexto."
+    },
+    {
+     "key": "B",
+     "text": "Reprocesar el lote completo de 50.000 documentos desde cero."
+    },
+    {
+     "key": "C",
+     "text": "Descartar los 300 documentos fallidos como no procesables."
+    },
+    {
+     "key": "D",
+     "text": "Aumentar `max_tokens` y reenviar los 50.000 sin trocear."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Lo eficiente es reenviar únicamente los documentos fallidos, identificados por `custom_id`, y trocear los que excedieron el contexto para que quepan. Reprocesar todo desperdicia trabajo y dinero, descartar pierde datos de la auditoría, y subir `max_tokens` no resuelve documentos que superan la ventana de contexto."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "5A77PVHFZD8QHBKFJYD42K89TC",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 85,
+   "sourceOrder": 85,
+   "variant": false,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Extraes referencias de artículos académicos, pero los documentos varían mucho (citas inline, bibliografías al final, metodología en secciones separadas o embebida) y las instrucciones detalladas dan resultados inconsistentes. ¿Qué técnica es la más efectiva?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Añadir 2-4 ejemplos few-shot que muestren la extracción correcta sobre formatos de documento variados."
+    },
+    {
+     "key": "B",
+     "text": "Escribir instrucciones aún más largas y exhaustivas que cubran cada formato posible."
+    },
+    {
+     "key": "C",
+     "text": "Un pipeline distinto por cada formato de documento detectado."
+    },
+    {
+     "key": "D",
+     "text": "Pedir al modelo que primero describa el formato y luego extraiga."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Los few-shot son la técnica más efectiva cuando las instrucciones detalladas producen resultados inconsistentes: demuestran el manejo de casos variados y permiten generalizar a formatos nuevos. Instrucciones más largas siguen siendo inconsistentes, un pipeline por formato es frágil y costoso, y describir el formato primero no garantiza una extracción correcta."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "7HG498D8DNZSB1RM8FAT1RG2PZ",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 86,
+   "sourceOrder": 86,
+   "variant": false,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Tu sistema tiene varios schemas de extracción (factura, recibo, contrato) y el tipo de documento entrante es desconocido de antemano. A veces el modelo responde con texto conversacional en vez de extraer. ¿Qué configuración lo corrige mejor?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Usar `tool_choice: \"any\"` para forzar que el modelo llame a una de las tools de extracción en vez de devolver texto."
+    },
+    {
+     "key": "B",
+     "text": "Usar `tool_choice: \"auto\"` y pedir en el prompt que siempre extraiga."
+    },
+    {
+     "key": "C",
+     "text": "Forzar siempre la tool de factura como predeterminada."
+    },
+    {
+     "key": "D",
+     "text": "Añadir una tool de 'respuesta en texto' para capturar los casos sin extracción."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "`tool_choice: \"any\"` obliga al modelo a llamar a una tool (eligiendo el schema adecuado) en vez de devolver texto, apropiado cuando hay varios schemas y el tipo es desconocido. `\"auto\"` permite texto, forzar siempre factura clasifica mal los demás tipos, y añadir una tool de texto legitima justamente el comportamiento que quieres evitar."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "ZQD7E1Z3CHYYAR8FQEGSA6ADEY",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 87,
+   "sourceOrder": 87,
+   "variant": false,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Tu extractor reporta un 97% de exactitud global y el equipo quiere reducir la revisión humana. ¿Qué es lo más prudente antes de automatizar las extracciones de alta confianza?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Validar la exactitud por tipo de documento y por campo mediante muestreo aleatorio estratificado, ya que la métrica global puede enmascarar fallos concretos."
+    },
+    {
+     "key": "B",
+     "text": "Automatizar todo lo que supere el 90% de confianza reportada por el modelo."
+    },
+    {
+     "key": "C",
+     "text": "Reducir la revisión humana de forma uniforme en todos los tipos de documento."
+    },
+    {
+     "key": "D",
+     "text": "Confiar en el 97% global, dado que supera cualquier umbral razonable."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Una métrica agregada puede ocultar un mal desempeño en ciertos tipos de documento o campos. El muestreo estratificado mide la exactitud por tipo y por campo para decidir dónde es seguro automatizar. La confianza auto-reportada está mal calibrada, y reducir la revisión de forma uniforme o confiar en el global ignora los puntos débiles ocultos."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "WTSF8PE0669MR7G9ZBH5TWPWCS",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 88,
+   "sourceOrder": 88,
+   "variant": false,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Las fechas aparecen en los documentos en formatos diversos (DD/MM/AAAA, 'March 3, 2025', 2025-03-03) y necesitas que la salida use un formato ISO uniforme. El schema estricto define el tipo, pero no la normalización. ¿Cuál es el mejor enfoque?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Incluir reglas de normalización de formato en el prompt junto al schema estricto (p. ej. 'convierte todas las fechas a ISO 8601 AAAA-MM-DD')."
+    },
+    {
+     "key": "B",
+     "text": "Confiar en que el schema estricto por sí solo normalice las fechas."
+    },
+    {
+     "key": "C",
+     "text": "Un post-procesamiento con regex que intente reformatear cualquier fecha."
+    },
+    {
+     "key": "D",
+     "text": "Rechazar los documentos cuyas fechas no vengan ya en ISO 8601."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "El schema garantiza el tipo del campo, pero la normalización de formato debe indicarse: reglas de normalización en el prompt, junto al schema estricto, producen fechas uniformes. El schema por sí solo no normaliza, el regex posterior es frágil ante la variedad de formatos, y rechazar documentos no procesa datos válidos que solo necesitan normalizarse."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "FFHZ23EW52EK5H8QSDXX61VMRQ",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 89,
+   "sourceOrder": 89,
+   "variant": false,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Algunos documentos contienen datos internamente inconsistentes (p. ej. un importe distinto en el resumen y en el desglose). Quieres que el sistema los señale en lugar de elegir un valor en silencio. ¿Qué diseño de salida lo habilita?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Incluir un booleano `conflict_detected` (con los valores en conflicto y su ubicación) para marcar las fuentes inconsistentes en lugar de escoger arbitrariamente."
+    },
+    {
+     "key": "B",
+     "text": "Instruir al modelo para que elija el valor que le parezca más probable."
+    },
+    {
+     "key": "C",
+     "text": "Promediar los valores en conflicto para obtener un único número."
+    },
+    {
+     "key": "D",
+     "text": "Descartar los documentos que contengan cualquier inconsistencia."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Ante datos fuente en conflicto, lo correcto es anotar el conflicto con los valores y su procedencia, no elegir uno en silencio. Un booleano `conflict_detected` marca esos casos para revisión. Elegir el 'más probable' o promediar oculta el problema, y descartar pierde documentos que un humano podría reconciliar."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "RKMZP6RX7Q6V3EJPCWYZNG40Q8",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 90,
+   "sourceOrder": 90,
+   "variant": false,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Consolidas cifras de mercado extraídas de varios informes y a veces valores de años distintos se interpretan erróneamente como contradicciones. ¿Qué debe requerir la salida estructurada para evitarlo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Requerir en cada extracción la fecha de publicación o de recolección del dato, para que las diferencias temporales no se confundan con contradicciones."
+    },
+    {
+     "key": "B",
+     "text": "Quedarse solo con el valor más reciente y descartar los demás."
+    },
+    {
+     "key": "C",
+     "text": "Promediar los valores de todos los informes en una única cifra."
+    },
+    {
+     "key": "D",
+     "text": "Marcar cualquier diferencia entre informes como un error de extracción."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Sin contexto temporal, cifras de años distintos parecen contradecirse. Requerir la fecha de publicación/recolección en la salida permite interpretar correctamente las diferencias. Quedarse con el más reciente o promediar descarta información válida, y marcar toda diferencia como error confunde variación temporal legítima con fallo."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "Y2MC7HJ0YN60GFJBQDVM5ZXFHX",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 91,
+   "sourceOrder": 91,
+   "variant": false,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "Tu agente de soporte de una fintech opera con el pipeline get_customer → lookup_order → process_refund. Una auditoría SOC2 detecta que en el 3% de los reembolsos el agente llamó a process_refund sin un customer ID verificado, porque en las conversaciones donde el cliente daba el número de orden por adelantado el modelo saltaba get_customer. El equipo ya reforzó el system prompt dos veces sin éxito. ¿Qué cambio garantiza que ningún reembolso se ejecute sin verificación previa de identidad?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Un gate programático en la capa de middleware que rechace toda llamada a process_refund cuyo estado de sesión no contenga un customer ID ya verificado por get_customer."
+    },
+    {
+     "key": "B",
+     "text": "Añadir un parámetro required verified_customer_id al JSON schema de process_refund para que el modelo no pueda invocarla sin ese campo."
+    },
+    {
+     "key": "C",
+     "text": "Un ejemplo few-shot muy detallado por cada flujo posible que muestre a get_customer ejecutándose siempre antes que process_refund."
+    },
+    {
+     "key": "D",
+     "text": "Instrucciones en mayúsculas al inicio y al final del system prompt exigiendo verificar identidad antes de cualquier reembolso."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "La verificación de identidad antes de mover dinero es una regla de negocio crítica que exige cumplimiento determinista y debe imponerse en la capa de middleware como un prerequisito que bloquee process_refund hasta que exista un customer ID verificado en el estado de sesión. Un campo required en el schema solo obliga a que el argumento esté presente en esa llamada, pero el modelo puede rellenarlo con un valor no verificado; los few-shot y el énfasis en el prompt ya fallaron porque dependen de cumplimiento probabilístico."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "KBKXRGPX40ZN8JEW80EG0ZBQSJ",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 92,
+   "sourceOrder": 92,
+   "variant": false,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "Reescribiste las descripciones de get_customer y lookup_order con formatos de entrada, ejemplos y fronteras claras, y aun así el agente sigue llamando a get_customer cuando el cliente menciona 'mi cuenta' aunque pregunte por una orden. Al revisar la configuración notas que el system prompt incluye la línea 'cuando el usuario hable de su cuenta, recupera primero los datos del cliente'. ¿Cuál es la causa raíz y el arreglo más efectivo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Las descripciones siguen siendo ambiguas; hay que añadir más ejemplos de queries a get_customer y lookup_order."
+    },
+    {
+     "key": "B",
+     "text": "El modelo necesita un router de keywords que mapee 'orden' a lookup_order y 'cuenta' a get_customer antes de invocar la tool."
+    },
+    {
+     "key": "C",
+     "text": "Una instrucción sensible a la keyword 'cuenta' en el system prompt está anulando las descripciones; hay que reformularla o quitarla para que no fuerce la selección."
+    },
+    {
+     "key": "D",
+     "text": "Consolidar ambas tools en una sola get_account_data que decida internamente qué devolver."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "C",
+    "justification": "El wording del system prompt puede crear asociaciones por keyword que anulan descripciones de tools bien escritas: aquí 'cuando el usuario hable de su cuenta, recupera primero los datos del cliente' empuja hacia get_customer ante la palabra 'cuenta' aunque la intención sea consultar una orden. La solución es reformular o quitar esa instrucción keyword-sensible. Añadir más ejemplos no vence la instrucción conflictiva, un router es sobre-ingeniería, y consolidar tools elimina una distinción útil en lugar de corregir la causa."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "030FQZ3J0NK03VD7F56T2FWQG0",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 93,
+   "sourceOrder": 93,
+   "variant": false,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "El agente resuelve el 55% en primer contacto (meta 80%). Segmentando por categoría ves que sobre-escala las devoluciones estándar con foto (que debería resolver) e intenta resolver por su cuenta las excepciones de política (que debería escalar). Un ingeniero propone añadir 15 ejemplos few-shot de casos complejos ya resueltos para 'enseñarle a resolver más'. ¿Cuál es el enfoque más efectivo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Definir criterios de escalada explícitos y aportar few-shot balanceados que muestren tanto cuándo resolver (devoluciones estándar) como cuándo escalar (excepciones de política)."
+    },
+    {
+     "key": "B",
+     "text": "Añadir los 15 ejemplos de casos complejos resueltos para que el agente gane confianza y resuelva más casos por su cuenta."
+    },
+    {
+     "key": "C",
+     "text": "Hacer que el agente puntúe su confianza (1-10) y escale por debajo de 7, calibrando el umbral con datos históricos."
+    },
+    {
+     "key": "D",
+     "text": "Añadir análisis de sentimiento para no escalar cuando el cliente está tranquilo, reservando la escalada a clientes molestos."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "El fallo es un límite de decisión mal calibrado en ambos sentidos, no falta de capacidad: sobre-escala lo fácil y sub-escala lo que debería derivar. Se corrige con criterios de escalada explícitos y few-shot balanceados que muestren ambos lados de la frontera. Añadir solo ejemplos de casos complejos resueltos sesga al agente a intentar resolver excepciones de política; la confianza auto-reportada está mal calibrada; y el sentimiento no correlaciona con la complejidad del caso."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "XMS703P9GFP2EXHBR1Y55XA5CP",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 94,
+   "sourceOrder": 94,
+   "variant": false,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "La política permite reembolsos automáticos hasta $500; por encima requiere aprobación humana y un registro auditable. Hoy la regla vive en el system prompt y en el 2% de los casos el agente aprobó montos mayores. Además, cumplimiento exige un log inmutable de cada bloqueo. ¿Qué diseño satisface ambos requisitos de forma fiable?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Reforzar el system prompt con la regla del límite y pedir al agente que registre en el chat cada vez que bloquee un reembolso alto."
+    },
+    {
+     "key": "B",
+     "text": "Un hook PreToolUse sobre process_refund que bloquee de forma determinista los montos superiores a $500, los redirija a escalada humana y escriba el evento en el log de auditoría."
+    },
+    {
+     "key": "C",
+     "text": "Añadir un campo max_amount al schema de process_refund y confiar en que el modelo lo respete."
+    },
+    {
+     "key": "D",
+     "text": "Un paso posterior que revise los reembolsos emitidos cada noche y revierta los que excedieron el límite, registrando la reversión."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "B",
+    "justification": "El límite de reembolso es una regla de cumplimiento crítica y debe imponerse en la capa de middleware, no en el prompt. Un hook PreToolUse bloquea de forma determinista antes de tocar el backend, redirige a escalada humana y puede escribir el log de auditoría inmutable que exige cumplimiento. El énfasis en el prompt y el campo de schema dependen del cumplimiento del modelo, y la reversión nocturna permite que el reembolso indebido ocurra y solo lo corrige tarde."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "8TSQMQTWBXJZE8MMTH4MBF72AW",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 95,
+   "sourceOrder": 95,
+   "variant": false,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "Un incidente muestra que, cuando el gateway de pagos tuvo una caída de 4 minutos, el agente reintentó process_refund decenas de veces y, al recuperarse el servicio, emitió reembolsos duplicados. La tool devuelve siempre el string 'error' sin distinguir el tipo de fallo. ¿Qué cambio previene mejor este tipo de incidente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Devolver errores estructurados con errorCategory (transient/validation/permission/business) e isRetryable, y aplicar recuperación local acotada solo a los transitorios, tratando los reembolsos ya iniciados como no reintentables por defecto."
+    },
+    {
+     "key": "B",
+     "text": "Aumentar el número máximo de reintentos y añadir jitter aleatorio para espaciar las llamadas durante las caídas del gateway."
+    },
+    {
+     "key": "C",
+     "text": "Capturar el error y devolver un resultado vacío marcado como éxito para que el agente no reintente."
+    },
+    {
+     "key": "D",
+     "text": "Escalar a un humano cada vez que process_refund falle, sin importar la causa."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "El incidente nace de errores indistinguibles: el agente no sabía que el fallo era transitorio ni que la operación podía haberse iniciado, así que reintentó a ciegas y duplicó reembolsos. Errores estructurados con categoría e isRetryable permiten reintentar solo lo transitorio y tratar los reembolsos como no reintentables salvo confirmación. Más reintentos agravan el problema, marcar vacío como éxito oculta fallos reales, y escalar ante cualquier fallo desperdicia la recuperación de errores transitorios benignos."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "ZBRK63X7QDHAHBN93B5B705XQX",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 96,
+   "sourceOrder": 96,
+   "variant": false,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "En una conversación de 30 turnos sobre tres pedidos, el agente confunde a mitad de charla el monto de reembolso acordado ($85) con el total de otro pedido ($120) y ofrece la cifra equivocada. El historial se resume de forma progresiva para caber en el contexto, y los datos clave quedaron sepultados en el medio del historial. ¿Cuál es la forma más fiable de evitarlo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Cambiar a un modelo con ventana de contexto mayor para no tener que resumir el historial."
+    },
+    {
+     "key": "B",
+     "text": "Aumentar la longitud de cada resumen progresivo para que retenga más detalle de los turnos intermedios."
+    },
+    {
+     "key": "C",
+     "text": "Mantener un bloque persistente de 'case facts' (montos, order IDs, estados por pedido) inyectado en cada prompt, fuera del historial resumido y colocado al inicio o al final."
+    },
+    {
+     "key": "D",
+     "text": "Pedir al agente que, antes de responder, relea todo el historial de la conversación para recuperar los datos correctos."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "C",
+    "justification": "Los valores transaccionales se pierden por dos efectos combinados: la summarización progresiva los condensa y el 'lost in the middle' hace que el modelo ignore lo que quedó en el centro del historial. Un bloque de 'case facts' con los datos exactos por pedido, inyectado en cada prompt y ubicado al inicio o al final, los preserva de forma fiable. Un modelo mayor no evita la condensación, resúmenes más largos siguen sepultando datos en el medio, y releer el historial es costoso y poco fiable."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "PNQY80WK2A34WF5JR4EEJRW9TN",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 97,
+   "sourceOrder": 97,
+   "variant": false,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "Cuando el agente escala, el operador humano tarda de media 6 minutos en retomar el caso porque recibe la transcripción completa de la conversación y debe reconstruir qué se intentó. Cumplimiento además exige registrar el motivo de cada escalada. ¿Qué mejora el handoff de forma más efectiva?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Generar un paquete de escalada estructurado con customer_id, issue_summary, order_id, root_cause, actions_taken[], refund_amount, recommended_action y escalation_reason."
+    },
+    {
+     "key": "B",
+     "text": "Adjuntar la transcripción completa con marcas de tiempo y resaltar los mensajes del cliente."
+    },
+    {
+     "key": "C",
+     "text": "Un resumen en prosa libre generado por el modelo en el momento de escalar, anexado al inicio del chat."
+    },
+    {
+     "key": "D",
+     "text": "Un enlace al CRM con el historial del cliente para que el operador lo consulte durante la llamada."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "El operador no debería reconstruir el caso a partir del chat; necesita un resumen estructurado y accionable. Un paquete de escalada con los hechos clave, lo ya intentado, la acción recomendada y el motivo de escalada permite retomar de inmediato y satisface el registro que exige cumplimiento. La transcripción completa y el enlace al CRM trasladan el trabajo al humano, y un resumen en prosa libre es menos fiable y puede omitir el escalation_reason requerido."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "NBF6MN14HA78TQYZKSE3FBY509",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 98,
+   "sourceOrder": 98,
+   "variant": false,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "get_customer devuelve dos clientes con el mismo nombre y apellido. Uno tiene un email cuyo dominio coincide con el de la empresa desde la que el cliente escribe; el otro tiene actividad de cuenta más reciente. El cliente pide un reembolso de $300. ¿Qué debe hacer el agente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Elegir el cliente cuyo dominio de email coincide con el de la empresa del remitente, por ser la señal más fuerte."
+    },
+    {
+     "key": "B",
+     "text": "Elegir el cliente con actividad de cuenta más reciente, ya que es más probable que sea quien escribe."
+    },
+    {
+     "key": "C",
+     "text": "Procesar el reembolso en ambas cuentas y avisar al cliente de que confirme cuál era la correcta."
+    },
+    {
+     "key": "D",
+     "text": "Pedir al cliente un identificador adicional (número de orden, últimos dígitos del método de pago o código postal) para desambiguar antes de tocar ninguna cuenta."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "D",
+    "justification": "Con múltiples coincidencias y una operación financiera de por medio, cualquier heurística —dominio de email o recencia— puede seleccionar la cuenta equivocada y ejecutar un reembolso indebido. Lo correcto es pedir un identificador adicional que verifique la identidad antes de actuar. Elegir por dominio o recencia es adivinar, y procesar en ambas cuentas viola la privacidad y puede duplicar el reembolso."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "72F6FASJ7GVW66C261WQ8KYFJ9",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 99,
+   "sourceOrder": 99,
+   "variant": false,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "Cada get_customer devuelve un objeto de 45 campos (preferencias de marketing, historial de sesiones, flags internos) del que el agente solo usa 5. En conversaciones largas, ese volumen empuja el contexto por encima del 70% y las respuestas empiezan a degradarse y a citar datos de pedidos equivocados. ¿Cuál es la mejor solución?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Recortar (mediante un hook PostToolUse o un wrapper) la salida de get_customer a los 5 campos relevantes antes de que se acumule en el contexto."
+    },
+    {
+     "key": "B",
+     "text": "Cambiar a un modelo con una ventana de contexto mayor para absorber los 45 campos sin degradación."
+    },
+    {
+     "key": "C",
+     "text": "Resumir toda la conversación automáticamente cada vez que el contexto supere el 80%."
+    },
+    {
+     "key": "D",
+     "text": "Instruir al agente en el prompt para que ignore los 40 campos que no necesita."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Los resultados de tools acumulan tokens desproporcionados a su relevancia, y aquí 40 campos inútiles por llamada saturan el contexto y provocan context rot. Recortar la salida a los campos necesarios antes de que se acumulen ataca la causa directa. Un modelo mayor solo retrasa el problema, resumir al 80% ya llega tarde (el modelo ya está degradado y puede alucinar su propio resumen), y pedir 'ignorar' en el prompt no impide que esos tokens ocupen el contexto."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "7PBA1DW0TD3J58GH4KEA2YT1FD",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 100,
+   "sourceOrder": 100,
+   "variant": false,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "Tu bucle agéntico termina el turno cuando detecta en el texto del asistente frases como 'he procesado tu reembolso'. En producción, el agente a veces menciona esa frase mientras aún planifica y el bucle corta antes de ejecutar realmente process_refund, dejando al cliente sin reembolso; otras veces la menciona dos veces y se duplica la acción. ¿Cómo debe decidir el bucle que el turno terminó?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Ampliar la lista de frases de finalización y exigir que aparezcan al final del mensaje para reducir los falsos positivos."
+    },
+    {
+     "key": "B",
+     "text": "Detener el bucle al alcanzar un tope de iteraciones que garantice que la acción ya se ejecutó."
+    },
+    {
+     "key": "C",
+     "text": "Evaluar estrictamente stop_reason == 'end_turn' como única señal de finalización, ejecutando las tools solo cuando stop_reason == 'tool_use'."
+    },
+    {
+     "key": "D",
+     "text": "Comprobar si la respuesta contiene texto del asistente en lugar de una llamada a tool y, si es así, terminar."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "C",
+    "justification": "Parsear lenguaje natural para decidir la terminación es una abstracción con fugas: frágil ante variaciones de redacción y ante que el modelo mencione una acción antes de ejecutarla. El control de flujo debe basarse en la señal del servidor stop_reason: end_turn indica fin del turno y tool_use indica que hay que ejecutar herramientas. Ampliar la lista de frases no elimina la fragilidad, el tope de iteraciones es solo un fallback de seguridad, y la mera presencia de texto no distingue un turno intermedio del final."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "0JY6RB9KYV2NPR8BGQX14AZ26R",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 101,
+   "sourceOrder": 101,
+   "variant": false,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Tu extractor de facturas usa un prompt que pide 'devuelve un objeto JSON con estos campos' y, pese a la temperatura 0, un 4% de las respuestas trae comentarios en prosa antes del JSON o comas finales que rompen tu parser en producción. Necesitas una garantía de que la salida sea siempre JSON parseable y conforme a tus campos. ¿Cuál es el enfoque más fiable?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Añadir un post-procesador que extraiga el primer bloque {...} de la respuesta y le quite las comas finales con regex."
+    },
+    {
+     "key": "B",
+     "text": "Definir una tool de extracción cuyo input sea un JSON schema y tomar los datos del bloque tool_use de la respuesta, eliminando los errores de sintaxis por construcción."
+    },
+    {
+     "key": "C",
+     "text": "Reforzar el prompt con 'RESPONDE SOLO CON JSON, SIN TEXTO ADICIONAL' y varios ejemplos del formato exacto."
+    },
+    {
+     "key": "D",
+     "text": "Bajar aún más la aleatoriedad (top_p) y validar el JSON, reintentando cuando el parseo falle."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "B",
+    "justification": "tool_use con un JSON schema es el mecanismo más fiable para salida conforme al esquema porque el JSON se genera contra el schema y se eliminan los errores de sintaxis por construcción, tomando los datos del bloque tool_use. El post-procesado con regex es frágil ante variaciones, reforzar el prompt sigue permitiendo texto en prosa y comas finales, y ajustar top_p con reintentos reduce la frecuencia pero no garantiza JSON válido."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "9JTHFWVP9NF4DCAWME335PSF8N",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 102,
+   "sourceOrder": 102,
+   "variant": false,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Migraste tu extractor a tool_use con un schema estricto y desde entonces el JSON es siempre sintácticamente válido. Aun así, contabilidad reporta que en un 6% de las facturas la suma de line_items no coincide con el total, y en algunas el impuesto quedó cargado en el campo del subtotal. ¿Qué diagnóstico y arreglo es el correcto?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El schema garantiza la forma pero no la semántica; hay que extraer stated_total y calculated_total, comparar y, ante discrepancia, reintentar con el error específico o marcar para revisión."
+    },
+    {
+     "key": "B",
+     "text": "El schema no es lo bastante estricto; convertir subtotal, impuesto y total en campos required forzará al modelo a cuadrarlos."
+    },
+    {
+     "key": "C",
+     "text": "El problema es de cálculo del modelo; bajar la temperatura y añadir 'suma con cuidado' al prompt lo resuelve."
+    },
+    {
+     "key": "D",
+     "text": "Los documentos fuente están mal escaneados; conviene rechazarlos y solicitar mejores copias."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Un schema estricto elimina los errores de sintaxis pero no los semánticos: no impide que los importes no cuadren ni que un valor caiga en el campo equivocado. La solución es validar el contenido —extraer stated_total y calculated_total, compararlos y reintentar con el error concreto o derivar a revisión—. Más campos required no fuerzan coherencia aritmética, la temperatura no ataca la corrección semántica, y culpar al escaneo ignora que el fallo está en la extracción."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "EQ59Q73W3AFXSM2S0MEK6Y4A8C",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 103,
+   "sourceOrder": 103,
+   "variant": false,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Extraes cláusulas de contratos y tu schema marca governing_law como required. Cuando un contrato no especifica jurisdicción, el modelo rellena el campo con una plausible ('State of Delaware') en vez de dejarlo vacío, introduciendo datos falsos que legal detectó por casualidad. Ya añadiste 'no inventes datos ausentes' al prompt sin éxito total. ¿Cuál es la mejor solución?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Hacer governing_law nullable/opcional en el schema para que el modelo pueda omitirlo legítimamente cuando el documento no lo contiene."
+    },
+    {
+     "key": "B",
+     "text": "Reforzar la instrucción 'no inventes datos ausentes' con ejemplos few-shot de campos dejados en blanco."
+    },
+    {
+     "key": "C",
+     "text": "Un validador posterior que compruebe si la jurisdicción aparece literalmente en el texto y, si no, borre el valor."
+    },
+    {
+     "key": "D",
+     "text": "Reintentar la extracción del contrato hasta que el modelo devuelva el mismo valor dos veces seguidas."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Marcar como required un campo que puede no existir empuja al modelo a fabricar un valor para satisfacer el schema. Hacerlo nullable/opcional le permite omitirlo de forma legítima cuando el documento no lo contiene, que es la causa raíz. La instrucción en el prompt ya falló y sigue siendo probabilística, el validador posterior es un parche que no evita la fabricación inicial, y reintentar no crea información que no está en el contrato."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "DAFTFWZ0WS5BZT5Q29HP85H4P4",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 104,
+   "sourceOrder": 104,
+   "variant": false,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "En un lote de 2.000 facturas, 180 fallan la validación. Al inspeccionarlas, unas fallan porque las fechas vienen en formato local y no cuadran con el patrón esperado, y otras porque el documento sencillamente no incluye el número de pedido que tu schema espera. Un ingeniero propone reintentar las 180 con feedback de error. ¿Cuál es el enfoque correcto?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Reintentar las 180 con feedback de error, ya que anexar el error específico permite al modelo corregir cualquier fallo de validación."
+    },
+    {
+     "key": "B",
+     "text": "Marcar las 180 para revisión humana sin reintentar, porque los reintentos rara vez ayudan en extracción."
+    },
+    {
+     "key": "C",
+     "text": "Distinguir los tipos de fallo: reintentar con feedback las que fallan por formato de fecha, y marcar como ausente (sin reintentar) las que carecen del número de pedido en el documento."
+    },
+    {
+     "key": "D",
+     "text": "Reprocesar todo el lote con un prompt más estricto sobre fechas y números de pedido."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "C",
+    "justification": "El retry con feedback corrige errores de formato o estructura —como fechas en formato local que solo necesitan normalizarse—, pero es inútil cuando la información simplemente no está en el documento, como un número de pedido ausente. Lo correcto es ramificar: reintentar las de formato con el error específico y marcar como ausentes las que no contienen el dato. Reintentar las 180 malgasta llamadas en las irrecuperables, marcarlas todas descarta correcciones baratas, y reprocesar el lote entero es caro e innecesario."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "3VMJ8C1CJ58HXP3438GW17EE7M",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 105,
+   "sourceOrder": 105,
+   "variant": false,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Clasificas documentos entrantes en un enum de 6 tipos. Un 9% cae en 'None of the above' porque llegan tipos nuevos (notas de crédito, órdenes de compra) que no anticipaste, y otro 3% son ilegibles o ambiguos. Forzar la clasificación al tipo más cercano generó errores aguas abajo. ¿Cuál es el mejor diseño de schema?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Añadir un valor 'other' con un campo de detalle en texto para tipos no anticipados y un valor 'unclear' para los documentos ambiguos o ilegibles."
+    },
+    {
+     "key": "B",
+     "text": "Ampliar el enum ahora con notas de crédito y órdenes de compra, y repetir la ampliación cada vez que aparezca un tipo nuevo."
+    },
+    {
+     "key": "C",
+     "text": "Forzar siempre el tipo más cercano del enum y registrar la confianza para revisar después los de baja confianza."
+    },
+    {
+     "key": "D",
+     "text": "Eliminar el enum y dejar document_type como texto libre para que el modelo escriba lo que corresponda."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Un enum con 'other' + detalle absorbe los tipos no anticipados sin fabricar una categoría incorrecta, y 'unclear' captura de forma explícita lo ilegible o ambiguo, evitando los errores aguas abajo de forzar el tipo más cercano. Ampliar el enum manualmente ante cada tipo nuevo es un mantenimiento interminable, forzar el más cercano reintroduce las clasificaciones erróneas, y el texto libre pierde la estructura y la consistencia que aporta el enum."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "D67VAD48NG3KXFPWZ00KW3VDYW",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 106,
+   "sourceOrder": 106,
+   "variant": false,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Tienes dos cargas de extracción: (1) validar la factura en el checkout en tiempo real, donde el cliente espera la confirmación en segundos, y (2) un reproceso nocturno de 200.000 facturas históricas para un data warehouse. Un manager propone pasar ambas a la Message Batches API para ahorrar un 50%. ¿Cómo deberías evaluarlo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Pasar ambas a batch y hacer polling del estado, aceptando la latencia a cambio del ahorro del 50%."
+    },
+    {
+     "key": "B",
+     "text": "Mantener ambas en la API síncrona para evitar problemas de correlación y orden de resultados."
+    },
+    {
+     "key": "C",
+     "text": "Solo el reproceso nocturno va a batch (tolera latencia); la validación en checkout se queda en la API síncrona porque es bloqueante y sensible a la latencia."
+    },
+    {
+     "key": "D",
+     "text": "Pasar ambas a batch con un fallback a la API síncrona si el lote tarda más de lo esperado."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "C",
+    "justification": "La Message Batches API ahorra un 50% pero puede tardar hasta 24 horas sin SLA de latencia, así que solo sirve para cargas no bloqueantes y tolerantes a la latencia como el reproceso nocturno. La validación en el checkout es bloqueante —el cliente espera— y debe seguir en la API síncrona. Pasar ambas a batch rompe el requisito de tiempo real, mantener todo síncrono renuncia al ahorro donde sí aplica, y el fallback añade complejidad sin resolver que el batch no garantiza latencia."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "8EQWMSP36JHXB62CT4Q3N38JRZ",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 107,
+   "sourceOrder": 107,
+   "variant": false,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Extraes datos de informes clínicos con estructuras muy dispares: unos ponen la dosis en una tabla, otros en prosa dentro de la sección de tratamiento, otros en notas al pie. Instrucciones cada vez más largas dan resultados inconsistentes entre formatos. El equipo baraja opciones. ¿Cuál es la técnica más efectiva?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Escribir una especificación aún más exhaustiva que describa cada ubicación posible de la dosis en todos los formatos conocidos."
+    },
+    {
+     "key": "B",
+     "text": "Añadir 2-4 ejemplos few-shot que muestren la extracción correcta de la dosis sobre formatos variados (tabla, prosa, nota al pie), enseñando el criterio para generalizar."
+    },
+    {
+     "key": "C",
+     "text": "Hacer fine-tuning del modelo con miles de informes clínicos etiquetados para que aprenda todos los formatos."
+    },
+    {
+     "key": "D",
+     "text": "Construir un pipeline distinto por cada formato de informe detectado por reglas."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "B",
+    "justification": "Cuando instrucciones detalladas dan resultados inconsistentes ante formatos variados, los few-shot son la técnica más efectiva: 2-4 ejemplos que muestren la extracción correcta en distintas ubicaciones enseñan el criterio subyacente y permiten generalizar a formatos nuevos. Una especificación más larga sigue siendo inconsistente, el fine-tuning es costoso y rígido (y fuera del enfoque práctico del examen), y un pipeline por formato es frágil y no escala a variantes no previstas."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "9JWEKBX2BTWYC4TGC0G461GA5T",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 108,
+   "sourceOrder": 108,
+   "variant": false,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Tu pipeline de extracción debe ejecutar extract_metadata (tipo de documento, fecha, emisor) antes de un paso de enriquecimiento que depende de esos metadatos. A veces el modelo salta directamente al enriquecimiento o responde con texto, rompiendo el orden. ¿Qué configuración garantiza que extract_metadata se ejecute primero?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Usar tool_choice 'auto' y describir en el prompt que extract_metadata debe ir primero."
+    },
+    {
+     "key": "B",
+     "text": "Usar tool_choice 'any' para que el modelo llame alguna tool en cada paso y confiar en que elija bien el orden."
+    },
+    {
+     "key": "C",
+     "text": "Fusionar extract_metadata y el enriquecimiento en una sola tool para que el orden sea irrelevante."
+    },
+    {
+     "key": "D",
+     "text": "Forzar tool_choice a la tool específica ({'type':'tool','name':'extract_metadata'}) en la primera llamada para garantizar que corra antes del enriquecimiento."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "D",
+    "justification": "Cuando un paso debe ejecutarse antes que otro, forzar tool_choice a esa tool específica en la primera llamada garantiza de forma determinista que extract_metadata corra primero. 'auto' permite que el modelo salte el paso o devuelva texto, 'any' obliga a llamar alguna tool pero no fija cuál, y fusionar ambas tools mezcla responsabilidades y pierde la separación que hace el enriquecimiento dependiente de metadatos ya validados."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "Z08PWDT1D6ZJS8DF2DP0T5CPFN",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 109,
+   "sourceOrder": 109,
+   "variant": false,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Tu extractor reporta un 97% de exactitud global sobre un set mixto de facturas, recibos y contratos. Antes de reducir la revisión humana, un muestreo rápido sugiere que los contratos —el 8% del volumen— rinden mucho peor que la media. ¿Cuál es el paso más prudente antes de automatizar las extracciones de alta confianza?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Medir la exactitud por tipo de documento y por campo mediante muestreo aleatorio estratificado, ya que la media global puede enmascarar un tipo (contratos) con desempeño bajo."
+    },
+    {
+     "key": "B",
+     "text": "Automatizar todo lo que supere el 90% de confianza auto-reportada por el modelo y revisar el resto."
+    },
+    {
+     "key": "C",
+     "text": "Reducir la revisión humana de forma uniforme en los tres tipos, dado que el global es del 97%."
+    },
+    {
+     "key": "D",
+     "text": "Confiar en el 97% global porque ya supera el umbral de negocio, y monitorear quejas para detectar problemas."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Una métrica agregada puede enmascarar un mal desempeño en un subgrupo —aquí los contratos—, así que automatizar según el global arriesga aceptar extracciones erróneas de ese tipo. El muestreo estratificado por tipo de documento y por campo revela dónde es seguro automatizar y dónde no. La confianza auto-reportada está mal calibrada, reducir la revisión de forma uniforme ignora el punto débil, y esperar a las quejas detecta el problema demasiado tarde."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "CW8SHX9RJS47FRR5DQNZ95RWX2",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 110,
+   "sourceOrder": 110,
+   "variant": false,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Consolidas el 'tamaño de mercado' extraído de 15 informes. Algunos citan $40B, otros $52B; al revisar, unos son de 2021 y otros de 2024, y dos informes recientes se contradicen entre sí para el mismo año. Tu salida actual elige un valor y descarta el resto, ocultando el matiz. ¿Qué debe requerir la salida estructurada?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Requerir la fecha de publicación/recolección de cada cifra y marcar los desacuerdos reales con un conflict_detected que conserve los valores y su fuente, sin elegir uno en silencio."
+    },
+    {
+     "key": "B",
+     "text": "Quedarse con la cifra más reciente ($52B) y descartar las demás por obsoletas."
+    },
+    {
+     "key": "C",
+     "text": "Promediar las 15 cifras para obtener un único tamaño de mercado representativo."
+    },
+    {
+     "key": "D",
+     "text": "Marcar todo el conjunto como no fiable porque las cifras no coinciden entre sí."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Sin contexto temporal, cifras de años distintos parecen contradecirse cuando no lo son, y los conflictos reales entre fuentes creíbles deben anotarse, no resolverse en silencio. Requerir la fecha de cada cifra distingue variación temporal de contradicción, y un conflict_detected que preserve valores y fuentes deja el juicio final a un humano o al coordinador. Quedarse con la más reciente o promediar descarta información válida, y marcar todo como no fiable tira matices legítimos."
+   },
+   "difficulty": "advanced"
+  },
+  {
    "id": "EED2HX89TBGVDW4VD66W0VN1Q0",
    "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+   "order": 111,
+   "sourceOrder": 1,
+   "variant": true,
    "scenario": {
     "title": "Claude Code para Integración Continua",
     "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
@@ -1987,6 +3932,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "Z8XWZA26WS3ZCV156R5G762016",
    "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+   "order": 112,
+   "sourceOrder": 2,
+   "variant": true,
    "scenario": {
     "title": "Claude Code para Integración Continua",
     "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
@@ -2019,6 +3967,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "6DN5CYDE34SRDNTTPRY6YBR9V2",
    "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+   "order": 113,
+   "sourceOrder": 3,
+   "variant": true,
    "scenario": {
     "title": "Claude Code para Integración Continua",
     "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
@@ -2051,6 +4002,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "87X48AGC7TC5CRD83R3X64AGSC",
    "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+   "order": 114,
+   "sourceOrder": 4,
+   "variant": true,
    "scenario": {
     "title": "Claude Code para Integración Continua",
     "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
@@ -2083,6 +4037,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "RMQT60GGMBS5P1HW7FDS1PTFGH",
    "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+   "order": 115,
+   "sourceOrder": 5,
+   "variant": true,
    "scenario": {
     "title": "Claude Code para Integración Continua",
     "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
@@ -2115,6 +4072,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "X57PN5WS5KBR0GXNPJ4ZHDXSM6",
    "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+   "order": 116,
+   "sourceOrder": 6,
+   "variant": true,
    "scenario": {
     "title": "Claude Code para Integración Continua",
     "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
@@ -2147,6 +4107,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "1ZW7B4F6FN4DRREWQAYMMAVPYP",
    "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+   "order": 117,
+   "sourceOrder": 7,
+   "variant": true,
    "scenario": {
     "title": "Claude Code para Integración Continua",
     "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
@@ -2179,6 +4142,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "Y96H1M9M3Y1C8DZ8TDN3GN78PF",
    "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+   "order": 118,
+   "sourceOrder": 8,
+   "variant": true,
    "scenario": {
     "title": "Claude Code para Integración Continua",
     "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
@@ -2211,6 +4177,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "BGED4HAR08KC0A1YNJQWVE9T98",
    "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+   "order": 119,
+   "sourceOrder": 9,
+   "variant": true,
    "scenario": {
     "title": "Claude Code para Integración Continua",
     "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
@@ -2243,6 +4212,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "TCWR4F9MX2YC5G4MXPV1TS7W4X",
    "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+   "order": 120,
+   "sourceOrder": 10,
+   "variant": true,
    "scenario": {
     "title": "Claude Code para Integración Continua",
     "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
@@ -2275,6 +4247,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "DV3GR7KZ98MWBCB7750DE1AHAY",
    "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+   "order": 121,
+   "sourceOrder": 11,
+   "variant": true,
    "scenario": {
     "title": "Claude Code para Integración Continua",
     "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
@@ -2307,6 +4282,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "04B32WWJ6TQSTJAXTHYGH78X7P",
    "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+   "order": 122,
+   "sourceOrder": 12,
+   "variant": true,
    "scenario": {
     "title": "Claude Code para Integración Continua",
     "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
@@ -2339,6 +4317,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "JZ231XEBBNB26QY091WVZ2ND56",
    "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+   "order": 123,
+   "sourceOrder": 13,
+   "variant": true,
    "scenario": {
     "title": "Claude Code para Integración Continua",
     "body": "[ilegible]"
@@ -2371,6 +4352,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "KVHWCQRPM5QA9YW98NSCDV0ZRV",
    "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+   "order": 124,
+   "sourceOrder": 14,
+   "variant": true,
    "scenario": {
     "title": "Claude Code para Integración Continua",
     "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
@@ -2403,6 +4387,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "7N31V6D01ZK3XSTG82CV54EA93",
    "topicId": "01KT81BA4J1SN6A5M3D93T1920",
+   "order": 125,
+   "sourceOrder": 15,
+   "variant": true,
    "scenario": {
     "title": "Claude Code para Integración Continua",
     "body": "Estás integrando Claude Code en tu pipeline de Integración Continua/Despliegue Continuo (CI/CD). El sistema ejecuta revisiones de código automatizadas, genera casos de prueba y proporciona feedback sobre pull requests. Debes diseñar prompts que brinden feedback accionable y minimicen los falsos positivos."
@@ -2435,6 +4422,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "RQ2PHYH4QMF7Z5BCQ3DSJ26PXS",
    "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+   "order": 126,
+   "sourceOrder": 16,
+   "variant": true,
    "scenario": {
     "title": "Sistema de Investigación Multi-Agente",
     "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
@@ -2467,6 +4457,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "X9P1CYWHFRREQ9BSAHAAX4MQ4H",
    "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+   "order": 127,
+   "sourceOrder": 17,
+   "variant": true,
    "scenario": {
     "title": "Sistema de Investigación Multi-Agente",
     "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
@@ -2499,6 +4492,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "AY2QMDRTAYYPX46T34NTKNX3V4",
    "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+   "order": 128,
+   "sourceOrder": 18,
+   "variant": true,
    "scenario": {
     "title": "Sistema de Investigación Multi-Agente",
     "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
@@ -2531,6 +4527,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "PRV2D002T4KCDVSBCJQZ2Z7701",
    "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+   "order": 129,
+   "sourceOrder": 19,
+   "variant": true,
    "scenario": {
     "title": "Sistema de Investigación Multi-Agente",
     "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
@@ -2563,6 +4562,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "JSM88JGAZNG8RNXS9MJ0CN135Y",
    "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+   "order": 130,
+   "sourceOrder": 20,
+   "variant": true,
    "scenario": {
     "title": "Sistema de Investigación Multi-Agente",
     "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
@@ -2595,6 +4597,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "RHA2NS0FAFHZ1HVAVRGN4ZNC11",
    "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+   "order": 131,
+   "sourceOrder": 21,
+   "variant": true,
    "scenario": {
     "title": "Sistema de Investigación Multi-Agente",
     "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
@@ -2627,6 +4632,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "S0H2Z3BPGHH7NG1QW4GYH5TDWT",
    "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+   "order": 132,
+   "sourceOrder": 22,
+   "variant": true,
    "scenario": {
     "title": "Sistema de Investigación Multi-Agente",
     "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
@@ -2659,6 +4667,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "7DPTY76Y0E8YRSGAN1EM6YTE8V",
    "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+   "order": 133,
+   "sourceOrder": 23,
+   "variant": true,
    "scenario": {
     "title": "Sistema de Investigación Multi-Agente",
     "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
@@ -2691,6 +4702,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "4PJQ32TMRWGWVZ407V3ASNBPBA",
    "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+   "order": 134,
+   "sourceOrder": 24,
+   "variant": true,
    "scenario": {
     "title": "Sistema de Investigación Multi-Agente",
     "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
@@ -2723,6 +4737,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "RRB2G0P67JBQ7AYWBD5NJCX6MB",
    "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+   "order": 135,
+   "sourceOrder": 25,
+   "variant": true,
    "scenario": {
     "title": "Sistema de Investigación Multi-Agente",
     "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
@@ -2755,6 +4772,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "44AEQZ45E9TTR8T0KQSY5P4TXT",
    "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+   "order": 136,
+   "sourceOrder": 26,
+   "variant": true,
    "scenario": {
     "title": "Sistema de Investigación Multi-Agente",
     "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
@@ -2787,6 +4807,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "6ECV0ZJCEVDW2V0TWR5F1YD3A5",
    "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+   "order": 137,
+   "sourceOrder": 27,
+   "variant": true,
    "scenario": {
     "title": "Sistema de Investigación Multi-Agente",
     "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
@@ -2819,6 +4842,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "E05T4HT7YN34CJQDP7V4S2THE0",
    "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+   "order": 138,
+   "sourceOrder": 28,
+   "variant": true,
    "scenario": {
     "title": "Sistema de Investigación Multi-Agente",
     "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
@@ -2851,6 +4877,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "6MX5P2G7GFFQ9BFVG5NMCJK10J",
    "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+   "order": 139,
+   "sourceOrder": 29,
+   "variant": true,
    "scenario": {
     "title": "Sistema de Investigación Multi-Agente",
     "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
@@ -2883,6 +4912,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "H2SPR9T6VVHXS0EB4Z1AC3RMFW",
    "topicId": "01KT81BA4JK0BAMH84VBFJK0FA",
+   "order": 140,
+   "sourceOrder": 30,
+   "variant": true,
    "scenario": {
     "title": "Sistema de Investigación Multi-Agente",
     "body": "Estás construyendo un sistema de investigación multi-agente usando el Claude Agent SDK. Un agente coordinador delega en subagentes especializados: uno busca en la web, uno analiza documentos, uno sintetiza hallazgos y uno genera reportes. El sistema investiga temas y produce reportes completos con citas."
@@ -2915,6 +4947,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "3QNG3A8WGPYAK4YCK59P49XQYM",
    "topicId": "01KT81BA4J2675N47R42Q4C716",
+   "order": 141,
+   "sourceOrder": 31,
+   "variant": true,
    "scenario": {
     "title": "Productividad del Desarrollador con Claude",
     "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
@@ -2947,38 +4982,9 @@ window.QUESTION_BANKS["es"] = {
   {
    "id": "PWBPT4FVTX0CEX71GSFN264K3J",
    "topicId": "01KT81BA4J2675N47R42Q4C716",
-   "scenario": {
-    "title": "Productividad del Desarrollador con Claude",
-    "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
-   },
-   "prompt": "Configuraste tu agente Claude con tres servidores MCP: uno para operaciones git, uno para gestion de tickets Jira y uno para busqueda de documentacion. Cuando un usuario pide 'crea una rama para JIRA-123 y agrega links de documentacion al ticket', ¿como accede el agente a las herramientas de estos servidores?",
-   "options": [
-    {
-     "key": "A",
-     "text": "El agente selecciona automáticamente el servidor más relevante basándose en la solicitud y carga solo las herramientas de ese servidor."
-    },
-    {
-     "key": "B",
-     "text": "Las herramientas de todos los servidores MCP configurados se descubren en el momento de la conexión y están disponibles simultáneamente para el agente."
-    },
-    {
-     "key": "C",
-     "text": "El agente consulta cada servidor secuencialmente para determinar cuál maneja cada herramienta, enrutando las llamadas basándose en los prefijos del nombre de herramienta."
-    },
-    {
-     "key": "D",
-     "text": "Debés especificar qué servidor MCP usar en cada turno, y el agente solo puede acceder a las herramientas de un servidor a la vez."
-    }
-   ],
-   "answer": {
-    "correctOptionKey": "B",
-    "justification": "Cuando se configuran múltiples servidores MCP, sus herramientas se descubren cuando el agente se conecta y se ponen disponibles juntas. El agente puede por lo tanto usar la herramienta git para la rama, la herramienta Jira para el ticket y la herramienta de búsqueda de documentación para los links en el mismo flujo de trabajo. No necesita seleccionar solo un servidor por turno ni consultar servidores secuencialmente para determinar la propiedad."
-   },
-   "difficulty": "intermediate"
-  },
-  {
-   "id": "SQ24SFW6412CBQC15SA77C7SYX",
-   "topicId": "01KT81BA4J2675N47R42Q4C716",
+   "order": 142,
+   "sourceOrder": 33,
+   "variant": true,
    "scenario": {
     "title": "Productividad del Desarrollador con Claude",
     "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
@@ -3009,8 +5015,11 @@ window.QUESTION_BANKS["es"] = {
    "difficulty": "intermediate"
   },
   {
-   "id": "VK8MPMBAG260582297AC6VS1BZ",
+   "id": "SQ24SFW6412CBQC15SA77C7SYX",
    "topicId": "01KT81BA4J2675N47R42Q4C716",
+   "order": 143,
+   "sourceOrder": 34,
+   "variant": true,
    "scenario": {
     "title": "Productividad del Desarrollador con Claude",
     "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
@@ -3041,8 +5050,11 @@ window.QUESTION_BANKS["es"] = {
    "difficulty": "intermediate"
   },
   {
-   "id": "3GG64A44MDWZ45J1CN8VYYZ7VB",
+   "id": "VK8MPMBAG260582297AC6VS1BZ",
    "topicId": "01KT81BA4J2675N47R42Q4C716",
+   "order": 144,
+   "sourceOrder": 35,
+   "variant": true,
    "scenario": {
     "title": "Productividad del Desarrollador con Claude",
     "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
@@ -3073,8 +5085,11 @@ window.QUESTION_BANKS["es"] = {
    "difficulty": "intermediate"
   },
   {
-   "id": "CACNQETDH3RRS2S4HYW2ZT1TJM",
+   "id": "3GG64A44MDWZ45J1CN8VYYZ7VB",
    "topicId": "01KT81BA4J2675N47R42Q4C716",
+   "order": 145,
+   "sourceOrder": 36,
+   "variant": true,
    "scenario": {
     "title": "Productividad del Desarrollador con Claude",
     "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
@@ -3105,8 +5120,11 @@ window.QUESTION_BANKS["es"] = {
    "difficulty": "intermediate"
   },
   {
-   "id": "B81QWNJDYKEVXTT11NTX69A7P9",
+   "id": "CACNQETDH3RRS2S4HYW2ZT1TJM",
    "topicId": "01KT81BA4J2675N47R42Q4C716",
+   "order": 146,
+   "sourceOrder": 37,
+   "variant": true,
    "scenario": {
     "title": "Productividad del Desarrollador con Claude",
     "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
@@ -3137,8 +5155,11 @@ window.QUESTION_BANKS["es"] = {
    "difficulty": "intermediate"
   },
   {
-   "id": "6VSH4BXFXNBSRZGY1T65W7H89D",
+   "id": "B81QWNJDYKEVXTT11NTX69A7P9",
    "topicId": "01KT81BA4J2675N47R42Q4C716",
+   "order": 147,
+   "sourceOrder": 38,
+   "variant": true,
    "scenario": {
     "title": "Productividad del Desarrollador con Claude",
     "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
@@ -3169,8 +5190,11 @@ window.QUESTION_BANKS["es"] = {
    "difficulty": "intermediate"
   },
   {
-   "id": "28W69EYK5QX2C5HHFJ9EA2GCG8",
+   "id": "6VSH4BXFXNBSRZGY1T65W7H89D",
    "topicId": "01KT81BA4J2675N47R42Q4C716",
+   "order": 148,
+   "sourceOrder": 39,
+   "variant": true,
    "scenario": {
     "title": "Productividad del Desarrollador con Claude",
     "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
@@ -3201,8 +5225,11 @@ window.QUESTION_BANKS["es"] = {
    "difficulty": "intermediate"
   },
   {
-   "id": "D35TVPR4ZG0BB26WK24DA0MAAM",
+   "id": "28W69EYK5QX2C5HHFJ9EA2GCG8",
    "topicId": "01KT81BA4J2675N47R42Q4C716",
+   "order": 149,
+   "sourceOrder": 40,
+   "variant": true,
    "scenario": {
     "title": "Productividad del Desarrollador con Claude",
     "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
@@ -3233,8 +5260,11 @@ window.QUESTION_BANKS["es"] = {
    "difficulty": "intermediate"
   },
   {
-   "id": "T4XK0YYZTHR6D93GC9WY74YZ5G",
+   "id": "D35TVPR4ZG0BB26WK24DA0MAAM",
    "topicId": "01KT81BA4J2675N47R42Q4C716",
+   "order": 150,
+   "sourceOrder": 41,
+   "variant": true,
    "scenario": {
     "title": "Productividad del Desarrollador con Claude",
     "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
@@ -3265,8 +5295,11 @@ window.QUESTION_BANKS["es"] = {
    "difficulty": "intermediate"
   },
   {
-   "id": "XWC94CWDKSJFCWA7J58W47H2BV",
+   "id": "T4XK0YYZTHR6D93GC9WY74YZ5G",
    "topicId": "01KT81BA4J2675N47R42Q4C716",
+   "order": 151,
+   "sourceOrder": 42,
+   "variant": true,
    "scenario": {
     "title": "Productividad del Desarrollador con Claude",
     "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
@@ -3297,8 +5330,11 @@ window.QUESTION_BANKS["es"] = {
    "difficulty": "intermediate"
   },
   {
-   "id": "DJFZ59ERH4BXBH7MXX6CB5F38F",
+   "id": "XWC94CWDKSJFCWA7J58W47H2BV",
    "topicId": "01KT81BA4J2675N47R42Q4C716",
+   "order": 152,
+   "sourceOrder": 43,
+   "variant": true,
    "scenario": {
     "title": "Productividad del Desarrollador con Claude",
     "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
@@ -3329,8 +5365,11 @@ window.QUESTION_BANKS["es"] = {
    "difficulty": "intermediate"
   },
   {
-   "id": "EKRHN11788RHGXYAETAG3WKQ34",
+   "id": "DJFZ59ERH4BXBH7MXX6CB5F38F",
    "topicId": "01KT81BA4J2675N47R42Q4C716",
+   "order": 153,
+   "sourceOrder": 44,
+   "variant": true,
    "scenario": {
     "title": "Productividad del Desarrollador con Claude",
     "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
@@ -3361,8 +5400,11 @@ window.QUESTION_BANKS["es"] = {
    "difficulty": "intermediate"
   },
   {
-   "id": "W7SN466G5GP76EYA8C2TKKC5EP",
+   "id": "EKRHN11788RHGXYAETAG3WKQ34",
    "topicId": "01KT81BA4J2675N47R42Q4C716",
+   "order": 154,
+   "sourceOrder": 45,
+   "variant": true,
    "scenario": {
     "title": "Productividad del Desarrollador con Claude",
     "body": "Estás construyendo herramientas de productividad para desarrolladores usando el Claude Agent SDK. El agente ayuda a los ingenieros a explorar codebases desconocidas, entender sistemas legados, generar código boilerplate y automatizar tareas repetitivas. Utiliza las herramientas integradas (Read, Write, Bash, Grep, Glob) y se integra con servidores de Model Context Protocol (MCP)."
@@ -3393,8 +5435,11 @@ window.QUESTION_BANKS["es"] = {
    "difficulty": "intermediate"
   },
   {
-   "id": "K2R8D2ZXSRHVQ5TMKDTBH2F4TD",
+   "id": "W7SN466G5GP76EYA8C2TKKC5EP",
    "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+   "order": 155,
+   "sourceOrder": 46,
+   "variant": true,
    "scenario": {
     "title": "Generación de Código con Claude Code",
     "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
@@ -3425,8 +5470,11 @@ window.QUESTION_BANKS["es"] = {
    "difficulty": "intermediate"
   },
   {
-   "id": "7JGMQMN235S7GD8QC4NMWPSHN3",
+   "id": "K2R8D2ZXSRHVQ5TMKDTBH2F4TD",
    "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+   "order": 156,
+   "sourceOrder": 47,
+   "variant": true,
    "scenario": {
     "title": "Generación de Código con Claude Code",
     "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
@@ -3457,8 +5505,11 @@ window.QUESTION_BANKS["es"] = {
    "difficulty": "intermediate"
   },
   {
-   "id": "3ZC76BJEC7W889HREJ2T7MSRN3",
+   "id": "7JGMQMN235S7GD8QC4NMWPSHN3",
    "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+   "order": 157,
+   "sourceOrder": 48,
+   "variant": true,
    "scenario": {
     "title": "Generación de Código con Claude Code",
     "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
@@ -3489,8 +5540,11 @@ window.QUESTION_BANKS["es"] = {
    "difficulty": "intermediate"
   },
   {
-   "id": "KYZQ8K6Z08RX6TV7BEQXV3C7MV",
+   "id": "3ZC76BJEC7W889HREJ2T7MSRN3",
    "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+   "order": 158,
+   "sourceOrder": 49,
+   "variant": true,
    "scenario": {
     "title": "Generación de Código con Claude Code",
     "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
@@ -3521,40 +5575,11 @@ window.QUESTION_BANKS["es"] = {
    "difficulty": "intermediate"
   },
   {
-   "id": "NJ4W4T0TFS5BXT42V3Z8ZTRKFB",
+   "id": "KYZQ8K6Z08RX6TV7BEQXV3C7MV",
    "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
-   "scenario": {
-    "title": "Generación de Código con Claude Code",
-    "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
-   },
-   "prompt": "Tu equipo conecto un servidor MCP propio que ofrece plantillas de flujo de trabajo DevOps. El servidor expone varios prompts MCP (como deploy_checklist e incident_response) ademas de herramientas. ¿Como se vuelven accesibles esos prompts MCP dentro de Claude Code?",
-   "options": [
-    {
-     "key": "A",
-     "text": "Se agregan al registro de herramientas de Claude Code junto con las herramientas del servidor, invocados automáticamente por el modelo cuando son relevantes para la tarea."
-    },
-    {
-     "key": "B",
-     "text": "Se anteponen automáticamente a cada conversación como contexto adicional de nivel de sistema, influyendo en el comportamiento de Claude durante toda la sesión."
-    },
-    {
-     "key": "C",
-     "text": "Se exponen como recursos mencionables con @ junto a los archivos, obtenidos y adjuntados a tu mensaje cuando se los referencia."
-    },
-    {
-     "key": "D",
-     "text": "Aparecen como slash commands (por ejemplo, /mcp__servername__deploy_checklist) que podés invocar, con argumentos pasados después del nombre del comando."
-    }
-   ],
-   "answer": {
-    "correctOptionKey": "D",
-    "justification": "Los prompts MCP son plantillas de prompt reutilizables expuestas por el servidor. En Claude Code, se exponen para invocación explícita como slash commands, usando una forma con namespace que identifica el servidor MCP y el nombre del prompt. No son herramientas seleccionadas automáticamente por el modelo, no son contexto de sistema antepuesto a cada conversación, y no son recursos mencionables con `@` como archivos o catálogos."
-   },
-   "difficulty": "intermediate"
-  },
-  {
-   "id": "8DPBEDBQKKX7M54DVZXEXM9P47",
-   "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+   "order": 159,
+   "sourceOrder": 51,
+   "variant": true,
    "scenario": {
     "title": "Generación de Código con Claude Code",
     "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
@@ -3585,40 +5610,11 @@ window.QUESTION_BANKS["es"] = {
    "difficulty": "intermediate"
   },
   {
-   "id": "QNZS5WHAF16K3HZCBDP5HM1J66",
+   "id": "NJ4W4T0TFS5BXT42V3Z8ZTRKFB",
    "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
-   "scenario": {
-    "title": "Generación de Código con Claude Code",
-    "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
-   },
-   "prompt": "Documentaste las convenciones de manejo de errores de API en un CLAUDE.md en la raiz del proyecto, indicando que los handlers de endpoints deben usar una clase ApiError propia. Tras varias sesiones, notas que Claude Code a veces sigue esa convencion y a veces usa try/catch genericos con mensajes de texto. La inconsistencia parece aleatoria entre sesiones. ¿Cual es el primer paso diagnostico mas eficiente?",
-   "options": [
-    {
-     "key": "A",
-     "text": "Buscar instrucciones conflictivas en ~/.claude/CLAUDE.md o ~/.claude/rules/ que puedan estar anulando las convenciones del proyecto."
-    },
-    {
-     "key": "B",
-     "text": "Crear reglas específicas de ruta en .claude/rules/handlers.md con frontmatter YAML que delimite las instrucciones de manejo de errores a los archivos de handlers de API."
-    },
-    {
-     "key": "C",
-     "text": "Agregar ejemplos de código más detallados a tu CLAUDE.md que muestren el patrón exacto de uso de ApiError para diferentes tipos de endpoints."
-    },
-    {
-     "key": "D",
-     "text": "Ejecutar /memory para verificar qué archivos de memoria están cargados y confirmar que tu CLAUDE.md está incluido."
-    }
-   ],
-   "answer": {
-    "correctOptionKey": "D",
-    "justification": "Antes de cambiar la configuración, el paso diagnóstico más rápido es confirmar si Claude Code está realmente cargando el archivo de memoria del proyecto esperado en las sesiones donde el comportamiento es inconsistente. `/memory` muestra qué archivos de memoria están activos, ayudando a identificar problemas de jerarquía o carga. Agregar ejemplos o reglas específicas de ruta puede ser útil después, pero primero no verifica que el `CLAUDE.md` existente esté siendo aplicado."
-   },
-   "difficulty": "intermediate"
-  },
-  {
-   "id": "JVB9X4M5EH6EE9WYNXYP20NPF8",
-   "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+   "order": 160,
+   "sourceOrder": 53,
+   "variant": true,
    "scenario": {
     "title": "Generación de Código con Claude Code",
     "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
@@ -3649,40 +5645,11 @@ window.QUESTION_BANKS["es"] = {
    "difficulty": "intermediate"
   },
   {
-   "id": "34CJXAF0K4SEFKAQQTWFY7WFD8",
+   "id": "8DPBEDBQKKX7M54DVZXEXM9P47",
    "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
-   "scenario": {
-    "title": "Generación de Código con Claude Code",
-    "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
-   },
-   "prompt": "Una auditoria de seguridad exige actualizar tu biblioteca de autenticacion de v2 a v3. La guia de migracion documenta cambios que rompen compatibilidad: authenticate() ahora devuelve una Promise en vez de aceptar un callback, el tipo User tiene campos reestructurados y se eliminaron tres metodos deprecados. Grep muestra que la biblioteca se importa en 45 archivos de varios modulos. ¿Cual es el enfoque mas efectivo?",
-   "options": [
-    {
-     "key": "A",
-     "text": "Pegar los cambios que rompen compatibilidad de la guía de migración en tu prompt y usar ejecución directa para actualizar todos los usos en los 45 archivos."
-    },
-    {
-     "key": "B",
-     "text": "Actualizar la versión de la dependencia, ejecutar el conjunto de tests y usar Claude Code para corregir cada fallo a medida que aparece."
-    },
-    {
-     "key": "C",
-     "text": "Crear un comando slash personalizado que encapsule las transformaciones de migración y ejecutarlo contra cada archivo sin exploración previa del código."
-    },
-    {
-     "key": "D",
-     "text": "Entrar en plan mode para explorar el uso de la librería en todos los módulos, mapear los caminos de código afectados y luego crear una estrategia de migración antes de implementar."
-    }
-   ],
-   "answer": {
-    "correctOptionKey": "D",
-    "justification": "Esta es una migración multi-archivo con cambios de API que rompen compatibilidad en 45 archivos. El plan mode es apropiado porque Claude Code debe primero mapear los diferentes patrones de uso, entender los cambios de callback a Promise, identificar los supuestos del tipo `User` afectados y planificar cómo reemplazar los métodos eliminados antes de editar. La ejecución directa o las correcciones basadas en fallos de tests probablemente producirían cambios fragmentados y perderían los patrones entre módulos."
-   },
-   "difficulty": "intermediate"
-  },
-  {
-   "id": "VFTSV8C3577X1X2ZHJZVMTXWKQ",
-   "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+   "order": 161,
+   "sourceOrder": 55,
+   "variant": true,
    "scenario": {
     "title": "Generación de Código con Claude Code",
     "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
@@ -3713,8 +5680,11 @@ window.QUESTION_BANKS["es"] = {
    "difficulty": "intermediate"
   },
   {
-   "id": "J8YMR3SYPSKR8728WTBTH5ZKYH",
+   "id": "QNZS5WHAF16K3HZCBDP5HM1J66",
    "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+   "order": 162,
+   "sourceOrder": 56,
+   "variant": true,
    "scenario": {
     "title": "Generación de Código con Claude Code",
     "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
@@ -3745,8 +5715,11 @@ window.QUESTION_BANKS["es"] = {
    "difficulty": "intermediate"
   },
   {
-   "id": "W1Y7M3MGRXKAR425WHDZETS26Y",
+   "id": "JVB9X4M5EH6EE9WYNXYP20NPF8",
    "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+   "order": 163,
+   "sourceOrder": 57,
+   "variant": true,
    "scenario": {
     "title": "Generación de Código con Claude Code",
     "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
@@ -3777,8 +5750,11 @@ window.QUESTION_BANKS["es"] = {
    "difficulty": "intermediate"
   },
   {
-   "id": "VN13YJ110G5WQ8D8GM6YXMFMZ4",
+   "id": "34CJXAF0K4SEFKAQQTWFY7WFD8",
    "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+   "order": 164,
+   "sourceOrder": 58,
+   "variant": true,
    "scenario": {
     "title": "Generación de Código con Claude Code",
     "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
@@ -3809,8 +5785,11 @@ window.QUESTION_BANKS["es"] = {
    "difficulty": "intermediate"
   },
   {
-   "id": "9BPBT5Q4C3GV8EZ3HMC6KVD0Z5",
+   "id": "VFTSV8C3577X1X2ZHJZVMTXWKQ",
    "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+   "order": 165,
+   "sourceOrder": 59,
+   "variant": true,
    "scenario": {
     "title": "Generación de Código con Claude Code",
     "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
@@ -3841,8 +5820,11 @@ window.QUESTION_BANKS["es"] = {
    "difficulty": "intermediate"
   },
   {
-   "id": "M77X3ZA80J8TPBZWGZJFQ7ZAAW",
+   "id": "J8YMR3SYPSKR8728WTBTH5ZKYH",
    "topicId": "01KT81BA4JJHS623EN20YJ4JZ1",
+   "order": 166,
+   "sourceOrder": 60,
+   "variant": true,
    "scenario": {
     "title": "Generación de Código con Claude Code",
     "body": "Estás usando Claude Code para acelerar el desarrollo de software. Tu equipo lo utiliza para generación de código, refactorización, depuración y documentación. Necesitas integrarlo en tu flujo de trabajo de desarrollo con slash commands personalizados, configuraciones de CLAUDE.md, y entender cuándo usar plan mode versus ejecución directa."
@@ -3871,6 +5853,1581 @@ window.QUESTION_BANKS["es"] = {
     "justification": "Los problemas de formato interactúan entre sí, por lo que corregirlos de uno en uno puede hacer que los cambios posteriores invaliden el trabajo anterior. Proporcionar los requisitos de ancho de columnas, formato de fechas y saltos de página juntos le da a Claude el conjunto completo de restricciones necesarias para producir una actualización de layout coherente."
    },
    "difficulty": "intermediate"
+  },
+  {
+   "id": "W1Y7M3MGRXKAR425WHDZETS26Y",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 167,
+   "sourceOrder": 61,
+   "variant": true,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "El agente omite `get_customer` en un 12% de las interacciones y ejecuta `lookup_order` con el nombre que el cliente dicto, lo que en ocasiones asocia la cuenta equivocada y emite reembolsos erroneos. ¿Que medida lo corrige de forma mas confiable?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Un prerequisito programático que bloquee `lookup_order` y `process_refund` hasta que `get_customer` haya devuelto un customer ID verificado."
+    },
+    {
+     "key": "B",
+     "text": "Reforzar el system prompt para exigir la verificación de identidad antes de cualquier operación sobre órdenes."
+    },
+    {
+     "key": "C",
+     "text": "Añadir ejemplos few-shot que muestren al agente llamando siempre a `get_customer` primero."
+    },
+    {
+     "key": "D",
+     "text": "Un clasificador de ruteo que habilite solo el subconjunto de tools apropiado para cada request."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "La lógica de negocio crítica —verificar identidad antes de reembolsar— exige garantías deterministas que el prompt no puede dar. Un prerequisito programático que bloquea las tools posteriores hasta que `get_customer` verifica la cuenta elimina el fallo por diseño. Reforzar el prompt o los few-shot dependen de cumplimiento probabilístico, insuficiente cuando hay dinero e identidad de por medio; el clasificador de ruteo cambia qué tools están disponibles, no el orden de ejecución, que es el problema real."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "VN13YJ110G5WQ8D8GM6YXMFMZ4",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 168,
+   "sourceOrder": 62,
+   "variant": true,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "Ante 'revisa mi orden #12345' el agente invoca `get_customer` en lugar de `lookup_order`. Las dos tools traen descripciones escuetas y admiten identificadores similares. ¿Cual es el primer paso mas efectivo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Añadir 5-8 ejemplos few-shot de selección correcta de tool."
+    },
+    {
+     "key": "B",
+     "text": "Expandir la descripción de cada tool con formatos de entrada, consultas de ejemplo, casos borde y fronteras (cuándo usar una frente a la otra)."
+    },
+    {
+     "key": "C",
+     "text": "Un router que parsee la entrada y preseleccione la tool por palabras clave."
+    },
+    {
+     "key": "D",
+     "text": "Consolidar ambas tools en una única `lookup_entity`."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "B",
+    "justification": "Las descripciones de las tools son el mecanismo primario de selección del modelo; descripciones mínimas producen confusión entre tools similares. Expandirlas ataca la causa raíz con bajo esfuerzo y alta palanca. Los few-shot añaden tokens sin corregir la causa, el router por keywords es sobre-ingeniería, y consolidar es válido pero más costoso que un primer paso."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "9BPBT5Q4C3GV8EZ3HMC6KVD0Z5",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 169,
+   "sourceOrder": 63,
+   "variant": true,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "La resolucion del agente se estanca en 55% (objetivo 80%): deriva los casos sencillos (reemplazos con foto de dano) y solo resuelve los dificiles (excepciones de politica). ¿Como se calibra mejor la escalada?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Definir criterios de escalada explícitos y añadir ejemplos few-shot de cuándo escalar frente a cuándo resolver."
+    },
+    {
+     "key": "B",
+     "text": "Que el agente reporte su propia confianza (1-10) y rutee a un humano por debajo de un umbral."
+    },
+    {
+     "key": "C",
+     "text": "Entrenar un clasificador con tickets históricos etiquetados."
+    },
+    {
+     "key": "D",
+     "text": "Usar análisis de sentimiento para escalar cuando se detecta frustración."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "El problema son límites de decisión poco claros; criterios explícitos con few-shot enseñan cuándo escalar y cuándo resolver. La confianza auto-reportada del LLM está mal calibrada, un clasificador entrenado es sobre-ingeniería, y el sentimiento no correlaciona con la complejidad real del caso."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "M77X3ZA80J8TPBZWGZJFQ7ZAAW",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 170,
+   "sourceOrder": 64,
+   "variant": true,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "Ningun reembolso automatico puede exceder $500; por encima, va a un humano. La regla esta en mayusculas en el system prompt, pero de vez en cuando el agente aprueba reembolsos mayores. ¿Cual es el mecanismo mas confiable?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Un hook `PreToolUse` que intercepte las llamadas a `process_refund`, bloquee los montos superiores a $500 y los redirija a escalada humana."
+    },
+    {
+     "key": "B",
+     "text": "Repetir la regla con mayor énfasis y ejemplos en el system prompt."
+    },
+    {
+     "key": "C",
+     "text": "Añadir la restricción del límite a la descripción de la tool `process_refund`."
+    },
+    {
+     "key": "D",
+     "text": "Un paso de revisión posterior que verifique los reembolsos emitidos y revierta los que excedan el límite."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Las reglas de negocio y de cumplimiento críticas deben vivir en la capa determinista de middleware, no en el tejido probabilístico del prompt. Un hook `PreToolUse` bloquea la acción antes de que toque el backend, garantizando el límite. El énfasis en el prompt o en la descripción sigue dependiendo del cumplimiento del modelo, y revertir después ya permitió que ocurriera el reembolso indebido."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "J9SDMY73YPW4051NAMFESFP7W2",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 171,
+   "sourceOrder": 65,
+   "variant": true,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "`process_refund` siempre devuelve 'Operation failed' al fallar, asi que el agente no diferencia un timeout transitorio de una violacion de politica y reintenta cosas que no deberia. ¿Que diseno de respuesta de error habilita la recuperacion adecuada?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Que la tool reintente internamente con backoff y devuelva 'unavailable' tras agotar los reintentos."
+    },
+    {
+     "key": "B",
+     "text": "Registrar el error detallado en los logs del servidor y devolver al agente un mensaje genérico para no exponer detalles."
+    },
+    {
+     "key": "C",
+     "text": "Devolver metadata estructurada con `isError`, `errorCategory` (transient/validation/permission/business) e `isRetryable`, más una descripción legible."
+    },
+    {
+     "key": "D",
+     "text": "Que el agente escale al humano ante cualquier fallo de la tool."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "C",
+    "justification": "Respuestas uniformes impiden que el agente decida bien la recuperación. Metadata estructurada con la categoría del error y si es reintentable permite reintentar los transitorios y no reintentar los de negocio. El backoff interno oculta el contexto, un mensaje genérico repite el problema, y escalar ante cualquier fallo desperdicia la recuperación de fallos transitorios."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "EMTHG8H4JY98EPWE645MGPA2NF",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 172,
+   "sourceOrder": 66,
+   "variant": true,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "Al escalar, el operador humano recibe el chat completo y pierde tiempo reconstruyendo el caso. ¿Que hace el traspaso mas efectivo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Generar un paquete de escalada estructurado (customer_id, issue_summary, order_id, root_cause, actions_taken[], refund_amount, recommended_action, escalation_reason)."
+    },
+    {
+     "key": "B",
+     "text": "Adjuntar la transcripción completa de la conversación con marcas de tiempo."
+    },
+    {
+     "key": "C",
+     "text": "Un resumen en prosa libre generado por el modelo al momento de escalar."
+    },
+    {
+     "key": "D",
+     "text": "Un enlace al historial del cliente para que el operador lo consulte manualmente."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "El operador humano no debería leer todo el chat; necesita un resumen estructurado y accionable. Un paquete de handoff con los hechos clave y la acción recomendada permite continuar sin reconstruir el caso. La transcripción completa o un enlace trasladan el trabajo al humano, y un resumen en prosa libre es menos fiable y puede omitir campos críticos."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "S19V1WDE7Q3FM7MH6GGKTNZ7KK",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 173,
+   "sourceOrder": 67,
+   "variant": true,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "El cliente dice: 'Nada de bots, comuniqueme con una persona ya.' Aun asi el agente intenta diagnosticar y proponer soluciones antes de escalar. ¿Cual es la conducta correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Escalar a un humano de inmediato al tratarse de un pedido explícito, sin intentar investigar primero."
+    },
+    {
+     "key": "B",
+     "text": "Intentar resolver el problema una vez y escalar solo si el intento falla."
+    },
+    {
+     "key": "C",
+     "text": "Analizar el sentimiento para confirmar la frustración antes de decidir escalar."
+    },
+    {
+     "key": "D",
+     "text": "Pedir al cliente que explique su problema para evaluar si realmente requiere un humano."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Un pedido explícito de hablar con un humano es un disparador de escalada que debe honrarse de inmediato. Insistir en resolver, medir el sentimiento o interrogar al cliente ignora la solicitud directa y degrada la experiencia; esos pasos aplican cuando el issue es directo y el cliente no ha exigido un humano."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "W048TWENZQPWA14RD6MN0YWXH5",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 174,
+   "sourceOrder": 68,
+   "variant": true,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "`get_customer` arroja tres clientes distintos que coinciden con el nombre dado. ¿Como debe proceder el agente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Pedir al cliente identificadores adicionales (email, número de orden o código postal) para desambiguar antes de continuar."
+    },
+    {
+     "key": "B",
+     "text": "Elegir la coincidencia con la actividad de cuenta más reciente como la más probable."
+    },
+    {
+     "key": "C",
+     "text": "Elegir la coincidencia cuyo perfil esté más completo."
+    },
+    {
+     "key": "D",
+     "text": "Procesar la consulta para las tres cuentas y dejar que el cliente identifique la correcta en la respuesta."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Con múltiples coincidencias, elegir por heurística arriesga actuar sobre la cuenta equivocada —especialmente grave antes de operaciones sobre órdenes o reembolsos—. Lo correcto es pedir identificadores adicionales para verificar la identidad. Adivinar por recencia o completitud, o exponer datos de tres cuentas, compromete la exactitud y la privacidad."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "BFCK5HMZVV8RP0VF3P0M2HNB7T",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 175,
+   "sourceOrder": 69,
+   "variant": true,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "En dialogos largos de muchos turnos, el agente pierde el numero de orden y el monto de reembolso pactado porque el historial se resume. ¿Cual es la mejor forma de conservar esos datos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Extraer los hechos transaccionales (montos, fechas, order IDs, estados) a un bloque persistente de 'case facts' incluido en cada prompt, fuera del historial resumido."
+    },
+    {
+     "key": "B",
+     "text": "Aumentar la longitud del resumen para que conserve más detalles de cada turno."
+    },
+    {
+     "key": "C",
+     "text": "Cambiar a un modelo con ventana de contexto mayor para no resumir nunca."
+    },
+    {
+     "key": "D",
+     "text": "Repetir todo el historial completo sin resumir en cada request."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Los valores transaccionales precisos se pierden cuando la summarización progresiva los condensa. Mantener un bloque de 'case facts' con esos datos en cada prompt, separado del historial resumido, los preserva de forma fiable. Un resumen más largo sigue arriesgando pérdida, un modelo más grande no garantiza retener el dato exacto, y repetir todo el historial desperdicia contexto."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "2EV06D3874G4CDBTRPK2YXWVRN",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 176,
+   "sourceOrder": 70,
+   "variant": true,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "Las tools de pedidos y facturacion entregan fechas en formatos distintos (Unix, ISO 8601, codigos numericos de estado) y eso confunde al agente al comparar eventos. ¿Cual es la manera mas confiable de unificarlos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Un hook `PostToolUse` que intercepte los resultados de las tools y normalice fechas y estados a un formato uniforme antes de que el modelo los procese."
+    },
+    {
+     "key": "B",
+     "text": "Instruir en el prompt al agente para que convierta mentalmente cada formato al comparar."
+    },
+    {
+     "key": "C",
+     "text": "Añadir a cada descripción de tool una nota sobre el formato que devuelve."
+    },
+    {
+     "key": "D",
+     "text": "Un paso de post-procesamiento que reformatee la respuesta final del agente al usuario."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Normalizar formatos heterogéneos es una transformación determinista que debe hacerse antes de que el modelo razone. Un hook `PostToolUse` transforma los resultados de las tools a un formato uniforme de forma fiable. Pedirlo en el prompt depende del cumplimiento del modelo, documentar el formato no lo unifica, y reformatear la salida final no ayuda al razonamiento intermedio."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "7RGF0MBVKKCMDD4S82SJDYECCS",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 177,
+   "sourceOrder": 71,
+   "variant": true,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "Se plantea darle al agente de soporte las 20 herramientas internas 'por las dudas'. En pruebas, invoca tools ajenas a soporte. ¿Cual es el mejor diseno?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Dar al agente solo el conjunto reducido de tools que su rol necesita (get_customer, lookup_order, process_refund, escalate_to_human) y añadir tools puntuales solo ante necesidades reales de alta frecuencia."
+    },
+    {
+     "key": "B",
+     "text": "Mantener las 20 tools pero añadir instrucciones en el prompt para que use solo las de soporte."
+    },
+    {
+     "key": "C",
+     "text": "Mantener las 20 tools y un clasificador que preseleccione cuáles mostrar por request."
+    },
+    {
+     "key": "D",
+     "text": "Fusionar las tools relacionadas en unas pocas tools genéricas de propósito amplio."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Un conjunto de tools demasiado grande degrada la fiabilidad de selección y fomenta el mal uso entre dominios. El principio de menor privilegio —solo las tools del rol— es el mejor diseño. Las instrucciones en el prompt siguen dependiendo del cumplimiento, un clasificador es sobre-ingeniería, y fusionar en tools genéricas reintroduce la ambigüedad de selección."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "BTHKGMWG2GPT1BHQX27DH94A4B",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 178,
+   "sourceOrder": 72,
+   "variant": true,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "En el bucle agentico, ¿con que criterio debe la aplicacion anfitriona concluir que el turno termino y que el texto es la respuesta final al cliente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Evaluando estrictamente que `stop_reason` sea `end_turn`."
+    },
+    {
+     "key": "B",
+     "text": "Buscando frases como 'listo' o 'resuelto' en el texto de la respuesta."
+    },
+    {
+     "key": "C",
+     "text": "Deteniéndose al alcanzar un tope fijo de iteraciones (p. ej. 50)."
+    },
+    {
+     "key": "D",
+     "text": "Comprobando si la respuesta del asistente contiene texto en vez de una llamada a tool."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "El control de flujo del bucle agéntico se basa en la señal del servidor `stop_reason`; `end_turn` indica que el modelo terminó. Parsear texto en lenguaje natural es frágil ante variaciones de formato, el tope de iteraciones es solo un fallback de seguridad, y la mera presencia de texto no distingue de forma fiable un turno intermedio de la respuesta final."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "D50KWQEBV213AQ5Y28RZZWH5V5",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 179,
+   "sourceOrder": 73,
+   "variant": true,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "Cada `get_customer` devuelve mas de 40 campos y el agente usa solo 5 (nombre, email, tier, estado de cuenta, order IDs); en charlas largas ese volumen satura el contexto y empeora las respuestas. ¿Cual es la mejor solucion?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Recortar la salida de la tool a solo los campos relevantes antes de que se acumule en el contexto."
+    },
+    {
+     "key": "B",
+     "text": "Aumentar el tamaño de la ventana de contexto cambiando de modelo."
+    },
+    {
+     "key": "C",
+     "text": "Resumir periódicamente toda la conversación cuando el contexto crece."
+    },
+    {
+     "key": "D",
+     "text": "Pedir en el prompt que el agente ignore los campos irrelevantes."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Los resultados de tools acumulan tokens desproporcionados a su relevancia. Recortarlos a los campos necesarios antes de que entren al contexto ataca la causa directa. Un modelo mayor no evita la acumulación, resumir arriesga perder hechos transaccionales precisos, y pedir 'ignorar' en el prompt no impide que esos tokens ocupen y ensucien el contexto."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "BC91TQ68FADQAW50HVPRTKEKF9",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 180,
+   "sourceOrder": 74,
+   "variant": true,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "El cliente solicita igualar el precio de la competencia. La politica solo contempla ajustes dentro del propio sitio y calla sobre competidores. ¿Que corresponde hacer?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Escalar a un humano porque la política es ambigua o silenciosa sobre este pedido específico."
+    },
+    {
+     "key": "B",
+     "text": "Denegar el pedido porque la política no lo contempla explícitamente."
+    },
+    {
+     "key": "C",
+     "text": "Conceder el ajuste asumiendo que es equivalente a un ajuste del propio sitio."
+    },
+    {
+     "key": "D",
+     "text": "Reportar alta incertidumbre y dejar que el cliente decida si insiste."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Las excepciones y los vacíos de política —no solo los casos complejos— son disparadores válidos de escalada. Cuando la política no cubre el pedido, un humano debe decidir. Denegar o conceder por cuenta propia inventa política, y trasladar la decisión al cliente no resuelve el vacío."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "KH1RBW5VQD9PZB5S4PKYN9KPVT",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 181,
+   "sourceOrder": 75,
+   "variant": true,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "En un solo mensaje el cliente plantea tres temas: reembolso por articulo danado, estado de otro pedido y un reclamo de facturacion. ¿Cual es el mejor enfoque?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Descomponer el mensaje en los tres asuntos, atender cada uno con su tool correspondiente y sintetizar una respuesta unificada."
+    },
+    {
+     "key": "B",
+     "text": "Atender solo el asunto más urgente y pedir al cliente que reenvíe los demás por separado."
+    },
+    {
+     "key": "C",
+     "text": "Escalar a un humano porque el mensaje contiene múltiples asuntos."
+    },
+    {
+     "key": "D",
+     "text": "Responder los tres asuntos con una única llamada a una tool genérica."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Un request multi-tema debe separarse en asuntos distintos, resolver cada uno con la tool adecuada y sintetizar una resolución unificada. Atender solo uno o pedir reenvíos degrada la experiencia, escalar por el mero hecho de haber varios asuntos es innecesario, y no existe una tool genérica que resuelva asuntos heterogéneos en una sola llamada."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "CCK8NX07Z0VG6Z22MA7K3YAW9M",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 182,
+   "sourceOrder": 76,
+   "variant": true,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "A veces tu extractor emite JSON sintacticamente invalido (comas de menos, comillas abiertas) que rompe el parser aguas abajo. ¿Cual es la via mas confiable para asegurar salida conforme al esquema?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Definir la extracción como una tool con un JSON schema como input y tomar los datos del bloque `tool_use` de la respuesta."
+    },
+    {
+     "key": "B",
+     "text": "Pedir en el prompt 'devuelve solo JSON válido' y añadir ejemplos del formato."
+    },
+    {
+     "key": "C",
+     "text": "Un paso de post-procesamiento que intente reparar el JSON malformado con expresiones regulares."
+    },
+    {
+     "key": "D",
+     "text": "Bajar la temperatura a 0 para que el modelo sea más consistente con la sintaxis."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "`tool_use` con un JSON schema es el mecanismo más fiable para salida conforme al esquema porque elimina los errores de sintaxis JSON por construcción. Pedirlo en el prompt sigue permitiendo errores, reparar con regex es frágil, y bajar la temperatura reduce la variación pero no garantiza JSON válido."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "RHNDJZ2RKN5VHZE98SFHB8GA7F",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 183,
+   "sourceOrder": 77,
+   "variant": true,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Con `tool_use` y un schema estricto el JSON siempre es sintacticamente valido, pero algunas facturas traen conceptos que no suman el total y valores en el campo equivocado. ¿Que lo explica mejor?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Los schemas estrictos eliminan los errores de sintaxis pero no los semánticos; hace falta validación de contenido (p. ej. comparar la suma de line items con el total)."
+    },
+    {
+     "key": "B",
+     "text": "El schema no es lo bastante estricto; añadir más campos required lo corregirá."
+    },
+    {
+     "key": "C",
+     "text": "El modelo necesita una temperatura más baja para calcular bien los totales."
+    },
+    {
+     "key": "D",
+     "text": "El documento fuente debe estar corrupto; conviene rechazarlo."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Un schema garantiza la forma, no el significado: no impide que los números no cuadren o que un valor caiga en el campo equivocado. Se necesita validación semántica del contenido. Más campos required o menor temperatura no atacan la corrección semántica, y asumir corrupción del documento ignora que el fallo es de extracción."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "V5840ZMAM7TH8SPM33DXYE5TR1",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 184,
+   "sourceOrder": 78,
+   "variant": true,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Ciertos contratos carecen de fecha de renovacion, pero tu schema la exige como required, asi que el modelo inventa fechas verosimiles. ¿Cual es la mejor solucion?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Hacer el campo nullable/opcional para que el modelo pueda dejarlo vacío en vez de fabricar un valor."
+    },
+    {
+     "key": "B",
+     "text": "Añadir al prompt la instrucción 'no inventes datos que no estén en el documento'."
+    },
+    {
+     "key": "C",
+     "text": "Un paso de validación posterior que marque las fechas de renovación sospechosas."
+    },
+    {
+     "key": "D",
+     "text": "Reintentar la extracción con el mismo documento hasta que devuelva un valor consistente."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Marcar como required un campo que puede no existir empuja al modelo a fabricar valores. Hacerlo nullable/opcional le permite dejarlo vacío legítimamente. La instrucción en el prompt es menos fiable, la validación posterior no evita la fabricación, y reintentar no crea información que no está en el documento."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "CVWWEQ75855P38FFAGDAEHNWJ0",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 185,
+   "sourceOrder": 80,
+   "variant": true,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "La validacion falla por falta del identificador fiscal del proveedor y, al revisar, ese dato no figura en el documento. ¿Cual es la accion correcta?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Reconocer que el reintento no ayudará porque la información no está en la fuente, y marcar el campo como ausente para revisión u obtención externa."
+    },
+    {
+     "key": "B",
+     "text": "Reintentar con feedback de error hasta que el modelo lo encuentre."
+    },
+    {
+     "key": "C",
+     "text": "Dejar que el modelo infiera el identificador a partir del nombre del proveedor."
+    },
+    {
+     "key": "D",
+     "text": "Bajar la temperatura y volver a extraer el documento completo."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "El retry corrige errores de formato o estructura, pero es inútil cuando la información sencillamente no está en el documento. Lo correcto es reconocer la ausencia y marcarla, no reintentar en bucle, ni inferir/inventar el dato, ni reprocesar esperando que aparezca algo que no existe."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "GYBSHERFQ74WWAFCHXHBSQ3GNK",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 186,
+   "sourceOrder": 81,
+   "variant": true,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Clasificas documentos en un enum (invoice, receipt, contract), pero llegan algunos que no encajan y otros demasiado ambiguos. ¿Cual es el mejor diseno de schema?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Añadir un valor `other` con un campo de detalle en texto para categorías extensibles y un valor `unclear` para los casos ambiguos."
+    },
+    {
+     "key": "B",
+     "text": "Forzar siempre la categoría más cercana entre las tres existentes."
+    },
+    {
+     "key": "C",
+     "text": "Ampliar el enum con todas las categorías imaginables por adelantado."
+    },
+    {
+     "key": "D",
+     "text": "Eliminar el enum y dejar el tipo como texto libre."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Un enum con `other` + detalle permite categorización extensible sin fabricar, y `unclear` captura la ambigüedad de forma explícita. Forzar la categoría más cercana introduce clasificaciones erróneas, enumerar todo por adelantado es inviable, y el texto libre pierde la estructura que aporta el enum."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "E2Q8CCVQX79FE5W6SW299GPYEJ",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 187,
+   "sourceOrder": 83,
+   "variant": true,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Tienes que extraer datos de 50.000 documentos archivados para una auditoria trimestral; no corre prisa (toleras un dia de latencia) y buscas minimizar costo. ¿Que enfoque conviene mas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Enviar las extracciones a la Message Batches API con un `custom_id` por documento y recuperar los resultados al completarse el lote."
+    },
+    {
+     "key": "B",
+     "text": "Procesar los 50.000 documentos con la API síncrona en paralelo para terminar antes."
+    },
+    {
+     "key": "C",
+     "text": "Concatenar muchos documentos por request para reducir el número de llamadas."
+    },
+    {
+     "key": "D",
+     "text": "Esperar a poder revisar cada documento manualmente antes de extraer."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Una carga grande, no bloqueante y tolerante a la latencia encaja con la Message Batches API, que reduce el costo un 50% y usa `custom_id` para correlacionar cada documento. La API síncrona no ofrece el ahorro, concatenar documentos degrada la estructura y la correlación, y la revisión manual previa no aplica a 50.000 documentos."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "WKYA7GWDPJFZZC9CW2B56QS4JT",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 188,
+   "sourceOrder": 84,
+   "variant": true,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Terminado un lote, 300 de 50.000 documentos fallaron por superar el contexto. ¿Cual es la manera mas eficiente de completarlos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Reenviar en un nuevo lote solo los documentos fallidos (por su `custom_id`), troceando los que excedieron el contexto."
+    },
+    {
+     "key": "B",
+     "text": "Reprocesar el lote completo de 50.000 documentos desde cero."
+    },
+    {
+     "key": "C",
+     "text": "Descartar los 300 documentos fallidos como no procesables."
+    },
+    {
+     "key": "D",
+     "text": "Aumentar `max_tokens` y reenviar los 50.000 sin trocear."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Lo eficiente es reenviar únicamente los documentos fallidos, identificados por `custom_id`, y trocear los que excedieron el contexto para que quepan. Reprocesar todo desperdicia trabajo y dinero, descartar pierde datos de la auditoría, y subir `max_tokens` no resuelve documentos que superan la ventana de contexto."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "KM83BMNW78240NFP803A8VFJ1F",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 189,
+   "sourceOrder": 85,
+   "variant": true,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Extraes referencias de papers, pero los documentos son muy heterogeneos (citas inline, bibliografia final, metodologia separada o embebida) y las instrucciones detalladas rinden de forma inconsistente. ¿Que tecnica es la mas efectiva?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Añadir 2-4 ejemplos few-shot que muestren la extracción correcta sobre formatos de documento variados."
+    },
+    {
+     "key": "B",
+     "text": "Escribir instrucciones aún más largas y exhaustivas que cubran cada formato posible."
+    },
+    {
+     "key": "C",
+     "text": "Un pipeline distinto por cada formato de documento detectado."
+    },
+    {
+     "key": "D",
+     "text": "Pedir al modelo que primero describa el formato y luego extraiga."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Los few-shot son la técnica más efectiva cuando las instrucciones detalladas producen resultados inconsistentes: demuestran el manejo de casos variados y permiten generalizar a formatos nuevos. Instrucciones más largas siguen siendo inconsistentes, un pipeline por formato es frágil y costoso, y describir el formato primero no garantiza una extracción correcta."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "H0HC6B5KXVCKN74SKJYV0XP77S",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 190,
+   "sourceOrder": 86,
+   "variant": true,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Manejas varios schemas de extraccion (factura, recibo, contrato) y el tipo de documento entrante no se conoce de antemano; por momentos el modelo responde con texto en vez de extraer. ¿Que configuracion lo corrige mejor?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Usar `tool_choice: \"any\"` para forzar que el modelo llame a una de las tools de extracción en vez de devolver texto."
+    },
+    {
+     "key": "B",
+     "text": "Usar `tool_choice: \"auto\"` y pedir en el prompt que siempre extraiga."
+    },
+    {
+     "key": "C",
+     "text": "Forzar siempre la tool de factura como predeterminada."
+    },
+    {
+     "key": "D",
+     "text": "Añadir una tool de 'respuesta en texto' para capturar los casos sin extracción."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "`tool_choice: \"any\"` obliga al modelo a llamar a una tool (eligiendo el schema adecuado) en vez de devolver texto, apropiado cuando hay varios schemas y el tipo es desconocido. `\"auto\"` permite texto, forzar siempre factura clasifica mal los demás tipos, y añadir una tool de texto legitima justamente el comportamiento que quieres evitar."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "RF2HR5GGVXJ9C6VJD63X4NXZYJ",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 191,
+   "sourceOrder": 88,
+   "variant": true,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Las fechas llegan en formatos variados (DD/MM/AAAA, 'March 3, 2025', 2025-03-03) y necesitas salida en ISO uniforme; el schema estricto fija el tipo pero no la normalizacion. ¿Cual es el mejor enfoque?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Incluir reglas de normalización de formato en el prompt junto al schema estricto (p. ej. 'convierte todas las fechas a ISO 8601 AAAA-MM-DD')."
+    },
+    {
+     "key": "B",
+     "text": "Confiar en que el schema estricto por sí solo normalice las fechas."
+    },
+    {
+     "key": "C",
+     "text": "Un post-procesamiento con regex que intente reformatear cualquier fecha."
+    },
+    {
+     "key": "D",
+     "text": "Rechazar los documentos cuyas fechas no vengan ya en ISO 8601."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "El schema garantiza el tipo del campo, pero la normalización de formato debe indicarse: reglas de normalización en el prompt, junto al schema estricto, producen fechas uniformes. El schema por sí solo no normaliza, el regex posterior es frágil ante la variedad de formatos, y rechazar documentos no procesa datos válidos que solo necesitan normalizarse."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "ZW4J68FW0NWRE7SFH352DHK38Q",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 192,
+   "sourceOrder": 89,
+   "variant": true,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Algunos documentos traen datos internamente inconsistentes (por ejemplo, un importe en el resumen y otro en el desglose) y quieres que el sistema los senale en vez de elegir en silencio. ¿Que diseno de salida lo habilita?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Incluir un booleano `conflict_detected` (con los valores en conflicto y su ubicación) para marcar las fuentes inconsistentes en lugar de escoger arbitrariamente."
+    },
+    {
+     "key": "B",
+     "text": "Instruir al modelo para que elija el valor que le parezca más probable."
+    },
+    {
+     "key": "C",
+     "text": "Promediar los valores en conflicto para obtener un único número."
+    },
+    {
+     "key": "D",
+     "text": "Descartar los documentos que contengan cualquier inconsistencia."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Ante datos fuente en conflicto, lo correcto es anotar el conflicto con los valores y su procedencia, no elegir uno en silencio. Un booleano `conflict_detected` marca esos casos para revisión. Elegir el 'más probable' o promediar oculta el problema, y descartar pierde documentos que un humano podría reconciliar."
+   },
+   "difficulty": "intermediate"
+  },
+  {
+   "id": "F0Q6VXAS9MW189BPW1VGM5DV3V",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 193,
+   "sourceOrder": 91,
+   "variant": true,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "Una fintech ejecuta el flujo get_customer -> lookup_order -> process_refund. Una auditoria SOC2 revela que en el 3% de los reembolsos se llamo a process_refund sin un customer ID verificado, porque cuando el cliente adelantaba el numero de orden el modelo se saltaba get_customer; reforzar el system prompt dos veces no basto. ¿Que cambio asegura que ningun reembolso corra sin verificacion de identidad previa?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Un gate programático en la capa de middleware que rechace toda llamada a process_refund cuyo estado de sesión no contenga un customer ID ya verificado por get_customer."
+    },
+    {
+     "key": "B",
+     "text": "Añadir un parámetro required verified_customer_id al JSON schema de process_refund para que el modelo no pueda invocarla sin ese campo."
+    },
+    {
+     "key": "C",
+     "text": "Un ejemplo few-shot muy detallado por cada flujo posible que muestre a get_customer ejecutándose siempre antes que process_refund."
+    },
+    {
+     "key": "D",
+     "text": "Instrucciones en mayúsculas al inicio y al final del system prompt exigiendo verificar identidad antes de cualquier reembolso."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "La verificación de identidad antes de mover dinero es una regla de negocio crítica que exige cumplimiento determinista y debe imponerse en la capa de middleware como un prerequisito que bloquee process_refund hasta que exista un customer ID verificado en el estado de sesión. Un campo required en el schema solo obliga a que el argumento esté presente en esa llamada, pero el modelo puede rellenarlo con un valor no verificado; los few-shot y el énfasis en el prompt ya fallaron porque dependen de cumplimiento probabilístico."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "69RCVD9AV7Z009E0PFT6RAJT8R",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 194,
+   "sourceOrder": 92,
+   "variant": true,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "Ya reescribiste con detalle las descripciones de get_customer y lookup_order, y aun asi el agente invoca get_customer cuando el cliente dice 'mi cuenta' pese a preguntar por una orden. Descubres en el system prompt la linea 'cuando el usuario hable de su cuenta, recupera primero los datos del cliente'. ¿Cual es la causa raiz y el mejor arreglo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Las descripciones siguen siendo ambiguas; hay que añadir más ejemplos de queries a get_customer y lookup_order."
+    },
+    {
+     "key": "B",
+     "text": "El modelo necesita un router de keywords que mapee 'orden' a lookup_order y 'cuenta' a get_customer antes de invocar la tool."
+    },
+    {
+     "key": "C",
+     "text": "Una instrucción sensible a la keyword 'cuenta' en el system prompt está anulando las descripciones; hay que reformularla o quitarla para que no fuerce la selección."
+    },
+    {
+     "key": "D",
+     "text": "Consolidar ambas tools en una sola get_account_data que decida internamente qué devolver."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "C",
+    "justification": "El wording del system prompt puede crear asociaciones por keyword que anulan descripciones de tools bien escritas: aquí 'cuando el usuario hable de su cuenta, recupera primero los datos del cliente' empuja hacia get_customer ante la palabra 'cuenta' aunque la intención sea consultar una orden. La solución es reformular o quitar esa instrucción keyword-sensible. Añadir más ejemplos no vence la instrucción conflictiva, un router es sobre-ingeniería, y consolidar tools elimina una distinción útil en lugar de corregir la causa."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "PT8WK6ZQB1HS8DN140ATM2N55M",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 195,
+   "sourceOrder": 93,
+   "variant": true,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "El agente resuelve el 55% (meta 80%). Por categoria, sobre-escala las devoluciones estandar con foto y trata de resolver por su cuenta las excepciones de politica. Un ingeniero sugiere sumar 15 few-shot de casos complejos ya resueltos para que 'resuelva mas'. ¿Cual es el enfoque mas efectivo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Definir criterios de escalada explícitos y aportar few-shot balanceados que muestren tanto cuándo resolver (devoluciones estándar) como cuándo escalar (excepciones de política)."
+    },
+    {
+     "key": "B",
+     "text": "Añadir los 15 ejemplos de casos complejos resueltos para que el agente gane confianza y resuelva más casos por su cuenta."
+    },
+    {
+     "key": "C",
+     "text": "Hacer que el agente puntúe su confianza (1-10) y escale por debajo de 7, calibrando el umbral con datos históricos."
+    },
+    {
+     "key": "D",
+     "text": "Añadir análisis de sentimiento para no escalar cuando el cliente está tranquilo, reservando la escalada a clientes molestos."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "El fallo es un límite de decisión mal calibrado en ambos sentidos, no falta de capacidad: sobre-escala lo fácil y sub-escala lo que debería derivar. Se corrige con criterios de escalada explícitos y few-shot balanceados que muestren ambos lados de la frontera. Añadir solo ejemplos de casos complejos resueltos sesga al agente a intentar resolver excepciones de política; la confianza auto-reportada está mal calibrada; y el sentimiento no correlaciona con la complejidad del caso."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "9YE12Y79WEVC4V0ASZ5HYF3Q07",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 196,
+   "sourceOrder": 94,
+   "variant": true,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "La politica permite reembolsos automaticos hasta $500; por encima exige aprobacion humana y registro auditable. La regla esta en el system prompt y en un 2% de casos se aprobaron montos mayores; cumplimiento pide ademas un log inmutable de cada bloqueo. ¿Que diseno cumple ambos requisitos de forma fiable?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Reforzar el system prompt con la regla del límite y pedir al agente que registre en el chat cada vez que bloquee un reembolso alto."
+    },
+    {
+     "key": "B",
+     "text": "Un hook PreToolUse sobre process_refund que bloquee de forma determinista los montos superiores a $500, los redirija a escalada humana y escriba el evento en el log de auditoría."
+    },
+    {
+     "key": "C",
+     "text": "Añadir un campo max_amount al schema de process_refund y confiar en que el modelo lo respete."
+    },
+    {
+     "key": "D",
+     "text": "Un paso posterior que revise los reembolsos emitidos cada noche y revierta los que excedieron el límite, registrando la reversión."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "B",
+    "justification": "El límite de reembolso es una regla de cumplimiento crítica y debe imponerse en la capa de middleware, no en el prompt. Un hook PreToolUse bloquea de forma determinista antes de tocar el backend, redirige a escalada humana y puede escribir el log de auditoría inmutable que exige cumplimiento. El énfasis en el prompt y el campo de schema dependen del cumplimiento del modelo, y la reversión nocturna permite que el reembolso indebido ocurra y solo lo corrige tarde."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "S8BXTKDPC4GM2VV3MYNGBKMDZB",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 197,
+   "sourceOrder": 95,
+   "variant": true,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "Un incidente revela que, durante una caida de 4 minutos del gateway de pagos, el agente reintento process_refund decenas de veces y al recuperarse emitio reembolsos duplicados; la tool siempre devuelve 'error' sin distinguir el tipo. ¿Que cambio previene mejor este incidente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Devolver errores estructurados con errorCategory (transient/validation/permission/business) e isRetryable, y aplicar recuperación local acotada solo a los transitorios, tratando los reembolsos ya iniciados como no reintentables por defecto."
+    },
+    {
+     "key": "B",
+     "text": "Aumentar el número máximo de reintentos y añadir jitter aleatorio para espaciar las llamadas durante las caídas del gateway."
+    },
+    {
+     "key": "C",
+     "text": "Capturar el error y devolver un resultado vacío marcado como éxito para que el agente no reintente."
+    },
+    {
+     "key": "D",
+     "text": "Escalar a un humano cada vez que process_refund falle, sin importar la causa."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "El incidente nace de errores indistinguibles: el agente no sabía que el fallo era transitorio ni que la operación podía haberse iniciado, así que reintentó a ciegas y duplicó reembolsos. Errores estructurados con categoría e isRetryable permiten reintentar solo lo transitorio y tratar los reembolsos como no reintentables salvo confirmación. Más reintentos agravan el problema, marcar vacío como éxito oculta fallos reales, y escalar ante cualquier fallo desperdicia la recuperación de errores transitorios benignos."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "2QJTT768QGSC350HAQHNKDEJ23",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 198,
+   "sourceOrder": 96,
+   "variant": true,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "En una charla de 30 turnos sobre tres pedidos, el agente confunde a mitad de conversacion el reembolso pactado ($85) con el total de otro pedido ($120); el historial se resume progresivamente y los datos clave quedaron en el medio. ¿Cual es la forma mas fiable de evitarlo?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Cambiar a un modelo con ventana de contexto mayor para no tener que resumir el historial."
+    },
+    {
+     "key": "B",
+     "text": "Aumentar la longitud de cada resumen progresivo para que retenga más detalle de los turnos intermedios."
+    },
+    {
+     "key": "C",
+     "text": "Mantener un bloque persistente de 'case facts' (montos, order IDs, estados por pedido) inyectado en cada prompt, fuera del historial resumido y colocado al inicio o al final."
+    },
+    {
+     "key": "D",
+     "text": "Pedir al agente que, antes de responder, relea todo el historial de la conversación para recuperar los datos correctos."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "C",
+    "justification": "Los valores transaccionales se pierden por dos efectos combinados: la summarización progresiva los condensa y el 'lost in the middle' hace que el modelo ignore lo que quedó en el centro del historial. Un bloque de 'case facts' con los datos exactos por pedido, inyectado en cada prompt y ubicado al inicio o al final, los preserva de forma fiable. Un modelo mayor no evita la condensación, resúmenes más largos siguen sepultando datos en el medio, y releer el historial es costoso y poco fiable."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "3YVAEEPVJ1S9Y9J0720GK171TA",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 199,
+   "sourceOrder": 97,
+   "variant": true,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "Al escalar, el operador humano tarda unos 6 minutos en retomar el caso porque recibe la transcripcion completa y debe reconstruir lo intentado; cumplimiento exige registrar el motivo de cada escalada. ¿Que mejora el handoff de forma mas efectiva?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Generar un paquete de escalada estructurado con customer_id, issue_summary, order_id, root_cause, actions_taken[], refund_amount, recommended_action y escalation_reason."
+    },
+    {
+     "key": "B",
+     "text": "Adjuntar la transcripción completa con marcas de tiempo y resaltar los mensajes del cliente."
+    },
+    {
+     "key": "C",
+     "text": "Un resumen en prosa libre generado por el modelo en el momento de escalar, anexado al inicio del chat."
+    },
+    {
+     "key": "D",
+     "text": "Un enlace al CRM con el historial del cliente para que el operador lo consulte durante la llamada."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "El operador no debería reconstruir el caso a partir del chat; necesita un resumen estructurado y accionable. Un paquete de escalada con los hechos clave, lo ya intentado, la acción recomendada y el motivo de escalada permite retomar de inmediato y satisface el registro que exige cumplimiento. La transcripción completa y el enlace al CRM trasladan el trabajo al humano, y un resumen en prosa libre es menos fiable y puede omitir el escalation_reason requerido."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "573B3XH2YNARBMNK1GMQ80BJVQ",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 200,
+   "sourceOrder": 98,
+   "variant": true,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "get_customer devuelve dos clientes homonimos: uno con un email cuyo dominio coincide con el de la empresa del remitente, y otro con actividad mas reciente. El cliente pide un reembolso de $300. ¿Que debe hacer el agente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Elegir el cliente cuyo dominio de email coincide con el de la empresa del remitente, por ser la señal más fuerte."
+    },
+    {
+     "key": "B",
+     "text": "Elegir el cliente con actividad de cuenta más reciente, ya que es más probable que sea quien escribe."
+    },
+    {
+     "key": "C",
+     "text": "Procesar el reembolso en ambas cuentas y avisar al cliente de que confirme cuál era la correcta."
+    },
+    {
+     "key": "D",
+     "text": "Pedir al cliente un identificador adicional (número de orden, últimos dígitos del método de pago o código postal) para desambiguar antes de tocar ninguna cuenta."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "D",
+    "justification": "Con múltiples coincidencias y una operación financiera de por medio, cualquier heurística —dominio de email o recencia— puede seleccionar la cuenta equivocada y ejecutar un reembolso indebido. Lo correcto es pedir un identificador adicional que verifique la identidad antes de actuar. Elegir por dominio o recencia es adivinar, y procesar en ambas cuentas viola la privacidad y puede duplicar el reembolso."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "6D8HGPYPY1VMS7AG70624WPAXJ",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 201,
+   "sourceOrder": 99,
+   "variant": true,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "Cada get_customer devuelve 45 campos (marketing, sesiones, flags) de los que el agente usa 5; en conversaciones largas eso lleva el contexto por encima del 70% y las respuestas se degradan y citan pedidos equivocados. ¿Cual es la mejor solucion?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Recortar (mediante un hook PostToolUse o un wrapper) la salida de get_customer a los 5 campos relevantes antes de que se acumule en el contexto."
+    },
+    {
+     "key": "B",
+     "text": "Cambiar a un modelo con una ventana de contexto mayor para absorber los 45 campos sin degradación."
+    },
+    {
+     "key": "C",
+     "text": "Resumir toda la conversación automáticamente cada vez que el contexto supere el 80%."
+    },
+    {
+     "key": "D",
+     "text": "Instruir al agente en el prompt para que ignore los 40 campos que no necesita."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Los resultados de tools acumulan tokens desproporcionados a su relevancia, y aquí 40 campos inútiles por llamada saturan el contexto y provocan context rot. Recortar la salida a los campos necesarios antes de que se acumulen ataca la causa directa. Un modelo mayor solo retrasa el problema, resumir al 80% ya llega tarde (el modelo ya está degradado y puede alucinar su propio resumen), y pedir 'ignorar' en el prompt no impide que esos tokens ocupen el contexto."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "57W0ZPJ4XQYS3E6R30MJAE2W6P",
+   "topicId": "01KT81BA4JCST5PP0RTAGENT01",
+   "order": 202,
+   "sourceOrder": 100,
+   "variant": true,
+   "scenario": {
+    "title": "Agente de Resolución de Soporte al Cliente",
+    "body": "Estás construyendo un agente de resolución de soporte al cliente con el Claude Agent SDK. El agente usa herramientas MCP (get_customer, lookup_order, process_refund, escalate_to_human) para resolver consultas de clientes, con la meta de resolver el 80%+ en el primer contacto sabiendo cuándo escalar a un humano."
+   },
+   "prompt": "Tu bucle agentico cierra el turno al detectar frases como 'he procesado tu reembolso' en el texto; en produccion el agente a veces lo dice mientras planifica (y el bucle corta antes de ejecutar process_refund) o lo repite (y duplica la accion). ¿Como debe decidir el bucle que el turno termino?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Ampliar la lista de frases de finalización y exigir que aparezcan al final del mensaje para reducir los falsos positivos."
+    },
+    {
+     "key": "B",
+     "text": "Detener el bucle al alcanzar un tope de iteraciones que garantice que la acción ya se ejecutó."
+    },
+    {
+     "key": "C",
+     "text": "Evaluar estrictamente stop_reason == 'end_turn' como única señal de finalización, ejecutando las tools solo cuando stop_reason == 'tool_use'."
+    },
+    {
+     "key": "D",
+     "text": "Comprobar si la respuesta contiene texto del asistente en lugar de una llamada a tool y, si es así, terminar."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "C",
+    "justification": "Parsear lenguaje natural para decidir la terminación es una abstracción con fugas: frágil ante variaciones de redacción y ante que el modelo mencione una acción antes de ejecutarla. El control de flujo debe basarse en la señal del servidor stop_reason: end_turn indica fin del turno y tool_use indica que hay que ejecutar herramientas. Ampliar la lista de frases no elimina la fragilidad, el tope de iteraciones es solo un fallback de seguridad, y la mera presencia de texto no distingue un turno intermedio del final."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "E6KWVYAXH8HQDAFGDNPXD2VJWM",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 203,
+   "sourceOrder": 101,
+   "variant": true,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Tu extractor de facturas pide en el prompt 'devuelve un objeto JSON con estos campos' y, con temperatura 0, un 4% de respuestas trae prosa antes del JSON o comas finales que rompen el parser en produccion. Necesitas garantizar salida siempre parseable y conforme a tus campos. ¿Cual es el enfoque mas fiable?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Añadir un post-procesador que extraiga el primer bloque {...} de la respuesta y le quite las comas finales con regex."
+    },
+    {
+     "key": "B",
+     "text": "Definir una tool de extracción cuyo input sea un JSON schema y tomar los datos del bloque tool_use de la respuesta, eliminando los errores de sintaxis por construcción."
+    },
+    {
+     "key": "C",
+     "text": "Reforzar el prompt con 'RESPONDE SOLO CON JSON, SIN TEXTO ADICIONAL' y varios ejemplos del formato exacto."
+    },
+    {
+     "key": "D",
+     "text": "Bajar aún más la aleatoriedad (top_p) y validar el JSON, reintentando cuando el parseo falle."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "B",
+    "justification": "tool_use con un JSON schema es el mecanismo más fiable para salida conforme al esquema porque el JSON se genera contra el schema y se eliminan los errores de sintaxis por construcción, tomando los datos del bloque tool_use. El post-procesado con regex es frágil ante variaciones, reforzar el prompt sigue permitiendo texto en prosa y comas finales, y ajustar top_p con reintentos reduce la frecuencia pero no garantiza JSON válido."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "BCEMSE2VYC0SRTMA1RQFB5TQ4D",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 204,
+   "sourceOrder": 102,
+   "variant": true,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Tras migrar a tool_use con schema estricto, el JSON es siempre sintacticamente valido, pero contabilidad detecta que en un 6% de facturas los line_items no suman el total y a veces el impuesto esta en el campo del subtotal. ¿Cual es el diagnostico y arreglo correctos?",
+   "options": [
+    {
+     "key": "A",
+     "text": "El schema garantiza la forma pero no la semántica; hay que extraer stated_total y calculated_total, comparar y, ante discrepancia, reintentar con el error específico o marcar para revisión."
+    },
+    {
+     "key": "B",
+     "text": "El schema no es lo bastante estricto; convertir subtotal, impuesto y total en campos required forzará al modelo a cuadrarlos."
+    },
+    {
+     "key": "C",
+     "text": "El problema es de cálculo del modelo; bajar la temperatura y añadir 'suma con cuidado' al prompt lo resuelve."
+    },
+    {
+     "key": "D",
+     "text": "Los documentos fuente están mal escaneados; conviene rechazarlos y solicitar mejores copias."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Un schema estricto elimina los errores de sintaxis pero no los semánticos: no impide que los importes no cuadren ni que un valor caiga en el campo equivocado. La solución es validar el contenido —extraer stated_total y calculated_total, compararlos y reintentar con el error concreto o derivar a revisión—. Más campos required no fuerzan coherencia aritmética, la temperatura no ataca la corrección semántica, y culpar al escaneo ignora que el fallo está en la extracción."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "7Z0GRTQGD55J3CZ62XXP3CC3BK",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 205,
+   "sourceOrder": 103,
+   "variant": true,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Extraes clausulas de contratos con governing_law marcado como required; cuando el contrato no fija jurisdiccion, el modelo rellena una plausible ('State of Delaware') en vez de dejarlo vacio, metiendo datos falsos. Anadir 'no inventes datos ausentes' no basto. ¿Cual es la mejor solucion?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Hacer governing_law nullable/opcional en el schema para que el modelo pueda omitirlo legítimamente cuando el documento no lo contiene."
+    },
+    {
+     "key": "B",
+     "text": "Reforzar la instrucción 'no inventes datos ausentes' con ejemplos few-shot de campos dejados en blanco."
+    },
+    {
+     "key": "C",
+     "text": "Un validador posterior que compruebe si la jurisdicción aparece literalmente en el texto y, si no, borre el valor."
+    },
+    {
+     "key": "D",
+     "text": "Reintentar la extracción del contrato hasta que el modelo devuelva el mismo valor dos veces seguidas."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Marcar como required un campo que puede no existir empuja al modelo a fabricar un valor para satisfacer el schema. Hacerlo nullable/opcional le permite omitirlo de forma legítima cuando el documento no lo contiene, que es la causa raíz. La instrucción en el prompt ya falló y sigue siendo probabilística, el validador posterior es un parche que no evita la fabricación inicial, y reintentar no crea información que no está en el contrato."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "QJRG2NPZZTZB18NHF4RPM0TEQQ",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 206,
+   "sourceOrder": 104,
+   "variant": true,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "En un lote de 2.000 facturas, 180 fallan la validacion: unas por fechas en formato local que no cuadran con el patron, otras porque el documento no incluye el numero de pedido que el schema espera. Un ingeniero propone reintentar las 180 con feedback. ¿Cual es el enfoque correcto?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Reintentar las 180 con feedback de error, ya que anexar el error específico permite al modelo corregir cualquier fallo de validación."
+    },
+    {
+     "key": "B",
+     "text": "Marcar las 180 para revisión humana sin reintentar, porque los reintentos rara vez ayudan en extracción."
+    },
+    {
+     "key": "C",
+     "text": "Distinguir los tipos de fallo: reintentar con feedback las que fallan por formato de fecha, y marcar como ausente (sin reintentar) las que carecen del número de pedido en el documento."
+    },
+    {
+     "key": "D",
+     "text": "Reprocesar todo el lote con un prompt más estricto sobre fechas y números de pedido."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "C",
+    "justification": "El retry con feedback corrige errores de formato o estructura —como fechas en formato local que solo necesitan normalizarse—, pero es inútil cuando la información simplemente no está en el documento, como un número de pedido ausente. Lo correcto es ramificar: reintentar las de formato con el error específico y marcar como ausentes las que no contienen el dato. Reintentar las 180 malgasta llamadas en las irrecuperables, marcarlas todas descarta correcciones baratas, y reprocesar el lote entero es caro e innecesario."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "A7RKQW0EX356M87R2K81C9GZH9",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 207,
+   "sourceOrder": 105,
+   "variant": true,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Clasificas documentos en un enum de 6 tipos; un 9% cae en 'None of the above' por tipos nuevos no anticipados (notas de credito, ordenes de compra) y un 3% son ilegibles o ambiguos, y forzar el tipo mas cercano ya causo errores aguas abajo. ¿Cual es el mejor diseno de schema?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Añadir un valor 'other' con un campo de detalle en texto para tipos no anticipados y un valor 'unclear' para los documentos ambiguos o ilegibles."
+    },
+    {
+     "key": "B",
+     "text": "Ampliar el enum ahora con notas de crédito y órdenes de compra, y repetir la ampliación cada vez que aparezca un tipo nuevo."
+    },
+    {
+     "key": "C",
+     "text": "Forzar siempre el tipo más cercano del enum y registrar la confianza para revisar después los de baja confianza."
+    },
+    {
+     "key": "D",
+     "text": "Eliminar el enum y dejar document_type como texto libre para que el modelo escriba lo que corresponda."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Un enum con 'other' + detalle absorbe los tipos no anticipados sin fabricar una categoría incorrecta, y 'unclear' captura de forma explícita lo ilegible o ambiguo, evitando los errores aguas abajo de forzar el tipo más cercano. Ampliar el enum manualmente ante cada tipo nuevo es un mantenimiento interminable, forzar el más cercano reintroduce las clasificaciones erróneas, y el texto libre pierde la estructura y la consistencia que aporta el enum."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "1H0XWZYPHEVQNYJNTZ1WB5BPCP",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 208,
+   "sourceOrder": 106,
+   "variant": true,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Tienes dos cargas: (1) validar la factura en el checkout en tiempo real, con el cliente esperando en segundos, y (2) un reproceso nocturno de 200.000 facturas historicas. Un manager quiere pasar ambas a la Message Batches API por el 50% de ahorro. ¿Como lo evaluas?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Pasar ambas a batch y hacer polling del estado, aceptando la latencia a cambio del ahorro del 50%."
+    },
+    {
+     "key": "B",
+     "text": "Mantener ambas en la API síncrona para evitar problemas de correlación y orden de resultados."
+    },
+    {
+     "key": "C",
+     "text": "Solo el reproceso nocturno va a batch (tolera latencia); la validación en checkout se queda en la API síncrona porque es bloqueante y sensible a la latencia."
+    },
+    {
+     "key": "D",
+     "text": "Pasar ambas a batch con un fallback a la API síncrona si el lote tarda más de lo esperado."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "C",
+    "justification": "La Message Batches API ahorra un 50% pero puede tardar hasta 24 horas sin SLA de latencia, así que solo sirve para cargas no bloqueantes y tolerantes a la latencia como el reproceso nocturno. La validación en el checkout es bloqueante —el cliente espera— y debe seguir en la API síncrona. Pasar ambas a batch rompe el requisito de tiempo real, mantener todo síncrono renuncia al ahorro donde sí aplica, y el fallback añade complejidad sin resolver que el batch no garantiza latencia."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "BWEMEDZB5ZMJPBWJS6B2BWZ48G",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 209,
+   "sourceOrder": 107,
+   "variant": true,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Extraes datos de informes clinicos muy dispares (la dosis aparece en tablas, en prosa o en notas al pie); instrucciones cada vez mas largas rinden de forma inconsistente entre formatos. ¿Cual es la tecnica mas efectiva?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Escribir una especificación aún más exhaustiva que describa cada ubicación posible de la dosis en todos los formatos conocidos."
+    },
+    {
+     "key": "B",
+     "text": "Añadir 2-4 ejemplos few-shot que muestren la extracción correcta de la dosis sobre formatos variados (tabla, prosa, nota al pie), enseñando el criterio para generalizar."
+    },
+    {
+     "key": "C",
+     "text": "Hacer fine-tuning del modelo con miles de informes clínicos etiquetados para que aprenda todos los formatos."
+    },
+    {
+     "key": "D",
+     "text": "Construir un pipeline distinto por cada formato de informe detectado por reglas."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "B",
+    "justification": "Cuando instrucciones detalladas dan resultados inconsistentes ante formatos variados, los few-shot son la técnica más efectiva: 2-4 ejemplos que muestren la extracción correcta en distintas ubicaciones enseñan el criterio subyacente y permiten generalizar a formatos nuevos. Una especificación más larga sigue siendo inconsistente, el fine-tuning es costoso y rígido (y fuera del enfoque práctico del examen), y un pipeline por formato es frágil y no escala a variantes no previstas."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "KBJ1KGNJBE450AJ07JVZTY2J6B",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 210,
+   "sourceOrder": 108,
+   "variant": true,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Tu pipeline debe ejecutar extract_metadata (tipo, fecha, emisor) antes de un paso de enriquecimiento que depende de esos metadatos, pero a veces el modelo salta al enriquecimiento o responde con texto. ¿Que configuracion garantiza que extract_metadata corra primero?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Usar tool_choice 'auto' y describir en el prompt que extract_metadata debe ir primero."
+    },
+    {
+     "key": "B",
+     "text": "Usar tool_choice 'any' para que el modelo llame alguna tool en cada paso y confiar en que elija bien el orden."
+    },
+    {
+     "key": "C",
+     "text": "Fusionar extract_metadata y el enriquecimiento en una sola tool para que el orden sea irrelevante."
+    },
+    {
+     "key": "D",
+     "text": "Forzar tool_choice a la tool específica ({'type':'tool','name':'extract_metadata'}) en la primera llamada para garantizar que corra antes del enriquecimiento."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "D",
+    "justification": "Cuando un paso debe ejecutarse antes que otro, forzar tool_choice a esa tool específica en la primera llamada garantiza de forma determinista que extract_metadata corra primero. 'auto' permite que el modelo salte el paso o devuelva texto, 'any' obliga a llamar alguna tool pero no fija cuál, y fusionar ambas tools mezcla responsabilidades y pierde la separación que hace el enriquecimiento dependiente de metadatos ya validados."
+   },
+   "difficulty": "advanced"
+  },
+  {
+   "id": "9BY0F0X72R98D965X38VQCMMWC",
+   "topicId": "01KT81BA4JXTRCTDATA5CHMA01",
+   "order": 211,
+   "sourceOrder": 109,
+   "variant": true,
+   "scenario": {
+    "title": "Extracción de Datos Estructurados",
+    "body": "Estás construyendo un sistema de extracción de datos estructurados que procesa documentos no estructurados (facturas, contratos, informes) y produce salida validada contra JSON schemas. Debes manejar formatos variados, campos ausentes y casos borde manteniendo la fiabilidad."
+   },
+   "prompt": "Tu extractor informa 97% de exactitud global sobre facturas, recibos y contratos; un muestreo rapido sugiere que los contratos (8% del volumen) rinden muy por debajo de la media. Antes de reducir la revision humana, ¿cual es el paso mas prudente?",
+   "options": [
+    {
+     "key": "A",
+     "text": "Medir la exactitud por tipo de documento y por campo mediante muestreo aleatorio estratificado, ya que la media global puede enmascarar un tipo (contratos) con desempeño bajo."
+    },
+    {
+     "key": "B",
+     "text": "Automatizar todo lo que supere el 90% de confianza auto-reportada por el modelo y revisar el resto."
+    },
+    {
+     "key": "C",
+     "text": "Reducir la revisión humana de forma uniforme en los tres tipos, dado que el global es del 97%."
+    },
+    {
+     "key": "D",
+     "text": "Confiar en el 97% global porque ya supera el umbral de negocio, y monitorear quejas para detectar problemas."
+    }
+   ],
+   "answer": {
+    "correctOptionKey": "A",
+    "justification": "Una métrica agregada puede enmascarar un mal desempeño en un subgrupo —aquí los contratos—, así que automatizar según el global arriesga aceptar extracciones erróneas de ese tipo. El muestreo estratificado por tipo de documento y por campo revela dónde es seguro automatizar y dónde no. La confianza auto-reportada está mal calibrada, reducir la revisión de forma uniforme ignora el punto débil, y esperar a las quejas detecta el problema demasiado tarde."
+   },
+   "difficulty": "advanced"
   }
  ]
 };

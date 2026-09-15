@@ -18,10 +18,15 @@ Uso:  python expand-question-bank.py   &&   python build-questions.py
 import json
 import os
 import random
+from difflib import SequenceMatcher
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(HERE, "study-question-bank.json")
 VARIANT_TAG = "variant_reworded"
+
+# Si el enunciado reformulado es demasiado parecido al de su pregunta base
+# (>= este umbral de similitud), NO se genera la variante: seria un casi-duplicado.
+SIMILAR_SKIP = 0.85
 
 # Enunciados reformulados, indexados por el 'order' original (1..60).
 # Cada uno conserva TODOS los detalles que determinan la respuesta correcta.
@@ -86,6 +91,60 @@ REWORDED = {
     58: "Tu equipo esta configurando servidores MCP en Claude Code. Quieres agregar un servidor compartido de busqueda de venues al que todos deberian tener acceso, y personalmente quieres agregar un servidor experimental de playlists de musica que solo vos estas probando. ¿Que enfoque de configuracion aplica correctamente los scopes de servidores MCP?",
     59: "Un bug critico afecta a usuarios de produccion. Los logs de error muestran excepciones en el modulo OrderProcessing con un stack trace claro que apunta a una funcion especifica. Nunca trabajaste con este modulo. ¿Cual es el enfoque mas efectivo?",
     60: "Le pediste a Claude Code una funcionalidad de generacion de reportes PDF. La implementacion inicial consulta la base de datos correctamente, pero la salida tiene problemas de formato: las columnas de la tabla son muy angostas y truncan contenido, las fechas se muestran sin el formato correcto y el manejo de saltos de pagina es incorrecto. Notaste que estos problemas interactuan: cambiar el ancho de columnas afecta como se renderizan las fechas, y los saltos de pagina dependen de la altura del contenido. ¿Cual es el enfoque mas efectivo para iterar hacia una solucion funcional?",
+    # --- Escenario 5: Agente de Resolucion de Soporte al Cliente (61-75) ---
+    61: "El agente omite `get_customer` en un 12% de las interacciones y ejecuta `lookup_order` con el nombre que el cliente dicto, lo que en ocasiones asocia la cuenta equivocada y emite reembolsos erroneos. ¿Que medida lo corrige de forma mas confiable?",
+    62: "Ante 'revisa mi orden #12345' el agente invoca `get_customer` en lugar de `lookup_order`. Las dos tools traen descripciones escuetas y admiten identificadores similares. ¿Cual es el primer paso mas efectivo?",
+    63: "La resolucion del agente se estanca en 55% (objetivo 80%): deriva los casos sencillos (reemplazos con foto de dano) y solo resuelve los dificiles (excepciones de politica). ¿Como se calibra mejor la escalada?",
+    64: "Ningun reembolso automatico puede exceder $500; por encima, va a un humano. La regla esta en mayusculas en el system prompt, pero de vez en cuando el agente aprueba reembolsos mayores. ¿Cual es el mecanismo mas confiable?",
+    65: "`process_refund` siempre devuelve 'Operation failed' al fallar, asi que el agente no diferencia un timeout transitorio de una violacion de politica y reintenta cosas que no deberia. ¿Que diseno de respuesta de error habilita la recuperacion adecuada?",
+    66: "Al escalar, el operador humano recibe el chat completo y pierde tiempo reconstruyendo el caso. ¿Que hace el traspaso mas efectivo?",
+    67: "El cliente dice: 'Nada de bots, comuniqueme con una persona ya.' Aun asi el agente intenta diagnosticar y proponer soluciones antes de escalar. ¿Cual es la conducta correcta?",
+    68: "`get_customer` arroja tres clientes distintos que coinciden con el nombre dado. ¿Como debe proceder el agente?",
+    69: "En dialogos largos de muchos turnos, el agente pierde el numero de orden y el monto de reembolso pactado porque el historial se resume. ¿Cual es la mejor forma de conservar esos datos?",
+    70: "Las tools de pedidos y facturacion entregan fechas en formatos distintos (Unix, ISO 8601, codigos numericos de estado) y eso confunde al agente al comparar eventos. ¿Cual es la manera mas confiable de unificarlos?",
+    71: "Se plantea darle al agente de soporte las 20 herramientas internas 'por las dudas'. En pruebas, invoca tools ajenas a soporte. ¿Cual es el mejor diseno?",
+    72: "En el bucle agentico, ¿con que criterio debe la aplicacion anfitriona concluir que el turno termino y que el texto es la respuesta final al cliente?",
+    73: "Cada `get_customer` devuelve mas de 40 campos y el agente usa solo 5 (nombre, email, tier, estado de cuenta, order IDs); en charlas largas ese volumen satura el contexto y empeora las respuestas. ¿Cual es la mejor solucion?",
+    74: "El cliente solicita igualar el precio de la competencia. La politica solo contempla ajustes dentro del propio sitio y calla sobre competidores. ¿Que corresponde hacer?",
+    75: "En un solo mensaje el cliente plantea tres temas: reembolso por articulo danado, estado de otro pedido y un reclamo de facturacion. ¿Cual es el mejor enfoque?",
+    # --- Escenario 6: Extraccion de Datos Estructurados (76-90) ---
+    76: "A veces tu extractor emite JSON sintacticamente invalido (comas de menos, comillas abiertas) que rompe el parser aguas abajo. ¿Cual es la via mas confiable para asegurar salida conforme al esquema?",
+    77: "Con `tool_use` y un schema estricto el JSON siempre es sintacticamente valido, pero algunas facturas traen conceptos que no suman el total y valores en el campo equivocado. ¿Que lo explica mejor?",
+    78: "Ciertos contratos carecen de fecha de renovacion, pero tu schema la exige como required, asi que el modelo inventa fechas verosimiles. ¿Cual es la mejor solucion?",
+    79: "Una extraccion no pasa la validacion porque el total no coincide con la suma de los conceptos. ¿Cual es la forma mas efectiva de que el sistema se autocorrija?",
+    80: "La validacion falla por falta del identificador fiscal del proveedor y, al revisar, ese dato no figura en el documento. ¿Cual es la accion correcta?",
+    81: "Clasificas documentos en un enum (invoice, receipt, contract), pero llegan algunos que no encajan y otros demasiado ambiguos. ¿Cual es el mejor diseno de schema?",
+    82: "Quieres detectar automaticamente cuando el total de una factura no cuadra con sus conceptos. ¿Que diseno de salida lo habilita mejor?",
+    83: "Tienes que extraer datos de 50.000 documentos archivados para una auditoria trimestral; no corre prisa (toleras un dia de latencia) y buscas minimizar costo. ¿Que enfoque conviene mas?",
+    84: "Terminado un lote, 300 de 50.000 documentos fallaron por superar el contexto. ¿Cual es la manera mas eficiente de completarlos?",
+    85: "Extraes referencias de papers, pero los documentos son muy heterogeneos (citas inline, bibliografia final, metodologia separada o embebida) y las instrucciones detalladas rinden de forma inconsistente. ¿Que tecnica es la mas efectiva?",
+    86: "Manejas varios schemas de extraccion (factura, recibo, contrato) y el tipo de documento entrante no se conoce de antemano; por momentos el modelo responde con texto en vez de extraer. ¿Que configuracion lo corrige mejor?",
+    87: "Tu extractor informa 97% de exactitud global y el equipo quiere recortar la revision humana. ¿Que es lo mas prudente antes de automatizar las extracciones de alta confianza?",
+    88: "Las fechas llegan en formatos variados (DD/MM/AAAA, 'March 3, 2025', 2025-03-03) y necesitas salida en ISO uniforme; el schema estricto fija el tipo pero no la normalizacion. ¿Cual es el mejor enfoque?",
+    89: "Algunos documentos traen datos internamente inconsistentes (por ejemplo, un importe en el resumen y otro en el desglose) y quieres que el sistema los senale en vez de elegir en silencio. ¿Que diseno de salida lo habilita?",
+    90: "Al consolidar cifras de mercado de varios informes, a veces valores de anos distintos se leen como contradicciones. ¿Que debe exigir la salida estructurada para evitarlo?",
+    # --- Alta densidad: Customer Support (91-100) ---
+    91: "Una fintech ejecuta el flujo get_customer -> lookup_order -> process_refund. Una auditoria SOC2 revela que en el 3% de los reembolsos se llamo a process_refund sin un customer ID verificado, porque cuando el cliente adelantaba el numero de orden el modelo se saltaba get_customer; reforzar el system prompt dos veces no basto. ¿Que cambio asegura que ningun reembolso corra sin verificacion de identidad previa?",
+    92: "Ya reescribiste con detalle las descripciones de get_customer y lookup_order, y aun asi el agente invoca get_customer cuando el cliente dice 'mi cuenta' pese a preguntar por una orden. Descubres en el system prompt la linea 'cuando el usuario hable de su cuenta, recupera primero los datos del cliente'. ¿Cual es la causa raiz y el mejor arreglo?",
+    93: "El agente resuelve el 55% (meta 80%). Por categoria, sobre-escala las devoluciones estandar con foto y trata de resolver por su cuenta las excepciones de politica. Un ingeniero sugiere sumar 15 few-shot de casos complejos ya resueltos para que 'resuelva mas'. ¿Cual es el enfoque mas efectivo?",
+    94: "La politica permite reembolsos automaticos hasta $500; por encima exige aprobacion humana y registro auditable. La regla esta en el system prompt y en un 2% de casos se aprobaron montos mayores; cumplimiento pide ademas un log inmutable de cada bloqueo. ¿Que diseno cumple ambos requisitos de forma fiable?",
+    95: "Un incidente revela que, durante una caida de 4 minutos del gateway de pagos, el agente reintento process_refund decenas de veces y al recuperarse emitio reembolsos duplicados; la tool siempre devuelve 'error' sin distinguir el tipo. ¿Que cambio previene mejor este incidente?",
+    96: "En una charla de 30 turnos sobre tres pedidos, el agente confunde a mitad de conversacion el reembolso pactado ($85) con el total de otro pedido ($120); el historial se resume progresivamente y los datos clave quedaron en el medio. ¿Cual es la forma mas fiable de evitarlo?",
+    97: "Al escalar, el operador humano tarda unos 6 minutos en retomar el caso porque recibe la transcripcion completa y debe reconstruir lo intentado; cumplimiento exige registrar el motivo de cada escalada. ¿Que mejora el handoff de forma mas efectiva?",
+    98: "get_customer devuelve dos clientes homonimos: uno con un email cuyo dominio coincide con el de la empresa del remitente, y otro con actividad mas reciente. El cliente pide un reembolso de $300. ¿Que debe hacer el agente?",
+    99: "Cada get_customer devuelve 45 campos (marketing, sesiones, flags) de los que el agente usa 5; en conversaciones largas eso lleva el contexto por encima del 70% y las respuestas se degradan y citan pedidos equivocados. ¿Cual es la mejor solucion?",
+    100: "Tu bucle agentico cierra el turno al detectar frases como 'he procesado tu reembolso' en el texto; en produccion el agente a veces lo dice mientras planifica (y el bucle corta antes de ejecutar process_refund) o lo repite (y duplica la accion). ¿Como debe decidir el bucle que el turno termino?",
+    # --- Alta densidad: Structured Data Extraction (101-110) ---
+    101: "Tu extractor de facturas pide en el prompt 'devuelve un objeto JSON con estos campos' y, con temperatura 0, un 4% de respuestas trae prosa antes del JSON o comas finales que rompen el parser en produccion. Necesitas garantizar salida siempre parseable y conforme a tus campos. ¿Cual es el enfoque mas fiable?",
+    102: "Tras migrar a tool_use con schema estricto, el JSON es siempre sintacticamente valido, pero contabilidad detecta que en un 6% de facturas los line_items no suman el total y a veces el impuesto esta en el campo del subtotal. ¿Cual es el diagnostico y arreglo correctos?",
+    103: "Extraes clausulas de contratos con governing_law marcado como required; cuando el contrato no fija jurisdiccion, el modelo rellena una plausible ('State of Delaware') en vez de dejarlo vacio, metiendo datos falsos. Anadir 'no inventes datos ausentes' no basto. ¿Cual es la mejor solucion?",
+    104: "En un lote de 2.000 facturas, 180 fallan la validacion: unas por fechas en formato local que no cuadran con el patron, otras porque el documento no incluye el numero de pedido que el schema espera. Un ingeniero propone reintentar las 180 con feedback. ¿Cual es el enfoque correcto?",
+    105: "Clasificas documentos en un enum de 6 tipos; un 9% cae en 'None of the above' por tipos nuevos no anticipados (notas de credito, ordenes de compra) y un 3% son ilegibles o ambiguos, y forzar el tipo mas cercano ya causo errores aguas abajo. ¿Cual es el mejor diseno de schema?",
+    106: "Tienes dos cargas: (1) validar la factura en el checkout en tiempo real, con el cliente esperando en segundos, y (2) un reproceso nocturno de 200.000 facturas historicas. Un manager quiere pasar ambas a la Message Batches API por el 50% de ahorro. ¿Como lo evaluas?",
+    107: "Extraes datos de informes clinicos muy dispares (la dosis aparece en tablas, en prosa o en notas al pie); instrucciones cada vez mas largas rinden de forma inconsistente entre formatos. ¿Cual es la tecnica mas efectiva?",
+    108: "Tu pipeline debe ejecutar extract_metadata (tipo, fecha, emisor) antes de un paso de enriquecimiento que depende de esos metadatos, pero a veces el modelo salta al enriquecimiento o responde con texto. ¿Que configuracion garantiza que extract_metadata corra primero?",
+    109: "Tu extractor informa 97% de exactitud global sobre facturas, recibos y contratos; un muestreo rapido sugiere que los contratos (8% del volumen) rinden muy por debajo de la media. Antes de reducir la revision humana, ¿cual es el paso mas prudente?",
+    110: "Consolidas el 'tamano de mercado' de 15 informes: unos citan $40B y otros $52B; al mirar, unos son de 2021 y otros de 2024, y dos informes recientes se contradicen para el mismo ano. Tu salida elige un valor y descarta el resto. ¿Que debe requerir la salida estructurada?",
 }
 
 _ALPHABET = "0123456789ABCDEFGHJKMNPQRSTVWXYZ"  # Crockford base32 (estilo ULID)
@@ -111,11 +170,18 @@ def main():
     rng = random.Random(20260630)  # semilla fija -> IDs reproducibles
     max_order = max(q["order"] for q in originals)
     variants = []
+    skipped = []
 
     for q in sorted(originals, key=lambda x: x["order"]):
         reworded = REWORDED.get(q["order"])
         if not reworded:
             raise SystemExit(f"Falta el enunciado reformulado para order={q['order']}")
+
+        # Omitir variantes casi identicas a su base (no aportan y confunden al estudiar).
+        ratio = SequenceMatcher(None, q.get("prompt", ""), reworded).ratio()
+        if ratio >= SIMILAR_SKIP:
+            skipped.append((q["order"], ratio))
+            continue
 
         # Nuevas opciones: mismo texto y misma key, ids nuevos. Preservamos cual
         # es la correcta emparejando por 'key' (nunca cambia el sentido).
@@ -165,6 +231,10 @@ def main():
 
     print(f"OK: {len(originals)} originales + {len(variants)} variantes = "
           f"{len(data['questions'])} preguntas totales.")
+    if skipped:
+        skipped.sort(key=lambda x: -x[1])
+        print(f"Variantes omitidas por similitud >= {SIMILAR_SKIP:.0%} ({len(skipped)}): "
+              + ", ".join(f"Q{o}({r:.0%})" for o, r in skipped))
 
 
 if __name__ == "__main__":

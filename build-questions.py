@@ -34,9 +34,14 @@ def slim(data):
         "questions": [],
     }
     for q in data["questions"]:
+        meta = q.get("studyMetadata", {})
         out["questions"].append({
             "id": q["id"],
             "topicId": q.get("topicId"),
+            "order": q.get("order"),
+            # sourceOrder enlaza cada variante con su pregunta base (mismo numero).
+            "sourceOrder": meta.get("sourceOrder", q.get("order")),
+            "variant": "variant_reworded" in meta.get("tags", []),
             "scenario": q.get("scenario", {}),
             "prompt": q.get("prompt", ""),
             "options": [{"key": o["key"], "text": o["text"]} for o in q["options"]],
@@ -44,7 +49,7 @@ def slim(data):
                 "correctOptionKey": q["answer"]["correctOptionKey"],
                 "justification": q["answer"].get("justification", ""),
             },
-            "difficulty": q.get("studyMetadata", {}).get("difficulty", ""),
+            "difficulty": meta.get("difficulty", ""),
         })
     return out
 
